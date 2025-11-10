@@ -13,9 +13,9 @@ export default defineConfig({
       'react-scroll-parallax': path.resolve(__dirname, 'src/lib/react-scroll-parallax.jsx')
     }
   },
-  base: '/',
-  server: {
+  base: '/'
+  /*,server: {
     port: 5173,
     open: true
-  }
+  }*/
 });
