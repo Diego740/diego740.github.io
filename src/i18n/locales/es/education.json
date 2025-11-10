@@ -1,0 +1,23 @@
+{
+  "title": "Formación Académica",
+  "items": [
+    {
+      "title": "Grado en Ingeniería del Software",
+      "details": [
+        "Centro: U-TAD (Centro Universitario de Tecnología y Arte Digital)",
+        "Periodo: 2022 – Actualidad",
+        "Curso: 4º y último año",
+        "Mención: Ciberseguridad"
+      ],
+      "description": "Actualmente cursando el último año de Ingeniería del Software, con especialización en Ciberseguridad. Formación centrada en desarrollo seguro, análisis forense, redes y arquitecturas distribuidas."
+    },
+    {
+      "title": "Prácticas Profesionales en Capgemini",
+      "details": [
+        "Puesto: Consultor Junior - BPM (Business Process Management)",
+        "Inicio: Octubre 2025"
+      ],
+      "description": "Desempeño mis prácticas en Capgemini, colaborando en la digitalización de procesos empresariales mediante soluciones BPM. Experiencia en entornos ágiles, automatización y análisis de sistemas."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "eyebrows": ["Software Engineering", "Cybersecurity"],
+    "title": "Diego Aranda Gómez",
+    "subtitle": "I build secure, efficient and future-proof digital experiences. I combine fullstack development with cybersecurity research to drive projects with real impact.",
+    "cta": {
+      "linkedin": "Connect on LinkedIn",
+      "github": "View GitHub",
+      "linkedinAria": "Open LinkedIn profile in a new tab",
+      "githubAria": "Open GitHub profile in a new tab"
+    },
+    "explore": "Explore",
+    "exploreAria": "Scroll to the next section"
+  }
+}

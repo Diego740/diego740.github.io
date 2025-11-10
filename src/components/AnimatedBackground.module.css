@@ -1,0 +1,24 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: var(--background-canvas);
+}
+
+.gradient {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(108, 0, 180, 0.2), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(138, 43, 226, 0.15), transparent 50%);
+  filter: blur(120px);
+}
+
+.particle {
+  position: absolute;
+  bottom: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.35), rgba(138, 43, 226, 0));
+  filter: blur(1px);
+}

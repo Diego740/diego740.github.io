@@ -1,0 +1,92 @@
+{
+  "header": {
+    "eyebrow": "Proyectos",
+    "title": "Experimentos y soluciones con impacto",
+    "description": "Una selección de proyectos que abarcan desde el desarrollo fullstack hasta la ciberseguridad y la inteligencia artificial. Cada iniciativa refleja investigación, colaboración y entrega constante."
+  },
+  "inProgress": {
+    "eyebrow": "En desarrollo",
+    "title": "Proyectos en curso",
+    "description": "Proyectos en progreso que combinan experimentación, aprendizaje continuo y validación de resultados.",
+    "meta": {
+      "start": "Inicio",
+      "scope": "Enfoque"
+    },
+    "objectives": "Objetivos clave",
+    "viewRepo": "Ver repositorio",
+    "privateRepo": "Repositorio privado / en preparación",
+    "empty": "No hay proyectos en desarrollo por ahora…"
+  },
+  "featuredTitle": "Proyectos destacados",
+  "viewMore": "Ver más",
+  "allProjects": {
+    "label": "Ver todos los proyectos",
+    "aria": "Ir a la página con todos los proyectos"
+  },
+  "featuredProjects": [
+    {
+      "title": "Gestor de Espacios y Proyectos Colaborativos",
+      "tech": "React · Node.js · MongoDB",
+      "description": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo",
+      "link": null
+    }
+  ],
+  "completed": {
+    "eyebrow": "Finalizados",
+    "title": "Proyectos completados",
+    "description": "Casos de éxito que consolidaron aprendizajes técnicos y estratégicos.",
+    "viewProject": "Ver proyecto"
+  },
+  "projectsInProgress": [
+    {
+      "title": "Analizador y Modificador de Metadatos",
+      "status": "Desarrollo aplicado",
+      "startDate": "Octubre 2025",
+      "scope": "Ciberseguridad · Programación · Scripting",
+      "objectives": [
+        "Diseñar proceso para extraer metadatos de archivos.",
+        "Correlacionar patrones sospechosos con posibles amenazas.",
+        "Permitir mantener la privacidad de los diferentes usuarios."
+      ],
+      "repository": null
+    },
+    {
+      "title": "Análisis de Termostato Inteligente",
+      "status": "Auditoría",
+      "startDate": "Septiembre 2025",
+      "scope": "IoT · Pentesting · Reverse engineering",
+      "objectives": [
+        "Mapear la superficie de ataque evaluando firmware, APIs móviles y comunicaciones inalámbricas.",
+        "Identificar vulnerabilidades en el control remoto.",
+        "Documentar proceso de intrusión."
+      ],
+      "repository": null
+    }
+  ],
+  "completedProjects": [
+    {
+      "title": "CTFs de Ciberseguridad",
+      "tech": "Burp Suite · Wireshark · Nmap · Otras",
+      "description": "Participación en desafíos CTF con foco en análisis forense, pentesting web y resolución de retos ofensivos y defensivos.",
+      "link": null
+    },
+    {
+      "title": "Web de Películas (API)",
+      "tech": "React · API Externa",
+      "description": "Plataforma interactiva para explorar películas y obtener detalles dinámicos mediante el consumo de APIs públicas.",
+      "link": null
+    },
+    {
+      "title": "Simulador de Memoria Caché",
+      "tech": "C",
+      "description": "Proyecto académico que reproduce la gestión de memoria caché utilizando estructuras dinámicas para visualizar asignaciones y liberaciones.",
+      "link": null
+    },
+    {
+      "title": "Modelos de Inteligencia Artificial",
+      "tech": "Python · LLMs · CNNs",
+      "description": "Generador de texto: Modelo entrenado para crear texto coherente a partir de datasets lingüísticos. Clasificador de imágenes pulmonares: CNN que diferencia pulmones sanos de enfermos para apoyar diagnósticos tempranos.",
+      "link": null
+    }
+  ]
+}

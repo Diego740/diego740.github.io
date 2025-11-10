@@ -1,0 +1,56 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.card {
+  padding: 2.4rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-border-color);
+  background: linear-gradient(140deg, var(--card-gradient-start), var(--card-gradient-end));
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+  color: var(--secondary-text);
+}
+
+.card li::before {
+  content: '▹';
+  margin-right: 0.6rem;
+  color: var(--color-accent);
+}
+
+.placeholder {
+  margin-top: 1rem;
+  padding: 1.4rem;
+  border-radius: 16px;
+  background: var(--accent-surface);
+  border: 1px solid var(--accent-border-color);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.placeholder span {
+  font-family: var(--font-mono);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.placeholder p {
+  color: var(--secondary-text);
+}

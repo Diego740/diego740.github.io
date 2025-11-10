@@ -1,0 +1,23 @@
+{
+  "title": "Academic background",
+  "items": [
+    {
+      "title": "BSc in Software Engineering",
+      "details": [
+        "Institution: U-TAD (University Center for Technology and Digital Art)",
+        "Period: 2022 – Present",
+        "Year: 4th and final year",
+        "Specialization: Cybersecurity"
+      ],
+      "description": "Currently in the final year of the Software Engineering degree with a specialization in Cybersecurity. Training focused on secure development, forensics, networking and distributed architectures."
+    },
+    {
+      "title": "Professional Internship at Capgemini",
+      "details": [
+        "Role: Junior Consultant - BPM (Business Process Management)",
+        "Start: October 2025"
+      ],
+      "description": "Carrying out my internship at Capgemini, collaborating on the digitalization of business processes through BPM solutions. Experience in agile environments, automation and systems analysis."
+    }
+  ]
+}

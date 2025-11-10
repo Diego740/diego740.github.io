@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "eyebrows": ["Ingeniería del Software", "Ciberseguridad"],
+    "title": "Diego Aranda Gómez",
+    "subtitle": "Construyo experiencias digitales seguras, eficientes y con visión de futuro. Combino el desarrollo fullstack con investigación en ciberseguridad para impulsar proyectos con impacto real.",
+    "cta": {
+      "linkedin": "Conectar en LinkedIn",
+      "github": "Ver GitHub",
+      "linkedinAria": "Abrir perfil de LinkedIn en una nueva pestaña",
+      "githubAria": "Abrir perfil de GitHub en una nueva pestaña"
+    },
+    "explore": "Explorar",
+    "exploreAria": "Desplazarse a la siguiente sección"
+  }
+}

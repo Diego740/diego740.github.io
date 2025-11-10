@@ -1,0 +1,93 @@
+{
+  "header": {
+    "eyebrow": "Projects",
+    "title": "Experiments and solutions with impact",
+    "description": "A selection of projects spanning fullstack development, cybersecurity and artificial intelligence. Each initiative reflects research, collaboration and continuous delivery."
+  },
+  "inProgress": {
+    "eyebrow": "In progress",
+    "title": "Projects under development",
+    "description": "Ongoing projects that combine experimentation, continuous learning, and validation of results.",
+    "meta": {
+      "start": "Start",
+      "scope": "Focus"
+    },
+    "objectives": "Key objectives",
+    "viewRepo": "View repository",
+    "privateRepo": "Private repository / in preparation",
+    "empty": "No projects in progress for now…"
+  },
+  "featuredTitle": "Featured Projects",
+  "viewMore": "View more",
+  "allProjects": {
+    "label": "View all projects",
+    "aria": "Go to the page with every project"
+  },
+  "featuredProjects": [
+    {
+      "title": "Collaborative Space and Project Managerr",
+      "tech": "React · Node.js · MongoDB",
+      "description": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment.",
+      "link": null
+    }
+  ],
+  "completed": {
+    "eyebrow": "Completed",
+    "title": "Finished projects",
+    "description": "Success cases that strengthened technical and strategic skills.",
+    "viewProject": "View project"
+  },
+  "projectsInProgress": [
+    {
+      "title": "Metadata Analyzer and Editor",
+      "status": "Applied development",
+      "startDate": "October 2025",
+      "scope": "Cybersecurity · Programming · Scripting",
+      "objectives": [
+        "Design a process to extract file metadata.",
+        "Correlate suspicious patterns with potential threats.",
+        "Allow different users to preserve their privacy."
+      ],
+      "repository": null
+    },
+    {
+      "title": "Smart Thermostat Analysis",
+      "status": "Audit",
+      "startDate": "September 2025",
+      "scope": "IoT · Pentesting · Reverse engineering",
+      "objectives": [
+        "Map the attack surface by assessing firmware, mobile APIs and wireless communications.",
+        "Identify vulnerabilities in the remote control.",
+        "Document the intrusion process."
+      ],
+      "repository": null
+    }
+  ],
+  "completedProjects": [
+    
+    {
+      "title": "Cybersecurity CTFs",
+      "tech": "Burp Suite · Wireshark · Nmap · Others",
+      "description": "Participation in CTF challenges focused on forensics, web pentesting and offensive/defensive challenges.",
+      "link": null
+    },
+    {
+      "title": "Movie Web (API)",
+      "tech": "React · External API",
+      "description": "Interactive platform to explore movies and fetch dynamic details by consuming public APIs.",
+      "link": null
+    },
+    {
+      "title": "Cache Memory Simulator",
+      "tech": "C",
+      "description": "Academic project that recreates cache memory management using dynamic structures to visualize allocations and releases.",
+      "link": null
+    },
+    {
+      "title": "Artificial Intelligence Models",
+      "tech": "Python · LLMs · CNNs",
+      "description": "Text generator: model trained to create coherent text from linguistic datasets. Lung image classifier: CNN distinguishing healthy and diseased lungs to support early diagnoses.",
+      "link": null
+    }
+  ]
+}

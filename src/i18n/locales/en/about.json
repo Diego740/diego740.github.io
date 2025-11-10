@@ -1,0 +1,18 @@
+{
+  "header": {
+    "eyebrow": "About Me",
+    "title": "About Me",
+    "description": "I am a Software Engineering student at U-TAD, passionate about cybersecurity and technology. I enjoy creating technical solutions, learning new technologies, and collaborating with others."
+  },
+  "downloadCv": "Download CV",
+  "technicalTitle": "Hard skills",
+  "softTitle": "Soft skills",
+  "softSkills": [
+    "Strong autonomy",
+    "Teamwork and collaboration",
+    "Organization and planning",
+    "Problem-solving",
+    "Active listening",
+    "Ability to work under pressure"
+  ]
+}

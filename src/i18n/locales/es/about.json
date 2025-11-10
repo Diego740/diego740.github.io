@@ -1,0 +1,18 @@
+{
+  "header": {
+    "eyebrow": "Sobre mí",
+    "title": "Sobre mí",
+    "description": "Soy estudiante de Ingeniería del Software en la U-TAD, apasionado por la ciberseguridad y la tecnología. Disfruto creando soluciones técnicas, aprendiendo nuevas tecnologías y trabajando en equipo."
+  },
+  "downloadCv": "Descargar CV",
+  "technicalTitle": "Hard skills",
+  "softTitle": "Soft skills",
+  "softSkills": [
+    "Gran autonomía",
+    "Trabajo en equipo y colaboración",
+    "Organización y planificación",
+    "Resolución de problemas",
+    "Escucha activa",
+    "Capacidad para trabajar bajo presión"
+  ]
+}

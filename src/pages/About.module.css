@@ -1,0 +1,113 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 2.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--action-button-border, var(--accent-border-color));
+  background: var(--action-button-gradient);
+  color: var(--action-button-text, var(--accent-contrast-text));
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  box-shadow: var(--action-button-shadow, var(--shadow-glow));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.downloadButton:hover {
+  transform: translateY(-3px);
+  background: var(--action-button-gradient-hover, var(--action-button-gradient));
+  box-shadow: var(--action-button-shadow-hover, var(--shadow-glow));
+}
+
+.downloadButton:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent-color) 70%, transparent);
+  outline-offset: 4px;
+}
+
+.buttonLabel {
+  letter-spacing: inherit;
+}
+
+.downloadIcon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.downloadButton:hover .downloadIcon {
+  transform: translateY(2px);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2.2rem;
+  border-radius: 18px;
+  border: 1px solid var(--accent-border-color);
+  background: var(--panel-bg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .actions {
+    justify-content: center;
+  }
+
+  .downloadButton {
+    width: min(100%, 320px);
+    justify-content: center;
+  }
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .downloadButton,
+  .downloadButton:hover {
+    transform: none;
+    background: var(--action-button-gradient);
+    box-shadow: var(--action-button-shadow, var(--shadow-glow));
+  }
+
+  .downloadButton,
+  .downloadIcon {
+    transition: none;
+  }
+
+  .downloadButton:hover .downloadIcon {
+    transform: none;
+  }
+}

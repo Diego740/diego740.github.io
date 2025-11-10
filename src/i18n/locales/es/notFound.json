@@ -1,0 +1,10 @@
+{
+  "status": "> SEÑAL PERDIDA",
+  "subtitle": "La ruta <0>{{path}}</0> no fue encontrada.",
+  "description": "Puede que el archivo haya sido movido, renombrado o que la dirección contenga un error",
+  "backHome": "Volver al inicio",
+  "log": {
+    "status": "> Estado: <0>escuchando...</0>",
+    "suggestion": "> Sugerencia: comprobar la URL o regresar al hub principal."
+  }
+}

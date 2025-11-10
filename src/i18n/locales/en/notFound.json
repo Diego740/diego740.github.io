@@ -1,0 +1,10 @@
+{
+  "status": "> SIGNAL LOST",
+  "subtitle": "The path <0>{{path}}</0> was not found.",
+  "description": "The file might have been moved, renamed or the address could contain an error",
+  "backHome": "Return home",
+  "log": {
+    "status": "> Status: <0>listening...</0>",
+    "suggestion": "> Suggestion: check the URL or go back to the main hub."
+  }
+}

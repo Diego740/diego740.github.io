@@ -1,0 +1,34 @@
+.toggle {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 3rem;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-border-color);
+  background: var(--glass-bg-strong);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding: 0.35rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  z-index: 9;
+}
+
+.iconWrapper {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--accent-contrast-text);
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+}

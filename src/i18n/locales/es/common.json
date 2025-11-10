@@ -1,0 +1,12 @@
+{
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés",
+    "switchToEs": "Cambiar a español",
+    "switchToEn": "Cambiar a inglés"
+  },
+  "themeToggle": "Cambiar tema",
+  "projects": {
+    "objectives": "Objetivos clave"
+  }
+}

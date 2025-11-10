@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+.header h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  letter-spacing: 0.02em;
+}
+
+.header p {
+  color: var(--secondary-text);
+  line-height: 1.7;
+  max-width: 620px;
+}

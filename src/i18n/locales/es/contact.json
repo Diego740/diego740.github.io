@@ -1,0 +1,26 @@
+{
+  "header": {
+    "eyebrow": "Contacto",
+    "title": "Construyamos algo juntos",
+    "description": "¿Tienes un proyecto, una idea o simplemente quieres saludar? Escríbeme y hablemos."
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando..."
+  },
+  "status": {
+    "warning": "Configura EmailJS en el archivo .env para activar el envío automático.",
+    "success": "Mensaje enviado correctamente. ¡Gracias por contactar!",
+    "error": "Ocurrió un error al enviar el mensaje. Intenta nuevamente."
+  },
+  "sidebar": {
+    "title": "Información directa",
+    "email": "7.40diego@gmail.com",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "note": "Trato de responder con la mayor brevedad posible. Cuéntame tu idea de ciberseguridad, desarrollo web, inteligencia artificial o similares y podemos trabajar juntos."
+  }
+}

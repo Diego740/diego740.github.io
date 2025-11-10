@@ -1,0 +1,138 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.form {
+  padding: 2.4rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-border-color);
+  background: var(--panel-bg);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 1.4rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form input,
+.form textarea {
+  border-radius: 12px;
+  border: 1px solid var(--input-border-color);
+  background: var(--input-bg);
+  padding: 0.9rem 1rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-family: var(--font-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.form button {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background: var(--accent-color);
+  color: var(--accent-contrast-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.form button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.status {
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.success {
+  color: #4ade80;
+}
+
+.error {
+  color: #f87171;
+}
+
+.warning {
+  color: #facc15;
+}
+
+.sidebar {
+  padding: 2.4rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-border-color);
+  background: var(--panel-alt-bg);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contactInfo h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 1rem;
+}
+
+.contactInfo ul {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+  color: var(--secondary-text);
+}
+
+.contactInfo a {
+  color: var(--color-accent);
+}
+
+.note {
+  color: var(--secondary-text);
+  line-height: 1.7;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+  color: var(--secondary-text);
+}
+
+li::before {
+  content: '▹';
+  margin-right: 0.6rem;
+  color: var(--color-accent);
+}
