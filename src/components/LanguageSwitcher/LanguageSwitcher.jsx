@@ -14,13 +14,13 @@ export default function LanguageSwitcher({ compact = false }) {
   const languages = [
     {
       code: 'es',
-      flag: '🇪🇸',
+      flag: 'es',
       title: t('language.spanish'),
       aria: t('language.switchToEs')
     },
     {
       code: 'en',
-      flag: '🇬🇧',
+      flag: 'gb',
       title: t('language.english'),
       aria: t('language.switchToEn')
     }
@@ -37,7 +37,7 @@ export default function LanguageSwitcher({ compact = false }) {
           aria-label={language.aria}
           title={language.title}
         >
-          {language.flag}
+          <span className={`fi fi-${language.flag}`}></span>
         </button>
       ))}
     </div>
