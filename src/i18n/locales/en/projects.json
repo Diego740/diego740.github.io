@@ -25,7 +25,7 @@
   },
   "featuredProjects": [
     {
-      "title": "Collaborative Space and Project Managerr",
+      "title": "Collaborative Space and Project Manager",
       "tech": "React · Node.js · MongoDB",
       "description": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment.",
       "link": null
@@ -64,7 +64,6 @@
     }
   ],
   "completedProjects": [
-    
     {
       "title": "Cybersecurity CTFs",
       "tech": "Burp Suite · Wireshark · Nmap · Others",
