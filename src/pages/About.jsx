@@ -4,12 +4,13 @@ import SkillTag from '../components/SkillTag.jsx';
 import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
 
-const technicalSkills = ['C', 'C++', 'Java', 'Python', 'React', 'Node.js', 'Docker', 'Kubernetes', 'AWS', 'SQL', 'MongoDB'];
+//const technicalSkills = ['C', 'C++', 'Java', 'Python', 'React', 'Node.js', 'Docker', 'Kubernetes', 'AWS', 'SQL', 'MongoDB'];
 
 function About({ sectionId }) {
   const { t, i18n } = useTranslation('about');
   const header = t('header', { returnObjects: true }) || {};
   const softSkills = t('softSkills', { returnObjects: true }) || [];
+  const technicalSkills = t('technicalSkills', { returnObjects: true }) || [];
 
   const language = (i18n.language || 'es').toLowerCase();
   const isEnglish = language.startsWith('en');
@@ -46,10 +47,10 @@ function About({ sectionId }) {
         </article>
         <article className={styles.card}>
           <h3>{t('softTitle')}</h3>
-           <div className="tag-grid">
+          <div className="tag-grid">
             {softSkills.map((skill) => (
               <SkillTag key={skill} label={skill} />
-              
+
             ))}
           </div>
         </article>

@@ -6,6 +6,19 @@
   },
   "downloadCv": "Download CV",
   "technicalTitle": "Hard skills",
+  "technicalSkills": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "React",
+    "Node.js",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "SQL",
+    "MongoDB"
+  ],
   "softTitle": "Soft skills",
   "softSkills": [
     "Strong autonomy",
