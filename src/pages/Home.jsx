@@ -132,10 +132,10 @@ function Home() {
       </section>
 
       <div className={styles.sectionsWrapper}>
-        {landingSections.map(({ id, Component, translateY }) => (
-          <Parallax key={id} translateY={translateY} className={styles.sectionParallax}>
+        {landingSections.map(({ id, Component }) => (
+          <div key={id} className={styles.sectionContainer}>
             <Component sectionId={id} />
-          </Parallax>
+          </div>
         ))}
       </div>
     </ParallaxProvider>
