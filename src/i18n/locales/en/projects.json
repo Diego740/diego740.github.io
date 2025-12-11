@@ -48,7 +48,7 @@
         "Correlate suspicious patterns with potential threats.",
         "Allow different users to preserve their privacy."
       ],
-      "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
+      "repository": null
     },
     {
       "title": "Smart Thermostat Analysis",

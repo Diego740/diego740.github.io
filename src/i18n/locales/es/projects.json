@@ -48,7 +48,7 @@
         "Correlacionar patrones sospechosos con posibles amenazas.",
         "Permitir mantener la privacidad de los diferentes usuarios."
       ],
-      "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
+      "repository": null
     },
     {
       "title": "Análisis de Termostato Inteligente",
