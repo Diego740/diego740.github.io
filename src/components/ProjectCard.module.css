@@ -18,6 +18,7 @@
   background: radial-gradient(circle at 30% 20%, rgba(138, 43, 226, 0.18), transparent 60%);
   opacity: 0;
   transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
 .card:hover::before {

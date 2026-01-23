@@ -29,6 +29,12 @@
       "tech": "React · Node.js · MongoDB",
       "description": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment.",
       "link": null
+    },
+    {
+      "title": "Smart Thermostat Analysis",
+      "tech": "Audit · IoT · Pentesting · Reverse engineering",
+      "description": "Comprehensive security assessment mapping the attack surface across hardware, mobile apps, and cloud infrastructure. Identified several vulnerabilities and bad practices, such as a critical Remote Code Execution (RCE) vulnerability in the backend, plain-text credential exposure in the local interface, and hardcoded API keys in the mobile application.",
+      "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
     }
   ],
   "completed": {
@@ -49,18 +55,6 @@
         "Allow different users to preserve their privacy."
       ],
       "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
-    },
-    {
-      "title": "Smart Thermostat Analysis",
-      "status": "Audit",
-      "startDate": "September 2025",
-      "scope": "IoT · Pentesting · Reverse engineering",
-      "objectives": [
-        "Map the attack surface by assessing firmware, mobile APIs and wireless communications.",
-        "Identify vulnerabilities in the remote control.",
-        "Document the intrusion process."
-      ],
-      "repository": null
     }
   ],
   "completedProjects": [

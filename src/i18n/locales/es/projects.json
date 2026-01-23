@@ -29,6 +29,12 @@
       "tech": "React · Node.js · MongoDB",
       "description": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo",
       "link": null
+    },
+    {
+      "title": "Análisis de Termostato Inteligente",
+      "tech": "Audit · IoT · Pentesting · Reverse engineering",
+      "description": "Evaluación exhaustiva de seguridad mediante el mapeo de la superficie de ataque en hardware, aplicaciones móviles e infraestructura en la nube. Se identificaron diversas vulnerabilidades y malas prácticas, tales como una vulnerabilidad crítica de Ejecución Remota de Código (RCE) en el backend, exposición de credenciales en texto plano en la interfaz local y claves de API 'harcodeadas' en el código de la aplicación móvil.",
+      "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
     }
   ],
   "completed": {
@@ -49,18 +55,6 @@
         "Permitir mantener la privacidad de los diferentes usuarios."
       ],
       "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
-    },
-    {
-      "title": "Análisis de Termostato Inteligente",
-      "status": "Auditoría",
-      "startDate": "Septiembre 2025",
-      "scope": "IoT · Pentesting · Reverse engineering",
-      "objectives": [
-        "Mapear la superficie de ataque evaluando firmware, APIs móviles y comunicaciones inalámbricas.",
-        "Identificar vulnerabilidades en el control remoto.",
-        "Documentar proceso de intrusión."
-      ],
-      "repository": null
     }
   ],
   "completedProjects": [
