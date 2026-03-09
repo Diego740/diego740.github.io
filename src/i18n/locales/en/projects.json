@@ -59,6 +59,12 @@
   ],
   "completedProjects": [
     {
+      "title": "Process Dump Tool",
+      "tech": "WinAPI · C · Sockets",
+      "description": "Tool to dump processes in RAM using WinAPI, including protected processes",
+      "link": "https://github.com/Diego740/MemoryDumpTool-WinApi"
+    },
+    {
       "title": "Cybersecurity CTFs",
       "tech": "Burp Suite · Wireshark · Nmap · Others",
       "description": "Participation in CTF challenges focused on forensics, web pentesting and offensive/defensive challenges.",
