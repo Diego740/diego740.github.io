@@ -19,5 +19,16 @@
       ],
       "description": "Carrying out my internship at Capgemini, collaborating on the digitalization of business processes through BPM solutions. Experience in agile environments, automation and systems analysis."
     }
+  ],
+  "certificationsTitle": "Certifications",
+  "certifications": [
+    {
+      "title": "Certification Name",
+      "details": [
+        "Issuer: [Name]",
+        "Issue Date: [Month Year]"
+      ],
+      "description": "Description of the acquired knowledge or the scope of the certification."
+    }
   ]
 }
