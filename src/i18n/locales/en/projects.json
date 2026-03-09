@@ -61,7 +61,7 @@
     {
       "title": "Process Dump Tool",
       "tech": "WinAPI · C · Sockets",
-      "description": "Tool to dump processes in RAM using WinAPI, including protected processes",
+      "description": "Tool to dump processes using WinAPI, including protected processes",
       "link": "https://github.com/Diego740/MemoryDumpTool-WinApi"
     },
     {

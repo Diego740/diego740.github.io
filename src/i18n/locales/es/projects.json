@@ -61,7 +61,7 @@
     {
       "title": "Herramienta de Volcado de Procesos",
       "tech": "WinAPI · C · Sockets",
-      "description": "Herramienta para volcar procesos en memoria RAM mediante WinAPI, incluidos procesos protegidos",
+      "description": "Herramienta para volcar procesos mediante WinAPI, incluidos procesos protegidos",
       "link": "https://github.com/Diego740/MemoryDumpTool-WinApi"
     },
     {
