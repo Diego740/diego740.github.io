@@ -1,24 +1,36 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
+/* Open layout — no card background or shadow */
 .card {
-  padding: 2.4rem;
-  border-radius: 20px;
-  border: 1px solid var(--accent-border-color);
-  background: linear-gradient(140deg, var(--card-gradient-start), var(--card-gradient-end));
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent-border-color);
+  position: relative;
 }
 
 .card h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.card h3::before {
+  content: '//';
+  color: var(--accent-warm, var(--accent-color));
+  font-weight: 700;
+  font-size: 0.9em;
 }
 
 .card ul {
@@ -26,31 +38,57 @@
   display: grid;
   gap: 0.8rem;
   color: var(--secondary-text);
+  font-size: 0.95rem;
+}
+
+.card li {
+  display: flex;
+  align-items: center;
 }
 
 .card li::before {
-  content: '▹';
+  content: '>';
   margin-right: 0.6rem;
-  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-color);
 }
 
+/* Minimalist placeholder, matches empty states */
 .placeholder {
   margin-top: 1rem;
-  padding: 1.4rem;
-  border-radius: 16px;
-  background: var(--accent-surface);
-  border: 1px solid var(--accent-border-color);
-  display: grid;
-  gap: 0.35rem;
+  padding-left: 1.25rem;
+  border-left: 2px dashed var(--accent-border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .placeholder span {
   font-family: var(--font-mono);
-  letter-spacing: 0.28em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.placeholder span::before {
+  content: '[';
+  color: var(--accent-warm, var(--accent-color));
+  font-weight: 700;
+}
+
+.placeholder span::after {
+  content: ']';
+  color: var(--accent-warm, var(--accent-color));
+  font-weight: 700;
 }
 
 .placeholder p {
   color: var(--secondary-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
