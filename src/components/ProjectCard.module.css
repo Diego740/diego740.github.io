@@ -9,21 +9,32 @@
   flex-direction: column;
   gap: 1.5rem;
   overflow: hidden;
+
+  /* glow defaults */
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-opacity: 0;
 }
 
 .card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(138, 43, 226, 0.18), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    circle 180px at var(--glow-x) var(--glow-y),
+    rgba(138, 43, 226, 0.28),
+    transparent 70%
+  );
+  opacity: var(--glow-opacity);
+  transition: opacity 0.4s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
 .card:hover::before {
-  opacity: 1;
+  opacity: var(--glow-opacity);
 }
+
 
 .header {
   display: flex;

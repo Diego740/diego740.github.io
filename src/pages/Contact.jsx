@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import SectionHeader from '../components/SectionHeader.jsx';
 import styles from './Contact.module.css';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../config/publicKeys";
+import { useCardGlow } from '../hooks/useCardGlow';
 
 /*
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -21,6 +22,8 @@ function Contact({ sectionId }) {
   const formCopy = t('form', { returnObjects: true }) || {};
   const statusCopy = t('status', { returnObjects: true }) || {};
   const sidebar = t('sidebar', { returnObjects: true }) || {};
+  const formGlow = useCardGlow();
+  const sidebarGlow = useCardGlow();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -63,12 +66,15 @@ function Contact({ sectionId }) {
       />
       <div className={styles.grid}>
         <motion.form
+          ref={formGlow.ref}
           className={styles.form}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
+          onMouseMove={formGlow.handleMouseMove}
+          onMouseLeave={formGlow.handleMouseLeave}
         >
           <label>
             {formCopy.name}
@@ -88,11 +94,14 @@ function Contact({ sectionId }) {
           {status.message && <p className={`${styles.status} ${status.type ? styles[status.type] : ''}`}>{status.message}</p>}
         </motion.form>
         <motion.aside
+          ref={sidebarGlow.ref}
           className={styles.sidebar}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.1, duration: 0.6, ease: 'easeOut' }}
+          onMouseMove={sidebarGlow.handleMouseMove}
+          onMouseLeave={sidebarGlow.handleMouseLeave}
         >
           <div className={styles.contactInfo}>
             <h3>{sidebar.title}</h3>

@@ -65,7 +65,29 @@
   background: color-mix(in srgb, var(--color-bg) 75%, transparent);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(14px) saturate(120%);
+  overflow: hidden;
+
+  /* glow defaults */
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-opacity: 0;
 }
+
+.content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 260px at var(--glow-x) var(--glow-y),
+    rgba(138, 43, 226, 0.22),
+    transparent 70%
+  );
+  opacity: var(--glow-opacity);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
 
 .heroEyebrowGroup {
   display: flex;

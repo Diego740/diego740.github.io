@@ -69,7 +69,30 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  /* glow defaults */
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-opacity: 0;
 }
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 200px at var(--glow-x) var(--glow-y),
+    rgba(138, 43, 226, 0.25),
+    transparent 70%
+  );
+  opacity: var(--glow-opacity);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
 
 @media (max-width: 720px) {
   .actions {

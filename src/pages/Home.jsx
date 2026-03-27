@@ -7,6 +7,7 @@ import About from './About.jsx';
 import HomeProjects from '../components/HomeProjects.jsx';
 import Contact from './Contact.jsx';
 import styles from './Home.module.css';
+import { useCardGlow } from '../hooks/useCardGlow';
 
 const landingSections = [
   { id: 'about', Component: About, translateY: [-12, 12] },
@@ -18,6 +19,7 @@ function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const { t } = useTranslation('home');
   const heroTitle = t('hero.title');
+  const heroGlow = useCardGlow();
   const heroEyebrows = t('hero.eyebrows', { returnObjects: true }) || [];
   const heroSubtitle = t('hero.subtitle');
   const heroCta = t('hero.cta', { returnObjects: true }) || {};
@@ -71,10 +73,13 @@ function Home() {
         </div>
 
         <motion.div
+          ref={heroGlow.ref}
           className={styles.content}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
+          onMouseMove={heroGlow.handleMouseMove}
+          onMouseLeave={heroGlow.handleMouseLeave}
         >
           <div className={styles.heroEyebrowGroup}>
             {heroEyebrows.map((eyebrow) => (
