@@ -6,6 +6,7 @@ import About from './About.jsx';
 import HomeProjects from '../components/HomeProjects.jsx';
 import Contact from './Contact.jsx';
 import styles from './Home.module.css';
+import { SOCIAL_LINKS } from '../config/socialLinks.js';
 
 const landingSections = [
   { id: 'about', Component: About, translateY: [-12, 12] },
@@ -103,7 +104,7 @@ function Home() {
           <p className={styles.subtitle}>{heroSubtitle}</p>
           <div className={styles.actions}>
             <a
-              href="https://www.linkedin.com/in/diego-aranda-gómez-a06052187"
+              href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noreferrer"
               className={styles.primaryButton}
@@ -112,7 +113,7 @@ function Home() {
               <FaLinkedin /> {heroCta.linkedin}
             </a>
             <a
-              href="https://github.com/Diego740"
+              href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noreferrer"
               className={styles.secondaryButton}

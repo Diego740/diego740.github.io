@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from '../components/SectionHeader.jsx';
 import styles from './Contact.module.css';
+import { SOCIAL_LINKS } from '../config/socialLinks.js';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../config/publicKeys";
 
 /*
@@ -100,12 +101,12 @@ function Contact({ sectionId }) {
               <span></span>
               <li>{sidebar.email}</li>
               <li>
-                <a href="https://www.linkedin.com/in/diego-aranda-gómez-a06052187" target="_blank" rel="noreferrer">
+                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer">
                   {sidebar.linkedin}
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Diego740" target="_blank" rel="noreferrer">
+                <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer">
                   {sidebar.github}
                 </a>
               </li>

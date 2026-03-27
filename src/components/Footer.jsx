@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
+import { SOCIAL_LINKS } from '../config/socialLinks.js';
 
 function Footer() {
   const { t } = useTranslation('footer');
@@ -11,7 +12,7 @@ function Footer() {
         <p>{t('copyright')}</p>
         <div className={styles.socials}>
           <a
-            href="https://github.com/Diego740"
+            href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noreferrer"
             aria-label={t('social.githubAria')}
@@ -19,7 +20,7 @@ function Footer() {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/diego-aranda-gómez-a06052187"
+            href={SOCIAL_LINKS.linkedin}
             target="_blank"
             rel="noreferrer"
             aria-label={t('social.linkedinAria')}
