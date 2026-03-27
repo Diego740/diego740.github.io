@@ -5,6 +5,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import ThemeToggle from './components/ThemeToggle.jsx';
 import AnimatedBackground from './components/AnimatedBackground.jsx';
+import CustomCursor from './components/CustomCursor.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
@@ -68,6 +69,7 @@ function App() {
   return (
     <ThemeContext.Provider value={contextValue}>
       <div style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden', background: 'var(--color-bg)' }}>
+        <CustomCursor />
         <AnimatedBackground />
         <Navbar />
         <ThemeToggle />
