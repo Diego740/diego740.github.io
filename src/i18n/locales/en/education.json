@@ -23,12 +23,12 @@
   "certificationsTitle": "Certifications",
   "certifications": [
     {
-      "title": "Certification Name",
+      "title": "Appian Certified Associate Developer",
       "details": [
-        "Issuer: [Name]",
-        "Issue Date: [Month Year]"
+        "Issuer: Appian",
+        "Issue Date: March 2026"
       ],
-      "description": "Description of the acquired knowledge or the scope of the certification."
+      "description": "Obtained during my internship at Capgemini. Official Appian certification that accredits knowledge in low-code application development, process automation and project management with the Appian platform, as well as good practices in software development, agile methodologies and software architecture."
     }
   ]
 }

@@ -23,12 +23,12 @@
   "certificationsTitle": "Certificaciones",
   "certifications": [
     {
-      "title": "Nombre de la Certificación",
+      "title": "Appian Certified Associate Developer",
       "details": [
-        "Emisor: [Nombre]",
-        "Fecha de expedición: [Mes Año]"
+        "Emisor: Appian",
+        "Fecha de expedición: Marzo2026"
       ],
-      "description": "Descripción de los conocimientos adquiridos o alcance de la certificación."
+      "description": "Certificación obtenida durante mis prácticas en Capgemini. Acredita conocimientos en desarrollo de aplicaciones de bajo código (low-code), automatización de procesos y gestión de proyectos con la plataforma Appian, así como buenas prácticas en el desarrollo de software, metodologías ágiles y arquitectura de software."
     }
   ]
 }

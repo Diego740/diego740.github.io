@@ -43,7 +43,6 @@ export default function Education({ sectionId }) {
           </motion.div>
         ))}
       </div>
-      {/*
       {certItems && certItems.length > 0 && (
         <>
           <motion.h2
@@ -82,7 +81,6 @@ export default function Education({ sectionId }) {
           </div>
         </>
       )}
-      */}
     </section>
   );
 }
