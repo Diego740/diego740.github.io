@@ -6,6 +6,7 @@
   --text-color: #ffffff;
   --secondary-text: #cfcfcf;
   --accent-color: #8a2be2;
+  --accent-warm: #a855f7;
   --accent-contrast-text: #ffffff;
   --border-color: rgba(255, 255, 255, 0.1);
   --accent-border-color: rgba(138, 43, 226, 0.35);
@@ -96,6 +97,10 @@ body {
   color: var(--text-color);
   scroll-behavior: smooth;
   cursor: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-mono);
 }
 
 a {

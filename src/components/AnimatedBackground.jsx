@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import styles from './AnimatedBackground.module.css';
 
-const bubbles = Array.from({ length: 12 }).map((_, index) => ({
+const bubbles = Array.from({ length: 10 }).map((_, index) => ({
   id: index,
-  delay: index * 0.4,
-  size: Math.floor(Math.random() * 160) + 120,
+  delay: index * 0.9,
+  size: Math.floor(Math.random() * 220) + 80,
   left: Math.random() * 100,
-  duration: Math.random() * 14 + 12
+  driftX: (Math.random() - 0.5) * 120,
+  duration: Math.random() * 20 + 14
 }));
 
 function AnimatedBackground() {
@@ -30,7 +31,9 @@ function AnimatedBackground() {
           }}
           animate={{
             y: ['110vh', '-10vh'],
-            opacity: [0, 0.4, 0]
+            x: [0, bubble.driftX, 0],
+            opacity: [0, 0.35, 0],
+            scale: [0.8, 1.1, 0.9]
           }}
           transition={{
             duration: bubble.duration,

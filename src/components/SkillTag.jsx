@@ -5,8 +5,8 @@ function SkillTag({ label }) {
   return (
     <motion.span
       className={styles.tag}
-      whileHover={{ y: -4, boxShadow: '0 12px 30px rgba(138, 43, 226, 0.3)' }}
-      transition={{ type: 'spring', stiffness: 260, damping: 16 }}
+      whileHover={{ x: 2 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 20 }}
     >
       {label}
     </motion.span>

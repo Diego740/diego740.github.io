@@ -3,7 +3,6 @@ import SectionHeader from '../components/SectionHeader.jsx';
 import SkillTag from '../components/SkillTag.jsx';
 import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
-import { useCardGlow } from '../hooks/useCardGlow';
 
 
 //const technicalSkills = ['C', 'C++', 'Java', 'Python', 'React', 'Node.js', 'Docker', 'Kubernetes', 'AWS', 'SQL', 'MongoDB'];
@@ -13,8 +12,6 @@ function About({ sectionId }) {
   const header = t('header', { returnObjects: true }) || {};
   const softSkills = t('softSkills', { returnObjects: true }) || [];
   const technicalSkills = t('technicalSkills', { returnObjects: true }) || [];
-  const techGlow = useCardGlow();
-  const softGlow = useCardGlow();
 
   const language = (i18n.language || 'es').toLowerCase();
   const isEnglish = language.startsWith('en');
@@ -40,34 +37,23 @@ function About({ sectionId }) {
           <HiOutlineArrowDown aria-hidden="true" className={styles.downloadIcon} />
         </a>
       </div>
-      <div className={styles.grid}>
-        <article
-          className={styles.card}
-          ref={techGlow.ref}
-          onMouseMove={techGlow.handleMouseMove}
-          onMouseLeave={techGlow.handleMouseLeave}
-        >
-          <h3>{t('technicalTitle')}</h3>
+      <div className={styles.skillsGrid}>
+        <div className={styles.skillGroup}>
+          <h3 className={styles.skillHeading}>{t('technicalTitle')}</h3>
           <div className="tag-grid">
             {technicalSkills.map((skill) => (
               <SkillTag key={skill} label={skill} />
             ))}
           </div>
-        </article>
-        <article
-          className={styles.card}
-          ref={softGlow.ref}
-          onMouseMove={softGlow.handleMouseMove}
-          onMouseLeave={softGlow.handleMouseLeave}
-        >
-          <h3>{t('softTitle')}</h3>
+        </div>
+        <div className={styles.skillGroup}>
+          <h3 className={styles.skillHeading}>{t('softTitle')}</h3>
           <div className="tag-grid">
             {softSkills.map((skill) => (
               <SkillTag key={skill} label={skill} />
-
             ))}
           </div>
-        </article>
+        </div>
       </div>
     </section>
   );

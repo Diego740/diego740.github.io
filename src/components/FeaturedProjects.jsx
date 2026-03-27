@@ -51,7 +51,7 @@ export default function FeaturedProjects() {
           const tech = Array.isArray(project.tech) ? project.tech.join(', ') : project.tech;
 
           return (
-             <ProjectCard key={project.title}{...project}/>
+             <ProjectCard key={project.title} {...project} index={index}/>
                       
           );
         })}

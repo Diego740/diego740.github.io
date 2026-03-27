@@ -9,16 +9,32 @@
 .gradient {
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.18), transparent 55%),
-    radial-gradient(circle at 80% 30%, rgba(108, 0, 180, 0.2), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(138, 43, 226, 0.15), transparent 50%);
+  background: radial-gradient(ellipse at 20% 20%, rgba(138, 43, 226, 0.18), transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(108, 0, 180, 0.2), transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(138, 43, 226, 0.15), transparent 50%);
   filter: blur(120px);
+  border-radius: 60% 40% 55% 45% / 40% 60% 45% 55%;
+  animation: morphGradient 22s ease-in-out infinite alternate;
+}
+
+@keyframes morphGradient {
+  0%   { border-radius: 60% 40% 55% 45% / 40% 60% 45% 55%; }
+  33%  { border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%; }
+  66%  { border-radius: 55% 45% 40% 60% / 60% 40% 55% 45%; }
+  100% { border-radius: 45% 55% 60% 40% / 45% 55% 40% 60%; }
 }
 
 .particle {
   position: absolute;
   bottom: -200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(138, 43, 226, 0.35), rgba(138, 43, 226, 0));
-  filter: blur(1px);
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3), rgba(138, 43, 226, 0));
+  filter: blur(2px);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morphParticle 8s ease-in-out infinite alternate;
+}
+
+@keyframes morphParticle {
+  0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50%  { border-radius: 30% 70% 60% 40% / 40% 60% 30% 70%; }
+  100% { border-radius: 50% 50% 40% 60% / 35% 65% 50% 50%; }
 }

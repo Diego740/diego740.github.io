@@ -25,13 +25,13 @@ function Projects({ sectionId }) {
 
       <div className={styles.completedSection}>
         <div className={styles.completedHeading}>
-          <span>{completed.eyebrow}</span>
+          <span className={styles.eyebrow}>{completed.eyebrow}</span>
           <h3>{completed.title}</h3>
           <p>{completed.description}</p>
         </div>
-        <div className={`${styles.grid} grid-responsive`}>
-          {completedProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+        <div className={styles.list}>
+          {completedProjects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index} />
           ))}
         </div>
       </div>

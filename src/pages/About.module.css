@@ -55,44 +55,40 @@
   transform: translateY(2px);
 }
 
-.grid {
+/* ── Open skills layout (no cards) ── */
+.skillsGrid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.card {
-  padding: 2.2rem;
-  border-radius: 18px;
-  border: 1px solid var(--accent-border-color);
-  background: var(--panel-bg);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+@media (min-width: 900px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+}
+
+.skillGroup {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  position: relative;
-  overflow: hidden;
-
-  /* glow defaults */
-  --glow-x: 50%;
-  --glow-y: 50%;
-  --glow-opacity: 0;
+  gap: 1.25rem;
 }
 
-.card::before {
+.skillGroup::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle 200px at var(--glow-x) var(--glow-y),
-    rgba(138, 43, 226, 0.25),
-    transparent 70%
-  );
-  opacity: var(--glow-opacity);
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-  z-index: 0;
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--accent-color);
 }
 
+.skillHeading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
 
 @media (max-width: 720px) {
   .actions {
@@ -102,18 +98,6 @@
   .downloadButton {
     width: min(100%, 320px);
     justify-content: center;
-  }
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

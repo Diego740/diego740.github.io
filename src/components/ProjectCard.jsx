@@ -1,42 +1,37 @@
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import styles from './ProjectCard.module.css';
-import { useCardGlow } from '../hooks/useCardGlow';
 
-const cardVariants = {
-  initial: { y: 20, opacity: 0 },
-  animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } }
+const entryVariants = {
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
-function ProjectCard({ title, tech, description, link }) {
+function ProjectCard({ title, tech, description, link, index = 0 }) {
   const { t } = useTranslation('projects');
-  const { ref, handleMouseMove, handleMouseLeave } = useCardGlow();
+  const displayIndex = String(index + 1).padStart(2, '0');
 
   return (
     <motion.article
-      ref={ref}
-      className={styles.card}
-      variants={cardVariants}
+      className={styles.entry}
+      variants={entryVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
-      whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(138, 43, 226, 0.25)' }}
-      transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      viewport={{ once: true, amount: 0.2 }}
     >
-      <div className={styles.header}>
-        <h3>{title}</h3>
-        <span className={styles.tech}>{tech}</span>
+      <span className={styles.index}>{displayIndex}</span>
+      <div className={styles.body}>
+        <div className={styles.header}>
+          <h3>{title}</h3>
+          {tech && <span className={styles.tech}>{Array.isArray(tech) ? tech.join(' · ') : tech}</span>}
+        </div>
+        <p className={styles.description}>{description}</p>
+        {link && (
+          <a href={link} className={styles.link} target="_blank" rel="noreferrer">
+            {t('completed.viewProject')} →
+          </a>
+        )}
       </div>
-      <p className={styles.description}>{description}</p>
-      {link && (
-        <a href={link} className={styles.link} target="_blank" rel="noreferrer">
-          {t('completed.viewProject')}
-          <FaArrowRight />
-        </a>
-      )}
     </motion.article>
   );
 }

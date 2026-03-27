@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { useTranslation } from 'react-i18next';
 import About from './About.jsx';
 import HomeProjects from '../components/HomeProjects.jsx';
 import Contact from './Contact.jsx';
 import styles from './Home.module.css';
-import { useCardGlow } from '../hooks/useCardGlow';
 
 const landingSections = [
   { id: 'about', Component: About, translateY: [-12, 12] },
@@ -19,7 +17,6 @@ function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const { t } = useTranslation('home');
   const heroTitle = t('hero.title');
-  const heroGlow = useCardGlow();
   const heroEyebrows = t('hero.eyebrows', { returnObjects: true }) || [];
   const heroSubtitle = t('hero.subtitle');
   const heroCta = t('hero.cta', { returnObjects: true }) || {};
@@ -64,23 +61,28 @@ function Home() {
   }, []);
 
   return (
-    <ParallaxProvider>
+    <>
       <section className={styles.hero}>
         <div className={styles.heroBackground} aria-hidden="true">
-          <Parallax translateY={[-40, 40]} className={`${styles.glow} ${styles.glowOne}`} />
-          <Parallax translateY={[20, -20]} className={`${styles.glow} ${styles.glowTwo}`} />
-          <Parallax translateY={[-30, 30]} className={`${styles.gridLayer}`} opacity={[0.35, 0.6]} />
+          <motion.div
+            className={`${styles.glow} ${styles.glowOne}`}
+            animate={{ y: [-20, 20, -20], x: [-10, 10, -10] }}
+            transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className={`${styles.glow} ${styles.glowTwo}`}
+            animate={{ y: [20, -20, 20], x: [10, -10, 10] }}
+            transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+          />
         </div>
 
         <motion.div
-          ref={heroGlow.ref}
           className={styles.content}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
-          onMouseMove={heroGlow.handleMouseMove}
-          onMouseLeave={heroGlow.handleMouseLeave}
         >
+          <p className={styles.promptLine}>init()</p>
           <div className={styles.heroEyebrowGroup}>
             {heroEyebrows.map((eyebrow) => (
               <span key={eyebrow} className={styles.eyebrow}>
@@ -97,6 +99,7 @@ function Home() {
             <span className={styles.typewriterText}>{displayedText}</span>
             <span className={styles.blinkingCursor}>|</span>
           </motion.h1>
+          <div className={styles.titleDivider} aria-hidden="true" />
           <p className={styles.subtitle}>{heroSubtitle}</p>
           <div className={styles.actions}>
             <a
@@ -138,12 +141,14 @@ function Home() {
 
       <div className={styles.sectionsWrapper}>
         {landingSections.map(({ id, Component }) => (
-          <div key={id} className={styles.sectionContainer}>
-            <Component sectionId={id} />
+          <div key={id} className={styles.sectionParallax}>
+            <div className="section-container">
+              <Component sectionId={id} />
+            </div>
           </div>
         ))}
       </div>
-    </ParallaxProvider>
+    </>
   );
 }
 

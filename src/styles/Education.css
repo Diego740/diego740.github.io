@@ -1,85 +1,126 @@
+/* ── Education page — matches the new open/terminal design system ── */
+
 .education {
-  position: relative;
   width: min(1100px, 90vw);
   margin: 0 auto;
   padding: 6rem 0 4rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 
+/* Section title — matches SectionHeader h2 style */
 .section-title {
   font-family: var(--font-mono);
-  font-size: clamp(2.25rem, 5vw, 2.75rem);
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
   color: var(--text-color);
-  text-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
+  position: relative;
+  padding-left: 1.1rem;
+  text-align: left;
 }
 
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Timeline container */
 .education-content {
-  display: grid;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border-color);
+  padding-left: 1.75rem;
+  position: relative;
 }
 
+/* Each item — open, no card */
 .education-item {
   position: relative;
-  padding: 2.5rem;
-  border-radius: 18px;
-  background: linear-gradient(145deg, var(--card-gradient-start), var(--card-gradient-end));
-  border: 1px solid var(--accent-border-color);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45), 0 0 35px rgba(138, 43, 226, 0.2);
-  overflow: hidden;
-  backdrop-filter: blur(12px);
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
+.education-item:last-child {
+  border-bottom: none;
+}
+
+/* Dot indicator on the timeline */
 .education-item::before {
-  content: "";
+  content: '';
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.25), transparent 55%);
-  opacity: 0.7;
-  pointer-events: none;
+  left: calc(-1.75rem - 5px);
+  top: 2.1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
 }
 
 .education-item h3 {
   font-family: var(--font-mono);
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--text-color);
+  margin: 0;
 }
 
 .education-item p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   color: var(--secondary-text);
+  margin: 0;
 }
 
 .education-item strong {
-  color: var(--accent-color);
+  color: var(--accent-warm, var(--accent-color));
   font-weight: 500;
 }
 
+/* Period / detail line — mono accent */
 .education-detail {
-  margin-top: 1.25rem;
   font-family: var(--font-mono);
-  color: var(--text-color);
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
 }
 
-@media (min-width: 768px) {
+.education-detail::before {
+  content: '//';
+  color: var(--accent-warm, var(--accent-color));
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
   .education-content {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 1.25rem;
+  }
+
+  .education-item::before {
+    left: calc(-1.25rem - 5px);
   }
 }
 
 @media (max-width: 600px) {
   .education {
     padding: 4.5rem 0 3rem;
-  }
-
-  .education-item {
-    padding: 2rem;
   }
 }
