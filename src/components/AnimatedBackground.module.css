@@ -13,6 +13,9 @@
     radial-gradient(ellipse at 80% 30%, rgba(108, 0, 180, 0.2), transparent 60%),
     radial-gradient(ellipse at 50% 80%, rgba(138, 43, 226, 0.15), transparent 50%);
   filter: blur(120px);
+  will-change: transform, filter;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   border-radius: 60% 40% 55% 45% / 40% 60% 45% 55%;
   animation: morphGradient 22s ease-in-out infinite alternate;
 }
@@ -29,6 +32,9 @@
   bottom: -200px;
   background: radial-gradient(circle, rgba(138, 43, 226, 0.3), rgba(138, 43, 226, 0));
   filter: blur(2px);
+  will-change: transform, filter, opacity;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: morphParticle 8s ease-in-out infinite alternate;
 }

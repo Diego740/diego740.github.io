@@ -3,6 +3,9 @@
   padding: 2.5rem 0;
   background: var(--footer-bg);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
 }
 
 .content {

@@ -44,6 +44,31 @@ function getInitialTheme() {
 function App() {
   const [theme, setTheme] = useState(getInitialTheme);
   const location = useLocation();
+  const [isSiteLoaded, setIsSiteLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsSiteLoaded(true);
+      const loader = document.getElementById('global-loader');
+      if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => {
+          if (loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 600);
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      setTimeout(handleLoad, 50);
+    } else {
+      window.addEventListener('load', handleLoad);
+      const fallbackTimer = setTimeout(handleLoad, 3000);
+      return () => {
+        window.removeEventListener('load', handleLoad);
+        clearTimeout(fallbackTimer);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -75,15 +100,17 @@ function App() {
         <ThemeToggle />
         <main>
           <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<AnimatedPage><Home /></AnimatedPage>} />
-              <Route path="/about" element={<AnimatedPage><About /></AnimatedPage>} />
-              <Route path="/projects" element={<AnimatedPage><Projects /></AnimatedPage>} />
-              <Route path="/cybersecurity" element={<AnimatedPage><Cybersecurity /></AnimatedPage>} />
-              <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
-              <Route path="/education" element={<AnimatedPage><Education /></AnimatedPage>} />
-              <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
-            </Routes>
+            {isSiteLoaded && (
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<AnimatedPage><Home /></AnimatedPage>} />
+                <Route path="/about" element={<AnimatedPage><About /></AnimatedPage>} />
+                <Route path="/projects" element={<AnimatedPage><Projects /></AnimatedPage>} />
+                <Route path="/cybersecurity" element={<AnimatedPage><Cybersecurity /></AnimatedPage>} />
+                <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
+                <Route path="/education" element={<AnimatedPage><Education /></AnimatedPage>} />
+                <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
+              </Routes>
+            )}
           </AnimatePresence>
         </main>
         <Footer />

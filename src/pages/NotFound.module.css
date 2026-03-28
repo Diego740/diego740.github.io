@@ -20,6 +20,9 @@
   background: radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.22), transparent 60%),
     radial-gradient(circle at 80% 30%, rgba(138, 43, 226, 0.18), transparent 70%);
   filter: blur(40px);
+  will-change: transform, filter;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 0.7;
   mix-blend-mode: screen;
 }
@@ -48,6 +51,9 @@
   border: 1px solid var(--accent-border-color);
   box-shadow: 0 24px 40px rgba(10, 0, 25, 0.25), var(--shadow-glow), inset 0 0 0 1px var(--color-accent-soft);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
   text-align: center;
   overflow: hidden;
 }

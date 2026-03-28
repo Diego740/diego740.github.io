@@ -21,27 +21,40 @@ function AnimatedBackground() {
         transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
       />
       {bubbles.map((bubble) => (
-        <motion.span
+        <motion.div
           key={bubble.id}
-          className={styles.particle}
           style={{
+            position: 'absolute',
+            bottom: '-20vh',
             width: bubble.size,
             height: bubble.size,
-            left: `${bubble.left}%`
+            left: `${bubble.left}%`,
+            zIndex: -1
           }}
           animate={{
-            y: ['110vh', '-10vh'],
+            y: ['130vh', '-30vh'],
             x: [0, bubble.driftX, 0],
-            opacity: [0, 0.35, 0],
-            scale: [0.8, 1.1, 0.9]
+            opacity: [0, 0.45, 0]
           }}
           transition={{
-            duration: bubble.duration,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: bubble.delay
+            y: { duration: bubble.duration, repeat: Infinity, ease: 'linear', delay: bubble.delay },
+            x: { duration: bubble.duration * 0.7, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut', delay: bubble.delay },
+            opacity: { duration: bubble.duration, repeat: Infinity, ease: 'easeInOut', delay: bubble.delay }
           }}
-        />
+        >
+          <motion.div
+            className={styles.particle}
+            style={{ position: 'relative', bottom: 0, width: '100%', height: '100%' }}
+            animate={{ scale: [0.3, 1.7] }}
+            transition={{
+              duration: 2 + (bubble.id % 2),
+              repeat: Infinity,
+              repeatType: 'mirror',
+              ease: 'easeInOut',
+              delay: bubble.delay % 2
+            }}
+          />
+        </motion.div>
       ))}
     </div>
   );

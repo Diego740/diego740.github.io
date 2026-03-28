@@ -3,6 +3,9 @@
   top: 0;
   z-index: 10;
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
   background: linear-gradient(180deg, var(--glass-bg-strong) 0%, var(--glass-bg-soft) 100%);
   border-bottom: 1px solid var(--border-color);
 }
