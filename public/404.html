@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio | Diego Aranda Gómez</title>
+    <script>
+      // GitHub Pages SPA redirect trick
+      // Encodes the URL path as a query param and redirects to index.html
+      // so React Router can handle client-side routing.
+      (function () {
+        var l = window.location;
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1).join('/') +
+            '/?p=' +
+            l.pathname.slice(1).replace(/&/g, '~and~') +
+            (l.search
+              ? '&q=' + l.search.slice(1).replace(/&/g, '~and~')
+              : '') +
+            l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
