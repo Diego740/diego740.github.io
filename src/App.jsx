@@ -47,22 +47,29 @@ function App() {
   const [isSiteLoaded, setIsSiteLoaded] = useState(false);
 
   useEffect(() => {
+    const startTime = Date.now();
+    
     const handleLoad = () => {
-      setIsSiteLoaded(true);
-      const loader = document.getElementById('global-loader');
-      if (loader) {
-        loader.classList.add('hidden');
-        setTimeout(() => {
-          if (loader.parentNode) loader.parentNode.removeChild(loader);
-        }, 600);
-      }
+      const elapsed = Date.now() - startTime;
+      const delay = Math.max(0, 2400 - elapsed); // Ensure terminal types at least 2.4s
+
+      setTimeout(() => {
+        setIsSiteLoaded(true);
+        const loader = document.getElementById('global-loader');
+        if (loader) {
+          loader.classList.add('hidden');
+          setTimeout(() => {
+            if (loader.parentNode) loader.parentNode.removeChild(loader);
+          }, 600);
+        }
+      }, delay);
     };
 
     if (document.readyState === 'complete') {
       setTimeout(handleLoad, 50);
     } else {
       window.addEventListener('load', handleLoad);
-      const fallbackTimer = setTimeout(handleLoad, 3000);
+      const fallbackTimer = setTimeout(handleLoad, 4000);
       return () => {
         window.removeEventListener('load', handleLoad);
         clearTimeout(fallbackTimer);

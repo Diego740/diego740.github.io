@@ -1,65 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio técnico de Diego Aranda Gómez — Ingeniería del Software, Ciberseguridad e Inteligencia Artificial." />
-    <title>Portfolio | Diego Aranda Gómez</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script>
-      (function() {
-        var storedTheme = window.localStorage.getItem('theme');
-        if (storedTheme === 'light' || storedTheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', storedTheme);
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-    <style>
-      #global-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #0a0a0a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99999;
-        transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio técnico de Diego Aranda Gómez — Ingeniería del Software, Ciberseguridad e Inteligencia Artificial." />
+  <title>Portfolio | Diego Aranda Gómez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    (function () {
+      var storedTheme = window.localStorage.getItem('theme');
+      if (storedTheme === 'light' || storedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', storedTheme);
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-      html[data-theme='light'] #global-loader {
-        background-color: #fafafa;
+    })();
+  </script>
+  <style>
+    #global-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+    }
+
+    html[data-theme='light'] #global-loader {
+      background-color: #fafafa;
+    }
+
+    #global-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-terminal {
+      font-family: 'Roboto Mono', Consolas, monospace;
+      color: #8a2be2;
+      font-size: clamp(0.85rem, 4vw, 1.15rem);
+      font-weight: 500;
+      text-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+      max-width: 90%;
+      text-align: left;
+    }
+
+    .terminal-line {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .blinking-cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.1em;
+      background-color: #8a2be2;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+      box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
       }
-      .loader-spinner {
-        width: 48px;
-        height: 48px;
-        border: 3px solid rgba(138, 43, 226, 0.15);
-        border-radius: 50%;
-        border-top-color: #8a2be2;
-        animation: loader-spin 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-        box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
-      }
-      @keyframes loader-spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      #global-loader.hidden {
+
+      50% {
         opacity: 0;
-        visibility: hidden;
       }
-    </style>
-  </head>
-  <body>
-    <div id="global-loader">
-      <div class="loader-spinner"></div>
+    }
+  </style>
+</head>
+
+<body>
+  <div id="global-loader">
+    <div class="loader-terminal">
+      <div id="terminal-content"></div>
+      <div class="blinking-cursor"></div>
     </div>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  </div>
+  <script>
+    (function () {
+      const lines = [
+        "> INITIALIZING SYSTEM...",
+        "> DOWNLOADING DATA...",
+        "> PREPARING REPO...",
+        "> STARTING..."
+      ];
+      const container = document.getElementById('terminal-content');
+      let currentLine = 0;
+      let currentChar = 0;
+
+      function type() {
+        if (currentLine >= lines.length) return;
+
+        let lineDiv = document.getElementById('line-' + currentLine);
+        if (!lineDiv) {
+          lineDiv = document.createElement('div');
+          lineDiv.id = 'line-' + currentLine;
+          lineDiv.className = 'terminal-line';
+          container.appendChild(lineDiv);
+        }
+
+        if (currentChar < lines[currentLine].length) {
+          lineDiv.textContent += lines[currentLine].charAt(currentChar);
+          currentChar++;
+          setTimeout(type, 15 + Math.random() * 25);
+        } else {
+          currentLine++;
+          currentChar = 0;
+          setTimeout(type, 150 + Math.random() * 100);
+        }
+      }
+
+      setTimeout(type, 150);
+    })();
+  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
