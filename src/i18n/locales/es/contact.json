@@ -9,12 +9,14 @@
     "email": "Email",
     "message": "Mensaje",
     "submit": "Enviar mensaje",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "cooldownBtn": "Espera un momento..."
   },
   "status": {
     "warning": "Configura EmailJS en el archivo .env para activar el envío automático.",
     "success": "Mensaje enviado correctamente. ¡Gracias por contactar!",
-    "error": "Ocurrió un error al enviar el mensaje. Intenta nuevamente."
+    "error": "Ocurrió un error al enviar el mensaje. Intenta nuevamente.",
+    "cooldown": "Espera un poco antes de volver a mandar un mensaje."
   },
   "sidebar": {
     "title": "Información directa",

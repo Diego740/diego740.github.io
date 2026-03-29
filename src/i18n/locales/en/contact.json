@@ -9,12 +9,14 @@
     "email": "Email",
     "message": "Message",
     "submit": "Send message",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "cooldownBtn": "Wait a moment..."
   },
   "status": {
     "warning": "Set up EmailJS in the .env file to enable automatic sending.",
     "success": "Message sent successfully. Thanks for reaching out!",
-    "error": "An error occurred while sending the message. Please try again."
+    "error": "An error occurred while sending the message. Please try again.",
+    "cooldown": "Please wait a bit before sending another message."
   },
   "sidebar": {
     "title": "Direct information",
