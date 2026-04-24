@@ -15,6 +15,7 @@
     "objectives": "Key objectives",
     "viewRepo": "View repository",
     "privateRepo": "Private repository / in preparation",
+    "viewGallery": "View gallery",
     "empty": "No projects in progress for now…"
   },
   "featuredTitle": "Featured Projects",
@@ -41,7 +42,8 @@
     "eyebrow": "Completed",
     "title": "Finished projects",
     "description": "Success cases that strengthened technical and strategic skills.",
-    "viewProject": "View project"
+    "viewProject": "View project",
+    "viewGallery": "View gallery"
   },
   "projectsInProgress": [
     {
@@ -65,6 +67,14 @@
         "Alarm app based on GPS location.",
         "Creates an app that triggers an alarm when the user approaches a specific location.",
         "Optimize app to work in background and with low battery consumption."
+      ],
+      "images": [
+        "/projects/GeoAlarm/GeoAlarm1.jpg",
+        "/projects/GeoAlarm/GeoAlarm2.jpg",
+        "/projects/GeoAlarm/GeoAlarm3.jpg",
+        "/projects/GeoAlarm/GeoAlarm4.jpg",
+        "/projects/GeoAlarm/GeoAlarm5.jpg",
+        "/projects/GeoAlarm/GeoAlarm6.jpg"
       ]
     }
   ],

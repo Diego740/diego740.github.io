@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { MdPhotoLibrary } from 'react-icons/md';
+import ImageGalleryModal from './ImageGalleryModal';
 import styles from './ProjectCard.module.css';
 
 const entryVariants = {
@@ -7,11 +10,14 @@ const entryVariants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
-function ProjectCard({ title, tech, description, link, index = 0 }) {
+function ProjectCard({ title, tech, description, link, images, index = 0 }) {
   const { t } = useTranslation('projects');
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const displayIndex = String(index + 1).padStart(2, '0');
+  const hasImages = Array.isArray(images) && images.length > 0;
 
   return (
+    <>
     <motion.article
       className={styles.entry}
       variants={entryVariants}
@@ -26,13 +32,30 @@ function ProjectCard({ title, tech, description, link, index = 0 }) {
           {tech && <span className={styles.tech}>{Array.isArray(tech) ? tech.join(' · ') : tech}</span>}
         </div>
         <p className={styles.description}>{description}</p>
-        {link && (
-          <a href={link} className={styles.link} target="_blank" rel="noreferrer">
-            {t('completed.viewProject')} →
-          </a>
-        )}
+        <div className={styles.actions}>
+          {link && (
+            <a href={link} className={styles.link} target="_blank" rel="noreferrer">
+              {t('completed.viewProject')} →
+            </a>
+          )}
+          {hasImages && (
+            <button 
+              className={styles.galleryButton} 
+              onClick={() => setIsGalleryOpen(true)}
+            >
+              <MdPhotoLibrary size={16} />
+              {t('completed.viewGallery')} →
+            </button>
+          )}
+        </div>
       </div>
     </motion.article>
+    <ImageGalleryModal 
+      isOpen={isGalleryOpen} 
+      onClose={() => setIsGalleryOpen(false)} 
+      images={images} 
+    />
+    </>
   );
 }
 

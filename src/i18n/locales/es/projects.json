@@ -15,6 +15,7 @@
     "objectives": "Objetivos clave",
     "viewRepo": "Ver repositorio",
     "privateRepo": "Repositorio privado / en preparación",
+    "viewGallery": "Ver galería",
     "empty": "No hay proyectos en desarrollo por ahora…"
   },
   "featuredTitle": "Proyectos destacados",
@@ -41,7 +42,8 @@
     "eyebrow": "Finalizados",
     "title": "Proyectos completados",
     "description": "Casos de éxito que consolidaron aprendizajes técnicos y estratégicos.",
-    "viewProject": "Ver proyecto"
+    "viewProject": "Ver proyecto",
+    "viewGallery": "Ver galería"
   },
   "projectsInProgress": [
     {
@@ -60,11 +62,19 @@
       "title": "GeoAlarm",
       "status": "Desarrollo de apps",
       "startDate": "Abril 2026",
-      "scope": "iOS · Swift · SwiftUI · Aplicación móvil",
+      "scope": "Aplicación móvil · iOS · Swift · SwiftUI",
       "objectives": [
         "App de alarma basada en ubicación GPS.",
         "Crea una app que activa una alarma cuando el usuario se acerca a una ubicación específica.",
         "Optimiza la app para que funcione en segundo plano y con bajo consumo de batería."
+      ],
+      "images": [
+        "/projects/GeoAlarm/GeoAlarm1.jpg",
+        "/projects/GeoAlarm/GeoAlarm2.jpg",
+        "/projects/GeoAlarm/GeoAlarm3.jpg",
+        "/projects/GeoAlarm/GeoAlarm4.jpg",
+        "/projects/GeoAlarm/GeoAlarm5.jpg",
+        "/projects/GeoAlarm/GeoAlarm6.jpg"
       ]
     }
   ],

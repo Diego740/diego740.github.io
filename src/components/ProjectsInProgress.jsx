@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { MdPhotoLibrary } from 'react-icons/md';
+import ImageGalleryModal from './ImageGalleryModal';
 import styles from './ProjectsInProgress.module.css';
 
 const containerVariants = {
@@ -23,8 +25,11 @@ const cardVariants = {
 
 function InProgressCard({ project, index, copy, meta, objectivesLabel }) {
   const [open, setOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const hasImages = Array.isArray(project.images) && project.images.length > 0;
 
   return (
+    <>
     <motion.article
       className={styles.timelineItem}
       variants={cardVariants}
@@ -109,20 +114,38 @@ function InProgressCard({ project, index, copy, meta, objectivesLabel }) {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        {project.repository ? (
-          <a
-            href={project.repository}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.link}
-          >
-            {copy.viewRepo} →
-          </a>
-        ) : (
-          <span className={styles.privateRepo}>{copy.privateRepo}</span>
-        )}
+        <div className={styles.actions}>
+          {project.repository ? (
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.link}
+            >
+              {copy.viewRepo} →
+            </a>
+          ) : (
+            <span className={styles.privateRepo}>{copy.privateRepo}</span>
+          )}
+          {hasImages && (
+            <button 
+              className={styles.galleryButton} 
+              onClick={() => setIsGalleryOpen(true)}
+              aria-label={copy.viewGallery}
+            >
+              <MdPhotoLibrary size={16} />
+              {copy.viewGallery} →
+            </button>
+          )}
+        </div>
       </footer>
     </motion.article>
+    <ImageGalleryModal 
+      isOpen={isGalleryOpen} 
+      onClose={() => setIsGalleryOpen(false)} 
+      images={project.images} 
+    />
+    </>
   );
 }
 
