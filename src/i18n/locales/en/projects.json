@@ -55,6 +55,17 @@
         "Allow different users to preserve their privacy."
       ],
       "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
+    },
+    {
+      "title": "GeoAlarm",
+      "status": "App development",
+      "startDate": "April 2026",
+      "scope": "Mobile App · iOS · Swift · SwiftUI",
+      "objectives": [
+        "Alarm app based on GPS location.",
+        "Creates an app that triggers an alarm when the user approaches a specific location.",
+        "Optimize app to work in background and with low battery consumption."
+      ]
     }
   ],
   "completedProjects": [
