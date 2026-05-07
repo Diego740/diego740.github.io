@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { MdPhotoLibrary } from 'react-icons/md';
+import { MdPhotoLibrary, MdPrivacyTip } from 'react-icons/md';
 import ImageGalleryModal from './ImageGalleryModal';
 import styles from './ProjectsInProgress.module.css';
 
@@ -128,14 +128,24 @@ function InProgressCard({ project, index, copy, meta, objectivesLabel }) {
             <span className={styles.privateRepo}>{copy.privateRepo}</span>
           )}
           {hasImages && (
-            <button 
-              className={styles.galleryButton} 
+            <button
+              className={styles.galleryButton}
               onClick={() => setIsGalleryOpen(true)}
               aria-label={copy.viewGallery}
             >
               <MdPhotoLibrary size={16} />
               {copy.viewGallery} →
             </button>
+          )}
+          {project.privacyUrl && (
+            <a
+              href={project.privacyUrl}
+              className={styles.link}
+              style={{ opacity: 0.7, display: 'inline-flex', alignItems: 'center', gap: '0.3em' }}
+            >
+              <MdPrivacyTip size={15} />
+              {copy.viewPrivacy} →
+            </a>
           )}
         </div>
       </footer>

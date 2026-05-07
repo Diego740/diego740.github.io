@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GeoAlarm Privacy Policy and Terms of Service — Diego Aranda Gómez" />
+  <title>Privacy Policy — GeoAlarm</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css" />
+
+  <script>
+    (function () {
+      var t = window.localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    })();
+  </script>
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --bg-color: #0a0a0a;
+      --card-bg: #121212;
+      --text-color: #ffffff;
+      --secondary-text: #cfcfcf;
+      --accent-color: #8a2be2;
+      --accent-contrast-text: #ffffff;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.4);
+      --accent-surface: rgba(138, 43, 226, 0.12);
+      --glass-bg-strong: rgba(10, 10, 10, 0.92);
+      --glass-bg-soft: rgba(10, 10, 10, 0.78);
+      --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    [data-theme='light'] {
+      --bg-color: #fafafa;
+      --card-bg: #ffffff;
+      --text-color: #0a0a0a;
+      --secondary-text: #444444;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.3);
+      --accent-surface: rgba(138, 43, 226, 0.08);
+      --glass-bg-strong: rgba(255, 255, 255, 0.92);
+      --glass-bg-soft: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    html, body {
+      width: 100%; min-height: 100%;
+      background-color: var(--bg-color);
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: var(--font-mono); }
+
+    a { color: var(--accent-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, var(--glass-bg-strong) 0%, var(--glass-bg-soft) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0;
+    }
+
+    .logo {
+      font-size: 1.35rem; font-weight: 600; letter-spacing: 0.02em;
+      color: var(--text-color); display: flex; align-items: center; gap: 0;
+      text-decoration: none; transition: color 0.3s ease;
+      font-family: var(--font-mono);
+    }
+    .logo:hover { color: var(--accent-color); text-decoration: none; }
+    .logo-accent { color: var(--accent-color); font-weight: 700; }
+
+    .header-controls { display: flex; align-items: center; gap: 0.75rem; }
+
+    /* ── Theme toggle — píldora fija igual que en el portfolio ── */
+    .theme-pill {
+      position: fixed;
+      right: 2.5rem; bottom: 3rem;
+      width: 5rem; height: 2.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border-color);
+      background: var(--glass-bg-strong);
+      color: var(--text-color);
+      display: flex; align-items: center;
+      padding: 0.35rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+      z-index: 9;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .theme-pill-icon {
+      width: 1.8rem; height: 1.8rem;
+      border-radius: 50%;
+      background: var(--accent-color);
+      color: var(--accent-contrast-text);
+      display: grid; place-items: center;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      flex-shrink: 0;
+    }
+
+    [data-theme='light'] .theme-pill-icon {
+      transform: translateX(2.4rem);
+    }
+
+    .theme-pill svg { display: block; }
+
+    @media (max-width: 768px) {
+      .theme-pill { right: 1.5rem; bottom: 2rem; }
+    }
+
+    .lang-toggle { display: inline-flex; gap: 0.5rem; align-items: center; }
+    .lang-toggle button {
+      background: transparent; color: var(--text-color);
+      border: 1px solid var(--accent-color); border-radius: 10px;
+      padding: 0.3rem 0.55rem; font-size: 1rem; cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .lang-toggle button:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--accent-color) 10%, transparent); }
+    .lang-toggle button.active { background: var(--accent-color); color: var(--accent-contrast-text); border-color: var(--accent-color); }
+
+    /* ── Main ── */
+    main {
+      width: min(740px, 92vw);
+      margin: 0 auto;
+      padding: 3.5rem 0 6rem;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.45em;
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em;
+      color: var(--secondary-text); text-transform: uppercase;
+      margin-bottom: 3rem; text-decoration: none;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .back-link:hover { color: var(--accent-color); text-decoration: none; gap: 0.6em; }
+    .back-arrow { display: inline-block; transition: transform 0.2s ease; }
+    .back-link:hover .back-arrow { transform: translateX(-3px); }
+
+    /* ── Page hero ── */
+    .page-hero {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .app-badge {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      background: var(--accent-surface);
+      border: 1px solid var(--accent-border-color);
+      border-radius: 20px; padding: 0.25rem 0.85rem;
+      font-size: 0.75rem; font-family: var(--font-mono);
+      color: var(--accent-color); letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.15; margin-bottom: 0.75rem;
+    }
+
+    .page-hero-sub {
+      font-size: 0.9rem; color: var(--secondary-text);
+      font-family: var(--font-mono); opacity: 0.7;
+    }
+
+    /* ── Doc nav ── */
+    .doc-nav {
+      display: flex; gap: 0.5rem; margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-nav a {
+      font-size: 0.8rem; font-family: var(--font-mono);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--secondary-text);
+      padding: 0.3rem 0.85rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .doc-nav a:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-border-color);
+      background: var(--accent-surface);
+      text-decoration: none;
+    }
+
+    /* ── Document sections ── */
+    .doc-block { margin-bottom: 4rem; }
+
+    .doc-label {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .doc-label-text {
+      font-family: var(--font-mono);
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--text-color); letter-spacing: -0.01em;
+    }
+
+    .doc-label-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, var(--accent-border-color), transparent);
+    }
+
+    .doc-meta {
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: var(--secondary-text); opacity: 0.55;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Sections ── */
+    .doc-section {
+      display: grid;
+      grid-template-columns: 2px 1fr;
+      gap: 0 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-rail {
+      background: var(--accent-border-color);
+      border-radius: 2px;
+      transition: background 0.2s ease;
+    }
+
+    .doc-section:hover .section-rail {
+      background: var(--accent-color);
+    }
+
+    .section-body {}
+
+    .doc-section h2 {
+      font-size: 0.72rem; font-weight: 600;
+      color: var(--accent-color);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-section p {
+      font-size: 0.95rem; color: var(--secondary-text);
+      line-height: 1.8;
+    }
+
+    .contact-link {
+      color: var(--accent-color);
+      font-family: var(--font-mono); font-size: 0.88rem;
+    }
+
+    /* ── Doc separator ── */
+    .doc-separator {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 3.5rem 0;
+    }
+    .doc-separator-line {
+      flex: 1; height: 1px; background: var(--border-color);
+    }
+    .doc-separator-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-color); opacity: 0.5;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.5rem 0; text-align: center;
+    }
+    .site-footer p {
+      font-size: 0.8rem; color: var(--secondary-text);
+      opacity: 0.5; font-family: var(--font-mono);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-hero h1 { font-size: 1.5rem; }
+      main { padding: 2.5rem 0 4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Volver al portfolio">
+        <span class="logo-accent">&lt;</span>Diego<span class="logo-accent">/&gt;</span>
+      </a>
+      <div class="header-controls">
+        <div class="lang-toggle">
+          <button data-lang="es" class="active" aria-label="Cambiar a español" title="Español">
+            <span class="fi fi-es"></span>
+          </button>
+          <button data-lang="en" aria-label="Switch to English" title="English">
+            <span class="fi fi-gb"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <a href="/" class="back-link">
+      <span class="back-arrow">←</span>
+      <span data-i18n="backToPortfolio">Volver al portfolio</span>
+    </a>
+
+    <!-- Hero -->
+    <div class="page-hero">
+      <div class="app-badge">⚙ GeoAlarm · iOS</div>
+      <h1 data-i18n="page.title">Legal — GeoAlarm</h1>
+      <p class="page-hero-sub" data-i18n="page.subtitle">Política de Privacidad &amp; Términos de Servicio</p>
+    </div>
+
+    <!-- Section nav -->
+    <nav class="doc-nav" aria-label="Secciones">
+      <a href="#privacy-policy" data-i18n="nav.privacy">Política de Privacidad</a>
+      <a href="#terms-of-service" data-i18n="nav.terms">Términos de Servicio</a>
+    </nav>
+
+    <!-- Privacy Policy -->
+    <section id="privacy-policy" class="doc-block">
+
+      <div class="doc-label">
+        <span class="doc-label-text" data-i18n="privacy.title">Política de Privacidad</span>
+        <span class="doc-label-line"></span>
+      </div>
+      <p class="doc-meta" data-i18n="privacy.lastUpdated">Última actualización: Mayo 2026</p>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.location.title">Acceso a la Ubicación</h2>
+          <p data-i18n="privacy.location.body">GeoAlarm solicita acceso a tu ubicación precisa para monitorizar la distancia a tu destino y activar la alarma al llegar. Estos datos se procesan únicamente en tu dispositivo y nunca se transmiten a ningún servidor externo.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.history.title">Historial de Viajes</h2>
+          <p data-i18n="privacy.history.body">Tu historial de viajes se almacena localmente en tu dispositivo mediante SwiftData. Estos datos no se comparten con terceros, no se suben a la nube ni son accesibles para nadie más.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.thirdParty.title">Sin Terceros</h2>
+          <p data-i18n="privacy.thirdParty.body">GeoAlarm no integra servicios de analítica, redes publicitarias, informes de errores ni SDKs de terceros que recopilen datos personales. Lo que ocurre en tu dispositivo se queda en tu dispositivo.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.rights.title">Tus Derechos</h2>
+          <p data-i18n="privacy.rights.body">Puedes eliminar tu historial de viajes en cualquier momento desde la propia app. Al no existir datos almacenados en servidores remotos, no hay nada que solicitar externamente. Para cualquier consulta sobre tus derechos bajo el RGPD, contáctanos en la dirección indicada a continuación.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.disclaimer.title">Aviso Legal</h2>
+          <p data-i18n="privacy.disclaimer.body">GeoAlarm se proporciona "tal cual", sin garantía de ningún tipo. El desarrollador no se hace responsable de alarmas omitidas debidas a imprecisiones del GPS, limitaciones del dispositivo, restricciones de iOS en segundo plano, o cualquier interrupción del sistema. El uso es bajo tu propia responsabilidad.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="privacy.contact.title">Contacto</h2>
+          <p><a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a></p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Separator -->
+    <div class="doc-separator" aria-hidden="true">
+      <span class="doc-separator-line"></span>
+      <span class="doc-separator-dot"></span>
+      <span class="doc-separator-line"></span>
+    </div>
+
+    <!-- Terms of Service -->
+    <section id="terms-of-service" class="doc-block">
+
+      <div class="doc-label">
+        <span class="doc-label-text" data-i18n="terms.title">Términos de Servicio</span>
+        <span class="doc-label-line"></span>
+      </div>
+      <p class="doc-meta" data-i18n="terms.lastUpdated">Última actualización: Mayo 2026</p>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="terms.acceptance.title">Aceptación</h2>
+          <p data-i18n="terms.acceptance.body">Al usar GeoAlarm, aceptas estos términos en su totalidad.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="terms.intendedUse.title">Uso Previsto</h2>
+          <p data-i18n="terms.intendedUse.body">GeoAlarm está diseñada como herramienta de comodidad para viajeros y usuarios de transporte público. No está concebida como sistema de seguridad principal ni sustituto de la atención personal durante el trayecto.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="terms.gps.title">GPS y Precisión</h2>
+          <p data-i18n="terms.gps.body">GeoAlarm depende del GPS de tu dispositivo. El rendimiento puede verse afectado en zonas con señal deficiente, interiores, bajo tierra o alta demanda del sistema. No se garantiza la detección precisa en todos los entornos.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="terms.liability.title">Limitación de Responsabilidad</h2>
+          <p data-i18n="terms.liability.body">El desarrollador no asume responsabilidad por alarmas omitidas, detección incorrecta de ubicación, fallos de la aplicación ni daños derivados del uso de GeoAlarm.</p>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <span class="section-rail"></span>
+        <div class="section-body">
+          <h2 data-i18n="terms.changes.title">Cambios en estos Términos</h2>
+          <p data-i18n="terms.changes.body">Estos términos pueden actualizarse en cualquier momento. El uso continuado implica la aceptación de los nuevos términos.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Theme pill (igual que en el portfolio) -->
+  <button class="theme-pill" id="theme-toggle" aria-label="Cambiar tema">
+    <span class="theme-pill-icon" id="theme-pill-icon">
+      <!-- Moon (dark mode) -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>
+      <!-- Sun (light mode, hidden by default) -->
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:none">
+        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707"/>
+      </svg>
+    </span>
+  </button>
+
+  <footer class="site-footer">
+    <p>© 2026 Diego Aranda Gómez — GeoAlarm</p>
+  </footer>
+
+  <script>
+    var translations = {
+      es: {
+        backToPortfolio: 'Volver al portfolio',
+        'page.title': 'Legal — GeoAlarm',
+        'page.subtitle': 'Política de Privacidad & Términos de Servicio',
+        'nav.privacy': 'Política de Privacidad',
+        'nav.terms': 'Términos de Servicio',
+        'privacy.title': 'Política de Privacidad',
+        'privacy.lastUpdated': 'Última actualización: Mayo 2026',
+        'privacy.location.title': 'Acceso a la Ubicación',
+        'privacy.location.body': 'GeoAlarm solicita acceso a tu ubicación precisa para monitorizar la distancia a tu destino y activar la alarma al llegar. Estos datos se procesan únicamente en tu dispositivo y nunca se transmiten a ningún servidor externo.',
+        'privacy.history.title': 'Historial de Viajes',
+        'privacy.history.body': 'Tu historial de viajes se almacena localmente en tu dispositivo mediante SwiftData. Estos datos no se comparten con terceros, no se suben a la nube ni son accesibles para nadie más.',
+        'privacy.thirdParty.title': 'Sin Terceros',
+        'privacy.thirdParty.body': 'GeoAlarm no integra servicios de analítica, redes publicitarias, informes de errores ni SDKs de terceros que recopilen datos personales. Lo que ocurre en tu dispositivo se queda en tu dispositivo.',
+        'privacy.rights.title': 'Tus Derechos',
+        'privacy.rights.body': 'Puedes eliminar tu historial de viajes en cualquier momento desde la propia app. Al no existir datos almacenados en servidores remotos, no hay nada que solicitar externamente. Para cualquier consulta sobre tus derechos bajo el RGPD, contáctanos en la dirección indicada a continuación.',
+        'privacy.disclaimer.title': 'Aviso Legal',
+        'privacy.disclaimer.body': 'GeoAlarm se proporciona "tal cual", sin garantía de ningún tipo. El desarrollador no se hace responsable de alarmas omitidas debidas a imprecisiones del GPS, limitaciones del dispositivo, restricciones de iOS en segundo plano, o cualquier interrupción del sistema. El uso es bajo tu propia responsabilidad.',
+        'privacy.contact.title': 'Contacto',
+        'terms.title': 'Términos de Servicio',
+        'terms.lastUpdated': 'Última actualización: Mayo 2026',
+        'terms.acceptance.title': 'Aceptación',
+        'terms.acceptance.body': 'Al usar GeoAlarm, aceptas estos términos en su totalidad.',
+        'terms.intendedUse.title': 'Uso Previsto',
+        'terms.intendedUse.body': 'GeoAlarm está diseñada como herramienta de comodidad para viajeros y usuarios de transporte público. No está concebida como sistema de seguridad principal ni sustituto de la atención personal durante el trayecto.',
+        'terms.gps.title': 'GPS y Precisión',
+        'terms.gps.body': 'GeoAlarm depende del GPS de tu dispositivo. El rendimiento puede verse afectado en zonas con señal deficiente, interiores, bajo tierra o alta demanda del sistema. No se garantiza la detección precisa en todos los entornos.',
+        'terms.liability.title': 'Limitación de Responsabilidad',
+        'terms.liability.body': 'El desarrollador no asume responsabilidad por alarmas omitidas, detección incorrecta de ubicación, fallos de la aplicación ni daños derivados del uso de GeoAlarm.',
+        'terms.changes.title': 'Cambios en estos Términos',
+        'terms.changes.body': 'Estos términos pueden actualizarse en cualquier momento. El uso continuado implica la aceptación de los nuevos términos.'
+      },
+      en: {
+        backToPortfolio: 'Back to portfolio',
+        'page.title': 'Legal — GeoAlarm',
+        'page.subtitle': 'Privacy Policy & Terms of Service',
+        'nav.privacy': 'Privacy Policy',
+        'nav.terms': 'Terms of Service',
+        'privacy.title': 'Privacy Policy',
+        'privacy.lastUpdated': 'Last updated: May 2026',
+        'privacy.location.title': 'Location Access',
+        'privacy.location.body': 'GeoAlarm requests access to your precise location to monitor the distance to your destination and trigger the alarm upon arrival. This data is processed solely on your device and is never transmitted to any external server.',
+        'privacy.history.title': 'Trip History',
+        'privacy.history.body': 'Your trip history is stored locally on your device using SwiftData. This data is not shared with third parties, is not uploaded to the cloud, and is not accessible to anyone else.',
+        'privacy.thirdParty.title': 'No Third Parties',
+        'privacy.thirdParty.body': 'GeoAlarm does not integrate analytics services, ad networks, crash reporters, or any third-party SDKs that collect personal data. What happens on your device stays on your device.',
+        'privacy.rights.title': 'Your Rights',
+        'privacy.rights.body': 'You can delete your trip history at any time from within the app. Since no data is stored on remote servers, there is nothing to request externally. For any questions about your rights under GDPR, contact us at the address below.',
+        'privacy.disclaimer.title': 'Legal Disclaimer',
+        'privacy.disclaimer.body': 'GeoAlarm is provided "as is", without warranty of any kind. The developer is not responsible for missed alarms due to GPS inaccuracies, device limitations, iOS background restrictions, or any system interruption. Use is at your own risk.',
+        'privacy.contact.title': 'Contact',
+        'terms.title': 'Terms of Service',
+        'terms.lastUpdated': 'Last updated: May 2026',
+        'terms.acceptance.title': 'Acceptance',
+        'terms.acceptance.body': 'By using GeoAlarm, you agree to these terms in their entirety.',
+        'terms.intendedUse.title': 'Intended Use',
+        'terms.intendedUse.body': 'GeoAlarm is designed as a convenience tool for commuters and public transport users. It is not intended as a primary safety system or a substitute for personal attentiveness during travel.',
+        'terms.gps.title': 'GPS and Accuracy',
+        'terms.gps.body': "GeoAlarm relies on your device's GPS. Performance may be affected in areas with poor signal, indoors, underground, or under high system load. Precise detection is not guaranteed in all environments.",
+        'terms.liability.title': 'Limitation of Liability',
+        'terms.liability.body': 'The developer assumes no liability for missed alarms, incorrect location detection, application failures, or any damages arising from the use of GeoAlarm.',
+        'terms.changes.title': 'Changes to These Terms',
+        'terms.changes.body': 'These terms may be updated at any time. Continued use implies acceptance of the updated terms.'
+      }
+    };
+
+    var currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyTranslations(lang) {
+      var t = translations[lang] || translations.es;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+      document.documentElement.lang = lang;
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      applyTranslations(lang);
+      document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+      btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+    });
+
+    function updateThemeIcon() {
+      var theme = document.documentElement.getAttribute('data-theme');
+      document.getElementById('icon-moon').style.display = theme === 'dark' ? '' : 'none';
+      document.getElementById('icon-sun').style.display  = theme === 'light' ? '' : 'none';
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon();
+    });
+
+    setLang(currentLang);
+    updateThemeIcon();
+  </script>
+
+</body>
+</html>

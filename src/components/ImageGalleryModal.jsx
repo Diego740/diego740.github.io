@@ -3,82 +3,37 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MdClose, MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import styles from './ImageGalleryModal.module.css';
 
-// Utility to wrap index around array length
 const wrap = (min, max, v) => {
   const rangeSize = max - min;
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 };
 
 export default function ImageGalleryModal({ isOpen, onClose, images = [] }) {
-  const [page, setPage] = useState(0);
+  const [[page, direction], setPage] = useState([0, 0]);
 
-  // Reset page when modal opens
   useEffect(() => {
-    if (isOpen) setPage(0);
+    if (isOpen) setPage([0, 0]);
   }, [isOpen]);
 
-  const handleNext = useCallback((e) => {
-    e?.stopPropagation();
-    setPage((prev) => prev + 1);
+  const paginate = useCallback((dir) => {
+    setPage(([p]) => [p + dir, dir]);
   }, []);
 
-  const handlePrev = useCallback((e) => {
-    e?.stopPropagation();
-    setPage((prev) => prev - 1);
-  }, []);
-
-  // Keyboard navigation
   useEffect(() => {
     if (!isOpen) return;
-    
-    const handleKeyDown = (e) => {
+    const onKey = (e) => {
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight') handleNext();
-      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'ArrowRight') paginate(1);
+      if (e.key === 'ArrowLeft') paginate(-1);
     };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen, onClose, paginate]);
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose, handleNext, handlePrev]);
+  if (!images?.length) return null;
 
-  if (!images || images.length === 0) return null;
-
-  // Single image case: no carousel needed
-  if (images.length === 1) {
-    return (
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={styles.overlay}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-          >
-            <motion.div
-              className={styles.modal}
-              initial={{ scale: 0.98, opacity: 0, y: 15 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.98, opacity: 0, y: 15 }}
-              transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button className={styles.closeButton} onClick={onClose} aria-label="Cerrar galería">
-                <MdClose size={24} />
-              </button>
-              <div className={styles.imageContainer}>
-                <img src={images[0]} alt="Screenshot 1" className={styles.imageSingle} />
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    );
-  }
-
-  // Carousel logic
   const activeIndex = wrap(0, images.length, page);
-  const visiblePages = [page - 1, page, page + 1];
+  const isSingle = images.length === 1;
 
   return (
     <AnimatePresence>
@@ -88,89 +43,122 @@ export default function ImageGalleryModal({ isOpen, onClose, images = [] }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
           onClick={onClose}
         >
           <motion.div
             className={styles.modal}
-            initial={{ scale: 0.98, opacity: 0, y: 15 }}
+            initial={{ scale: 0.96, opacity: 0, y: 12 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.98, opacity: 0, y: 15 }}
-            transition={{ type: 'spring', damping: 30, stiffness: 200 }}
+            exit={{ scale: 0.96, opacity: 0, y: 12 }}
+            transition={{ type: 'spring', damping: 28, stiffness: 220 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button className={styles.closeButton} onClick={onClose} aria-label="Cerrar galería">
-              <MdClose size={24} />
-            </button>
-
-            <div className={styles.carouselWrapper}>
-              <div className={styles.carouselTrack}>
-                <AnimatePresence initial={false}>
-                  {visiblePages.map((p) => {
-                    const offset = p - page; // -1, 0, or 1
-                    const index = wrap(0, images.length, p);
-                    const isCenter = offset === 0;
-                    
-                    return (
-                      <motion.div
-                        key={p}
-                        className={styles.carouselItem}
-                        initial={{ 
-                          x: `${offset * 90}%`, 
-                          scale: isCenter ? 1 : 0.8, 
-                          opacity: isCenter ? 1 : 0.4 
-                        }}
-                        animate={{ 
-                          x: `${offset * 90}%`, 
-                          scale: isCenter ? 1 : 0.8, 
-                          opacity: isCenter ? 1 : 0.4,
-                          zIndex: isCenter ? 10 : 1
-                        }}
-                        exit={{ 
-                          x: `${(offset < 0 ? -120 : 120)}%`,
-                          opacity: 0,
-                          scale: 0.6
-                        }}
-                        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                        onClick={() => {
-                          if (offset === -1) handlePrev();
-                          if (offset === 1) handleNext();
-                        }}
-                        style={{ cursor: isCenter ? 'default' : 'pointer' }}
-                      >
-                        <img 
-                          src={images[index]} 
-                          alt={`Screenshot ${index + 1}`} 
-                          className={styles.carouselImage} 
-                        />
-                      </motion.div>
-                    );
-                  })}
-                </AnimatePresence>
-              </div>
+            {/* Top bar */}
+            <div className={styles.topBar}>
+              <span className={styles.counter}>
+                {String(activeIndex + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+              </span>
+              <button className={styles.closeButton} onClick={onClose} aria-label="Cerrar galería">
+                <MdClose size={20} />
+              </button>
             </div>
 
-            <button className={styles.prevButton} onClick={handlePrev} aria-label="Imagen anterior">
-              <MdChevronLeft size={32} />
-            </button>
-            <button className={styles.nextButton} onClick={handleNext} aria-label="Siguiente imagen">
-              <MdChevronRight size={32} />
-            </button>
-            
-            <div className={styles.indicators}>
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  className={`${styles.dot} ${idx === activeIndex ? styles.activeDot : ''}`}
-                  onClick={() => {
-                    let diff = idx - activeIndex;
-                    if (diff > images.length / 2) diff -= images.length;
-                    if (diff < -images.length / 2) diff += images.length;
-                    setPage(page + diff);
-                  }}
-                  aria-label={`Ir a imagen ${idx + 1}`}
+            {isSingle ? (
+              /* Single image */
+              <div className={styles.imageArea}>
+                <img
+                  src={images[0]}
+                  alt="Screenshot 1"
+                  className={styles.imageSingle}
+                  draggable={false}
                 />
-              ))}
-            </div>
+              </div>
+            ) : (
+              <>
+                {/* Carousel with peek */}
+                <div className={styles.carouselArea}>
+                  <div className={styles.carouselTrack}>
+                    <AnimatePresence initial={false} custom={direction}>
+                      {[page - 1, page, page + 1].map((p) => {
+                        const offset = p - page;
+                        const index = wrap(0, images.length, p);
+                        const isCenter = offset === 0;
+
+                        return (
+                          <motion.div
+                            key={p}
+                            className={styles.carouselItem}
+                            custom={direction}
+                            initial={{
+                              x: `${offset * 88}%`,
+                              scale: isCenter ? 1 : 0.78,
+                              opacity: isCenter ? 1 : 0.3,
+                            }}
+                            animate={{
+                              x: `${offset * 88}%`,
+                              scale: isCenter ? 1 : 0.78,
+                              opacity: isCenter ? 1 : 0.3,
+                              zIndex: isCenter ? 10 : 1,
+                            }}
+                            exit={{
+                              x: `${(offset < 0 ? -140 : 140)}%`,
+                              opacity: 0,
+                              scale: 0.6,
+                            }}
+                            transition={{ type: 'spring', stiffness: 280, damping: 30 }}
+                            onClick={() => {
+                              if (offset === -1) paginate(-1);
+                              if (offset === 1) paginate(1);
+                            }}
+                            style={{ cursor: isCenter ? 'default' : 'pointer' }}
+                          >
+                            <img
+                              src={images[index]}
+                              alt={`Screenshot ${index + 1}`}
+                              className={styles.carouselImage}
+                              draggable={false}
+                            />
+                          </motion.div>
+                        );
+                      })}
+                    </AnimatePresence>
+                  </div>
+
+                  <button
+                    className={styles.prevButton}
+                    onClick={() => paginate(-1)}
+                    aria-label="Imagen anterior"
+                  >
+                    <MdChevronLeft size={32} />
+                  </button>
+                  <button
+                    className={styles.nextButton}
+                    onClick={() => paginate(1)}
+                    aria-label="Siguiente imagen"
+                  >
+                    <MdChevronRight size={32} />
+                  </button>
+                </div>
+
+                {/* Dots */}
+                <div className={styles.indicators}>
+                  {images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      className={`${styles.dot} ${idx === activeIndex ? styles.activeDot : ''}`}
+                      onClick={() => {
+                        let diff = idx - activeIndex;
+                        if (diff > images.length / 2) diff -= images.length;
+                        if (diff < -images.length / 2) diff += images.length;
+                        setPage(([p]) => [p + diff, diff > 0 ? 1 : -1]);
+                      }}
+                      aria-label={`Ir a imagen ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </motion.div>
         </motion.div>
       )}

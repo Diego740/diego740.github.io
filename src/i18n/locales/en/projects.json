@@ -16,6 +16,7 @@
     "viewRepo": "View repository",
     "privateRepo": "Private repository / in preparation",
     "viewGallery": "View gallery",
+    "viewPrivacy": "Privacy & Terms",
     "empty": "No projects in progress for now…"
   },
   "featuredTitle": "Featured Projects",
@@ -63,18 +64,19 @@
       "status": "App development",
       "startDate": "April 2026",
       "scope": "Mobile App · iOS · Swift · SwiftUI",
+      "privacyUrl": "/geoalarm-privacy.html",
       "objectives": [
         "Alarm app based on GPS location.",
         "Creates an app that triggers an alarm when the user approaches a specific location.",
         "Optimize app to work in background and with low battery consumption."
       ],
       "images": [
-        "/projects/GeoAlarm/GeoAlarm1.jpg",
-        "/projects/GeoAlarm/GeoAlarm2.jpg",
-        "/projects/GeoAlarm/GeoAlarm3.jpg",
-        "/projects/GeoAlarm/GeoAlarm4.jpg",
-        "/projects/GeoAlarm/GeoAlarm5.jpg",
-        "/projects/GeoAlarm/GeoAlarm6.jpg"
+        "/projects/GeoAlarm/Frame 1.png",
+        "/projects/GeoAlarm/Frame 2.png",
+        "/projects/GeoAlarm/Frame 3.png",
+        "/projects/GeoAlarm/Frame 4.png",
+        "/projects/GeoAlarm/Frame 5.png",
+        "/projects/GeoAlarm/Frame 6.png"
       ]
     }
   ],
