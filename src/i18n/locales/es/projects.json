@@ -27,16 +27,22 @@
   },
   "featuredProjects": [
     {
-      "title": "Gestor de Espacios y Proyectos Colaborativos",
-      "tech": "React · Node.js · MongoDB",
-      "description": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo",
-      "link": null
+      "title": "Analizador y Modificador de Metadatos",
+      "tech": "Python · Ciberseguridad · Scripting · IA",
+      "description": "Herramienta para extraer, analizar y eliminar metadatos de archivos. Correlaciona patrones sospechosos con posibles amenazas y permite a los usuarios preservar su privacidad eliminando información sensible embebida en documentos e imágenes.",
+      "link": "https://github.com/Diego740/Analizador-Metadatos.git"
     },
     {
       "title": "Análisis de Termostato Inteligente",
       "tech": "Audit · IoT · Pentesting · Reverse engineering",
       "description": "Evaluación exhaustiva de seguridad mediante el mapeo de la superficie de ataque en hardware, aplicaciones móviles e infraestructura en la nube. Se identificaron diversas vulnerabilidades y malas prácticas, tales como una vulnerabilidad crítica de Ejecución Remota de Código (RCE) en el backend, exposición de credenciales en texto plano en la interfaz local y claves de API 'harcodeadas' en el código de la aplicación móvil.",
       "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
+    },
+    {
+      "title": "CTF Writeups",
+      "tech": "Ciberseguridad · CTF · Forense · Web · Reversing",
+      "description": "Colección de writeups de competiciones CTF e investigación en seguridad. Cubre explotación web, análisis forense, ingeniería inversa y retos binarios con soluciones detalladas paso a paso.",
+      "link": "/cybersecurity"
     }
   ],
   "completed": {
@@ -64,6 +70,7 @@
       "status": "Desarrollo de apps",
       "startDate": "Abril 2026",
       "scope": "Aplicación móvil · iOS · Swift · SwiftUI",
+      "repository": "https://apps.apple.com/app/id6768651486",
       "privacyUrl": "/geoalarm-privacy.html",
       "objectives": [
         "App de alarma basada en ubicación GPS.",
@@ -81,6 +88,12 @@
     }
   ],
   "completedProjects": [
+    {
+      "title": "Gestor de Espacios y Proyectos Colaborativos",
+      "tech": "React · Node.js · MongoDB",
+      "description": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo.",
+      "link": null
+    },
     {
       "title": "Herramienta de Volcado de Procesos",
       "tech": "WinAPI · C · Sockets",

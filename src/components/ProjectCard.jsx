@@ -34,7 +34,11 @@ function ProjectCard({ title, tech, description, link, images, index = 0 }) {
         <p className={styles.description}>{description}</p>
         <div className={styles.actions}>
           {link && (
-            <a href={link} className={styles.link} target="_blank" rel="noreferrer">
+            <a
+              href={link}
+              className={styles.link}
+              {...(link.startsWith('/') ? {} : { target: '_blank', rel: 'noreferrer' })}
+            >
               {t('completed.viewProject')} →
             </a>
           )}

@@ -8,4 +8,13 @@ export const writeups = [
     date: '2026-05-07',
     file: '/writeups/UpDown.md',
   },
+  {
+    id: 'broker',
+    title: 'Broker',
+    os: 'Windows',
+    difficulty: 'Easy',
+    status: 'retired',
+    date: '2026-05-15',
+    file: '/writeups/Broker.md',
+  },
 ];

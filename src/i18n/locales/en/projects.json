@@ -27,16 +27,22 @@
   },
   "featuredProjects": [
     {
-      "title": "Collaborative Space and Project Manager",
-      "tech": "React · Node.js · MongoDB",
-      "description": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment.",
-      "link": null
+      "title": "Metadata Analyzer and Editor",
+      "tech": "Python · Cybersecurity · Scripting · AI",
+      "description": "Tool to extract, analyze and strip metadata from files. Correlates suspicious patterns with potential threats and allows users to preserve their privacy by removing sensitive information embedded in documents and images.",
+      "link": "https://github.com/Diego740/Analizador-Metadatos.git"
     },
     {
       "title": "Smart Thermostat Analysis",
       "tech": "Audit · IoT · Pentesting · Reverse engineering",
       "description": "Comprehensive security assessment mapping the attack surface across hardware, mobile apps, and cloud infrastructure. Identified several vulnerabilities and bad practices, such as a critical Remote Code Execution (RCE) vulnerability in the backend, plain-text credential exposure in the local interface, and hardcoded API keys in the mobile application.",
       "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
+    },
+    {
+      "title": "CTF Writeups",
+      "tech": "Cybersecurity · CTF · Forensics · Web · Reversing",
+      "description": "Collection of writeups from CTF competitions and security research. Covers web exploitation, forensics, reverse engineering, and binary challenges with detailed step-by-step solutions.",
+      "link": "/cybersecurity"
     }
   ],
   "completed": {
@@ -64,6 +70,7 @@
       "status": "App development",
       "startDate": "April 2026",
       "scope": "Mobile App · iOS · Swift · SwiftUI",
+      "repository": "https://apps.apple.com/app/id6768651486",
       "privacyUrl": "/geoalarm-privacy.html",
       "objectives": [
         "Alarm app based on GPS location.",
@@ -81,6 +88,12 @@
     }
   ],
   "completedProjects": [
+    {
+      "title": "Collaborative Space and Project Manager",
+      "tech": "React · Node.js · MongoDB",
+      "description": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment.",
+      "link": null
+    },
     {
       "title": "Process Dump Tool",
       "tech": "WinAPI · C · Sockets",
