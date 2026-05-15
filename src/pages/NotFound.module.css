@@ -46,16 +46,7 @@
   position: relative;
   width: min(640px, 100%);
   padding: clamp(2.5rem, 6vw, 3.75rem);
-  border-radius: 28px;
-  background: linear-gradient(145deg, var(--glass-bg-strong), var(--glass-bg-soft));
-  border: 1px solid var(--accent-border-color);
-  box-shadow: 0 24px 40px rgba(10, 0, 25, 0.25), var(--shadow-glow), inset 0 0 0 1px var(--color-accent-soft);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transform: translateZ(0);
-  will-change: transform, backdrop-filter;
   text-align: center;
-  overflow: hidden;
 }
 
 .status {
@@ -155,15 +146,10 @@
 
 .log {
   width: 100%;
-  padding: 1.3rem;
-  border-radius: 18px;
-  border: 1px solid var(--accent-border-color);
-  background: var(--glass-bg-soft);
   text-align: left;
   font-size: 0.9rem;
   line-height: 1.8;
   color: var(--secondary-text);
-  box-shadow: inset 0 0 0 1px var(--color-accent-soft);
 }
 
 .accent {
