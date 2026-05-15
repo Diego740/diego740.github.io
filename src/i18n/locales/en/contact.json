@@ -2,25 +2,10 @@
   "header": {
     "eyebrow": "Contact",
     "title": "Let's build something together",
-    "description": "Do you have a project, an idea or simply want to say hi? Write to me and let's talk."
-  },
-  "form": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Send message",
-    "sending": "Sending...",
-    "cooldownBtn": "Wait a moment..."
-  },
-  "status": {
-    "warning": "Set up EmailJS in the .env file to enable automatic sending.",
-    "success": "Message sent successfully. Thanks for reaching out!",
-    "error": "An error occurred while sending the message. Please try again.",
-    "cooldown": "Please wait a bit before sending another message."
+    "description": "Do you have a project, an idea or simply want to say hi? Reach out and let's talk."
   },
   "sidebar": {
     "title": "Direct information",
-    "email": "7.40diego@gmail.com",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "note": "I try to respond as quickly as possible. Tell me about your idea related to cybersecurity, web development, artificial intelligence, or similar fields, and we can work together."

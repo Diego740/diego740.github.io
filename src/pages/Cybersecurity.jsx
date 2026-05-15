@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from '../components/SectionHeader.jsx';
+import WriteupCard from '../components/WriteupCard.jsx';
+import { writeups } from '../config/writeups.js';
 import styles from './Cybersecurity.module.css';
 
 const tools = ['Burp Suite', 'Wireshark', 'Nmap', 'John the Ripper - Hashcat', 'Nessus', 'BloodHound', 'Metasploit'];
@@ -8,7 +10,6 @@ const tools = ['Burp Suite', 'Wireshark', 'Nmap', 'John the Ripper - Hashcat', '
 function Cybersecurity() {
   const { t } = useTranslation('cybersecurity');
   const header = t('header', { returnObjects: true }) || {};
-  const placeholder = t('placeholder', { returnObjects: true }) || {};
 
   return (
     <section className={`section-container ${styles.section}`}>
@@ -17,6 +18,7 @@ function Cybersecurity() {
         title={header.title}
         description={header.description}
       />
+
       <motion.div
         className={styles.card}
         initial={{ opacity: 0, y: 20 }}
@@ -30,11 +32,18 @@ function Cybersecurity() {
             <li key={tool}>{tool}</li>
           ))}
         </ul>
-        <div className={styles.placeholder}>
-          <span>{placeholder.title}</span>
-          <p>{placeholder.description}</p>
-        </div>
       </motion.div>
+
+      {writeups.length > 0 && (
+        <div className={styles.writeupsSection}>
+          <h3 className={styles.writeupsTitle}>{t('writeups.title')}</h3>
+          <div>
+            {writeups.map((writeup, i) => (
+              <WriteupCard key={writeup.id} writeup={writeup} index={i} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

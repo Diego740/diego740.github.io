@@ -1,0 +1,128 @@
+.entry {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.entry:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.entry:hover {
+  background: rgba(138, 43, 226, 0.03);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-color);
+  opacity: 0.6;
+  padding-top: 0.35rem;
+  letter-spacing: 0.04em;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--secondary-text);
+}
+
+.dot {
+  opacity: 0.4;
+}
+
+.sub {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.status[data-status='active'] {
+  color: var(--accent-warm);
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--secondary-text);
+  opacity: 0.6;
+}
+
+.actions {
+  margin-top: 0.25rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 0.06em;
+  transition: gap 0.2s ease;
+}
+
+.link:hover {
+  gap: 0.65rem;
+}
+
+.locked {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary-text);
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 560px) {
+  .entry {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}

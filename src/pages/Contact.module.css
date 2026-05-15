@@ -4,119 +4,11 @@
   gap: 3rem;
 }
 
-.grid {
-  display: grid;
-  gap: 3rem;
-}
-
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-  }
-}
-
-/* ── Open form — no card, left border accent line ── */
-.form {
-  display: grid;
-  gap: 1.6rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--accent-border-color);
-  position: relative;
-}
-
-.form::before {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: 0;
-  width: 2px;
-  height: 3rem;
-  background: var(--accent-color);
-  border-radius: 1px;
-}
-
-.form label {
-  display: grid;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--secondary-text);
-}
-
-/* Underline-only inputs */
-.form input,
-.form textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 0;
-  padding: 0.7rem 0;
-  color: var(--text-color);
-  font-size: 0.95rem;
-  font-family: var(--font-primary);
-  transition: border-color 0.3s ease;
-  outline: none;
-}
-
-.form input:focus,
-.form textarea:focus {
-  border-bottom-color: var(--accent-color);
-}
-
-.form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form button {
-  margin-top: 0.5rem;
-  justify-self: start;
-  border: 1px solid var(--accent-border-color);
-  border-radius: 4px;
-  padding: 0.8rem 1.8rem;
-  background: transparent;
-  color: var(--accent-color);
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.form button:hover:not(:disabled) {
-  background: var(--accent-color);
-  color: #fff;
-}
-
-.form button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-
-.status {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
-}
-
-.success { color: #4ade80; }
-.error   { color: #f87171; }
-.warning { color: #facc15; }
-
-
-
-/* ── Sidebar info — open, no card ── */
-.sidebar {
+.contactBlock {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-top: 0.25rem;
+  max-width: 480px;
 }
 
 .contactInfo h3 {
@@ -145,6 +37,12 @@
   font-size: 0.9rem;
 }
 
+.contactInfo li::before {
+  content: '▹';
+  margin-right: 0.6rem;
+  color: var(--color-accent);
+}
+
 .contactInfo a {
   color: var(--accent-color);
 }
@@ -155,17 +53,4 @@
   font-size: 0.88rem;
   border-left: 1px solid var(--border-color);
   padding-left: 1rem;
-}
-
-ul {
-  list-style: none;
-  display: grid;
-  gap: 0.8rem;
-  color: var(--secondary-text);
-}
-
-li::before {
-  content: '▹';
-  margin-right: 0.6rem;
-  color: var(--color-accent);
 }

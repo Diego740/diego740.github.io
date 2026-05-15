@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Cybersecurity from './pages/Cybersecurity.jsx';
+import WriteupViewer from './pages/WriteupViewer.jsx';
 
 import Contact from './pages/Contact.jsx';
 import Education from './pages/Education.jsx';
@@ -113,6 +114,7 @@ function App() {
                 <Route path="/about" element={<AnimatedPage><About /></AnimatedPage>} />
                 <Route path="/projects" element={<AnimatedPage><Projects /></AnimatedPage>} />
                 <Route path="/cybersecurity" element={<AnimatedPage><Cybersecurity /></AnimatedPage>} />
+                <Route path="/cybersecurity/:id" element={<AnimatedPage><WriteupViewer /></AnimatedPage>} />
                 <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
                 <Route path="/education" element={<AnimatedPage><Education /></AnimatedPage>} />
                 <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />

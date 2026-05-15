@@ -5,8 +5,14 @@
     "description": "Estoy iniciándome en el mundo de la ciberseguridad y me apasiona aprender cómo se protegen los sistemas desde dentro. Me gusta explorar nuevas técnicas de ataque y defensa para entender cómo se originan las vulnerabilidades y cómo prevenirlas. Aprovecho cada oportunidad para seguir formándome y aplicar lo aprendido en proyectos o entornos prácticos, con la meta de construir soluciones cada vez más seguras."
   },
   "toolsTitle": "Herramientas principales",
-  "placeholder": {
-    "title": "Próximamente",
-    "description": "Writeups, informes técnicos y análisis de vulnerabilidades."
+  "writeups": {
+    "title": "Writeups",
+    "readWriteup": "Leer writeup",
+    "machineActive": "Máquina activa",
+    "backButton": "Volver",
+    "status": {
+      "active": "Activa",
+      "retired": "Retirada"
+    }
   }
 }
