@@ -24,5 +24,15 @@ export const writeups = [
     status: 'retired',
     date: '2026-05-15',
     file: '/writeups/Broker.md',
-  }
+  },
+  {
+    id: 'builder',
+    title: 'Builder',
+    os: 'Linux',
+    difficulty: 'Medium',
+    status: 'retired',
+    date: '2026-05-15',
+    file: '/writeups/Builder.md',
+  },
+
 ];
