@@ -40,8 +40,8 @@ Busco seguir aprendiendo y participando en proyectos que unan **creatividad** y 
 
 Si desea ponerse en contacto conmigo o colaborar en un proyecto:
 
-**Correo:** [7.40diego@gmail.com](mailto:7.40diego@gmail.com)  
-**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gómez-a06052187)
+**Correo:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
+**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gomez)
 
 ---
 
@@ -89,6 +89,6 @@ I aim to keep learning and contributing to projects that connect **creativity** 
 
 If you’d like to get in touch or collaborate on a project:
 
-**Email:** [7.40diego@gmail.com](mailto:7.40diego@gmail.com)  
-**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gómez-a06052187)
+**Email:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
+**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gomez)
 
