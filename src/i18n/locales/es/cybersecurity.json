@@ -10,6 +10,8 @@
     "readWriteup": "Leer writeup",
     "machineActive": "Máquina activa",
     "backButton": "Volver",
+    "loadErrorTitle": "No se pudo cargar el writeup",
+    "loadErrorBody": "La respuesta recibida no parece ser un Markdown válido. Prueba a recargar la página en unos segundos.",
     "status": {
       "active": "Activa",
       "retired": "Retirada"

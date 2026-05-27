@@ -19,7 +19,7 @@ export const writeups = [
   {
     id: 'broker',
     title: 'Broker',
-    os: 'Windows',
+    os: 'Linux',
     difficulty: 'Easy',
     status: 'retired',
     date: '2026-05-15',

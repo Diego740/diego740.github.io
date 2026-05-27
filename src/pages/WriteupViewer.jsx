@@ -19,6 +19,8 @@ const DIFFICULTY_COLORS = {
   Insane: 'var(--accent-color)',
 };
 
+const HTML_DOCUMENT_RE = /^\s*<!doctype\s+html|^\s*<html[\s>]/i;
+
 function OsIcon({ os }) {
   if (os === 'Linux')   return <FaLinux size={14} />;
   if (os === 'Windows') return <FaWindows size={14} />;
@@ -60,6 +62,7 @@ function WriteupViewer() {
   const { t } = useTranslation('cybersecurity');
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const writeup = writeups.find((w) => w.id === id);
 
@@ -69,16 +72,55 @@ function WriteupViewer() {
       return;
     }
 
+    const controller = new AbortController();
     setLoading(true);
-    fetch(writeup.file)
-      .then((res) => res.text())
+    setError(false);
+    setContent('');
+
+    fetch(writeup.file, { signal: controller.signal })
+      .then((res) => {
+        const contentType = res.headers.get('content-type') || '';
+        if (!res.ok || contentType.includes('text/html')) {
+          throw new Error(`Unexpected writeup response: ${res.status} ${contentType}`);
+        }
+        return res.text();
+      })
       .then((raw) => {
+        if (HTML_DOCUMENT_RE.test(raw)) {
+          throw new Error('Writeup response looks like an HTML document');
+        }
         setContent(preprocessObsidianMarkdown(raw));
-        setLoading(false);
+      })
+      .catch((err) => {
+        if (err.name !== 'AbortError') {
+          setError(true);
+        }
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) {
+          setLoading(false);
+        }
       });
+
+    return () => controller.abort();
   }, [writeup, navigate]);
 
   if (!writeup || loading) return null;
+
+  if (error) {
+    return (
+      <section className={`section-container ${styles.section}`}>
+        <button className={styles.back} onClick={() => navigate('/cybersecurity')}>
+          <FaArrowLeft size={11} />
+          {t('writeups.backButton')}
+        </button>
+        <div className={styles.error} role="alert">
+          <h1>{t('writeups.loadErrorTitle')}</h1>
+          <p>{t('writeups.loadErrorBody')}</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={`section-container ${styles.section}`}>

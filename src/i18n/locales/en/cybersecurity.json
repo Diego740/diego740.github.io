@@ -10,6 +10,8 @@
     "readWriteup": "Read writeup",
     "machineActive": "Machine active",
     "backButton": "Back",
+    "loadErrorTitle": "The writeup could not be loaded",
+    "loadErrorBody": "The response did not look like valid Markdown. Try reloading the page in a few seconds.",
     "status": {
       "active": "Active",
       "retired": "Retired"
