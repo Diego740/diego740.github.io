@@ -33,6 +33,13 @@ export const writeups = [
     status: 'retired',
     date: '2026-05-15',
     file: '/writeups/Builder.md',
+  }, {
+    id: 'devhub',
+    title: 'DevHub',
+    os: 'Linux',
+    difficulty: 'Medium',
+    status: 'active',
+    date: '2026-06-05',
   },
 
 ];
