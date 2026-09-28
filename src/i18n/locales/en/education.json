@@ -1,34 +1,84 @@
 {
-  "title": "Academic background",
-  "items": [
+  "pageTitle": "Trajectory",
+  "pageEyebrow": "// CAREER & EDUCATION",
+  "title": "Trajectory",
+  "experienceTitle": "Professional Experience",
+  "experience": [
     {
-      "title": "BSc in Software Engineering",
+      "title": "Security Architecture Analyst",
+      "company": "Deloitte",
+      "period": "Sept 2026 – Present",
+      "location": "Madrid, Spain",
+      "badge": "Current Role",
       "details": [
-        "Institution: U-TAD (University Center for Technology and Digital Art)",
-        "Period: 2022 – Present",
-        "Year: 4th and final year",
-        "Specialization: Cybersecurity"
+        "Company: Deloitte",
+        "Period: September 2026 – Present",
+        "Location: Madrid, Spain"
       ],
-      "description": "Currently in the final year of the Software Engineering degree with a specialization in Cybersecurity. Training focused on secure development, forensics, networking and distributed architectures."
+      "description": "Security architecture analysis and design for enterprise infrastructures, focusing on risk assessments, systems hardening, cloud security, and alignment with industry standards."
     },
     {
-      "title": "Professional Internship at Capgemini",
+      "title": "Software Engineering Intern",
+      "company": "Capgemini",
+      "period": "Oct 2025 – Apr 2026",
+      "location": "Madrid, Spain",
       "details": [
-        "Role: Junior Consultant - BPM (Business Process Management)",
-        "Start: October 2025"
+        "Company: Capgemini",
+        "Period: October 2025 – April 2026",
+        "Location: Madrid, Spain"
       ],
-      "description": "Carrying out my internship at Capgemini, collaborating on the digitalization of business processes through BPM solutions. Experience in agile environments, automation and systems analysis."
+      "description": "Software engineering and technical consulting on production enterprise systems in an Agile environment.",
+      "highlights": [
+        "Owned end-to-end refactoring of a production enterprise system, shipping new features iteratively in an Agile environment.",
+        "Accelerated delivery by integrating AI tools into the development workflow for design, testing, and documentation.",
+        "Earned Appian Certified Associate Developer within 3 months — rapid ramp-up in an unfamiliar proprietary platform."
+      ]
     }
   ],
   "certificationsTitle": "Certifications",
   "certifications": [
     {
+      "title": "OSCP - Offensive Security Certified Professional",
+      "issuer": "OffSec (Offensive Security)",
+      "issueDate": "September 2026",
+      "badge": "OffSec",
+      "details": [
+        "Issuer: OffSec (Offensive Security)",
+        "Issue Date: September 2026"
+      ],
+      "description": "Gold-standard certification in offensive security and penetration testing. Demonstrates hands-on mastery in advanced reconnaissance, web application exploitation, Linux and Windows privilege escalation, defense evasion, and executing attack chains across complex Active Directory domains."
+    },
+    {
       "title": "Appian Certified Associate Developer",
+      "issuer": "Appian",
+      "issueDate": "March 2026",
+      "badge": "Appian",
       "details": [
         "Issuer: Appian",
         "Issue Date: March 2026"
       ],
-      "description": "Obtained during my internship at Capgemini. Official Appian certification that accredits knowledge in low-code application development, process automation and project management with the Appian platform, as well as good practices in software development, agile methodologies and software architecture."
+      "description": "Official certification validating skills in enterprise application development, business process automation, data architecture, and software engineering best practices in agile settings."
+    }
+  ],
+  "educationTitle": "Academic Background",
+  "education": [
+    {
+      "title": "B.Sc. Software Engineering (Cybersecurity Specialization)",
+      "institution": "U-TAD (University Center for Technology and Digital Art)",
+      "period": "September 2022 – June 2026",
+      "location": "Madrid, Spain",
+      "badge": "Graduated · GPA: 8.3/10",
+      "details": [
+        "Institution: U-TAD (Madrid, Spain)",
+        "Period: September 2022 – June 2026",
+        "GPA: 8.3 / 10",
+        "Specialization: Cybersecurity"
+      ],
+      "description": "Graduated with honors in technical subjects. Comprehensive curriculum in secure software engineering, distributed systems, digital forensics, computer networks, and operating systems.",
+      "highlights": [
+        "Computer Networks: 9.7 (Honours)",
+        "Algorithms: 9.6"
+      ]
     }
   ]
 }

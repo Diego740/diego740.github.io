@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrows": ["Software Engineering", "Cybersecurity"],
+    "eyebrows": ["Software Engineering", "Cybersecurity", "OSCP"],
     "title": "Diego Aranda Gómez",
-    "subtitle": "I build secure, efficient and future-proof digital experiences. I combine fullstack development with cybersecurity research to drive projects with real impact.",
+    "subtitle": "Security-focused software engineer (OSCP certified) and Security Architecture Analyst at Deloitte. Hands-on experience in offensive and defensive operations, infrastructure hardening, and security automation across Linux, Windows, Active Directory, and Cloud.",
     "cta": {
       "linkedin": "Connect on LinkedIn",
       "github": "View GitHub",

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrows": ["Ingeniería del Software", "Ciberseguridad"],
+    "eyebrows": ["Ingeniería del Software", "Ciberseguridad", "OSCP"],
     "title": "Diego Aranda Gómez",
-    "subtitle": "Construyo experiencias digitales seguras, eficientes y con visión de futuro. Combino el desarrollo fullstack con investigación en ciberseguridad para impulsar proyectos con impacto real.",
+    "subtitle": "Ingeniero de software especializado en ciberseguridad (OSCP) y analista de arquitectura de seguridad en Deloitte. Experiencia práctica en operaciones ofensivas y defensivas, bastionado de infraestructuras y automatización en Linux, Windows, Active Directory y Cloud.",
     "cta": {
       "linkedin": "Conectar en LinkedIn",
       "github": "Ver GitHub",

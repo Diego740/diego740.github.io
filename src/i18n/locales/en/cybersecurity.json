@@ -2,16 +2,19 @@
   "header": {
     "eyebrow": "Cybersecurity",
     "title": "Defensive and offensive strategies",
-    "description": "I'm getting started in the world of cybersecurity, and I'm passionate about learning how systems are protected from the inside out. I enjoy exploring new attack and defense techniques to understand how vulnerabilities arise and how to prevent them. I take every opportunity to keep learning and apply what I learn in projects or practical settings, aiming to build increasingly secure solutions."
+    "description": "Security-focused software engineer and OSCP certified (Offensive Security Certified Professional), currently working as a Security Architecture Analyst at Deloitte. Proven experience in Red & Blue Team operations, critical infrastructure hardening, and vulnerability assessments. Specialized in Active Directory attack chains, Linux and Windows environments, security automation, and threat detection with SIEM (Wazuh)."
   },
-  "toolsTitle": "Key tools",
+  "certTitle": "Featured Certification",
+  "certSubtitle": "OffSec Certified · Issued September 2026",
+  "certDesc": "Demonstrates advanced hands-on proficiency in reconnaissance, exploitation, Linux/Windows privilege escalation, and lateral movement across enterprise Active Directory domains.",
+  "toolsTitle": "Ecosystem, key tools & capabilities",
   "writeups": {
     "title": "Writeups",
     "readWriteup": "Read writeup",
-    "machineActive": "Machine active",
+    "machineActive": "Active machine",
     "backButton": "Back",
-    "loadErrorTitle": "The writeup could not be loaded",
-    "loadErrorBody": "The response did not look like valid Markdown. Try reloading the page in a few seconds.",
+    "loadErrorTitle": "Could not load writeup",
+    "loadErrorBody": "The response did not seem to be valid Markdown. Try reloading in a few seconds.",
     "status": {
       "active": "Active",
       "retired": "Retired"

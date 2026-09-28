@@ -5,7 +5,19 @@ import WriteupCard from '../components/WriteupCard.jsx';
 import { writeups } from '../config/writeups.js';
 import styles from './Cybersecurity.module.css';
 
-const tools = ['Burp Suite', 'Wireshark', 'Nmap', 'John the Ripper - Hashcat', 'Nessus', 'BloodHound', 'Metasploit'];
+const tools = [
+  'OSCP Methodologies (OffSec Certified)',
+  'Active Directory (BloodHound · Mimikatz)',
+  'Wazuh SIEM (Detection & Log Correlation)',
+  'Burp Suite Pro (Web Exploitation)',
+  'Nmap & Network Reconnaissance',
+  'Wireshark & Network Forensics',
+  'Metasploit Framework',
+  'Hashcat & John the Ripper',
+  'Reverse Engineering (Ghidra · WinAPI)',
+  'Linux & Windows Hardening',
+  'Enterprise Infrastructure (Netskope · Zscaler · AWS)'
+];
 
 function Cybersecurity() {
   const { t } = useTranslation('cybersecurity');
@@ -18,6 +30,28 @@ function Cybersecurity() {
         title={header.title}
         description={header.description}
       />
+
+      <motion.div
+        className={styles.certBanner}
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
+        <div className={styles.certBadge}>OSCP</div>
+        <div className={styles.certInfo}>
+          <h4>Offensive Security Certified Professional</h4>
+          <span className={styles.certSubtitle}>
+            {t('certSubtitle', { defaultValue: 'OffSec Certified · Expedida en Septiembre 2026' })}
+          </span>
+          <p className={styles.certDesc}>
+            {t('certDesc', {
+              defaultValue:
+                'Acredita capacidades avanzadas en reconocimiento, explotación de vulnerabilidades complejas, escalada de privilegios y ataques en entornos corporativos de Active Directory.'
+            })}
+          </p>
+        </div>
+      </motion.div>
 
       <motion.div
         className={styles.card}

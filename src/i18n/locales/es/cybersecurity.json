@@ -2,9 +2,12 @@
   "header": {
     "eyebrow": "Ciberseguridad",
     "title": "Estrategias defensivas y ofensivas",
-    "description": "Estoy iniciándome en el mundo de la ciberseguridad y me apasiona aprender cómo se protegen los sistemas desde dentro. Me gusta explorar nuevas técnicas de ataque y defensa para entender cómo se originan las vulnerabilidades y cómo prevenirlas. Aprovecho cada oportunidad para seguir formándome y aplicar lo aprendido en proyectos o entornos prácticos, con la meta de construir soluciones cada vez más seguras."
+    "description": "Ingeniero de software enfocado en seguridad y certificado OSCP (Offensive Security Certified Professional), actualmente Analista de Arquitectura de Seguridad en Deloitte. Experiencia contrastada en operaciones Red & Blue Team, bastionado de sistemas e infraestructuras críticas, y análisis de vulnerabilidades. Especializado en cadenas de ataque en Active Directory, entornos Linux y Windows, automatización de la seguridad y detección de amenazas con SIEM (Wazuh)."
   },
-  "toolsTitle": "Herramientas principales",
+  "certTitle": "Certificación Destacada",
+  "certSubtitle": "OffSec Certified · Expedida en Septiembre 2026",
+  "certDesc": "Acredita capacidades avanzadas en reconocimiento, explotación de aplicaciones y servicios, escalada de privilegios en Linux/Windows y cadenas de ataque en dominios Active Directory.",
+  "toolsTitle": "Ecosistema, herramientas y capacidades clave",
   "writeups": {
     "title": "Writeups",
     "readWriteup": "Leer writeup",

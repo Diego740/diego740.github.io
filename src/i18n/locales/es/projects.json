@@ -1,8 +1,8 @@
 {
   "header": {
     "eyebrow": "Proyectos",
-    "title": "Experimentos y soluciones con impacto",
-    "description": "Una selección de proyectos que abarcan desde el desarrollo fullstack hasta la ciberseguridad y la inteligencia artificial. Cada iniciativa refleja investigación, colaboración y entrega constante."
+    "title": "Ingeniería, seguridad y soluciones con impacto",
+    "description": "Una selección de proyectos que abarcan auditorías de seguridad, aplicaciones nativas con privacidad por diseño, automatización con IA y operaciones Red & Blue Team."
   },
   "inProgress": {
     "eyebrow": "En desarrollo",
@@ -27,16 +27,36 @@
   },
   "featuredProjects": [
     {
-      "title": "Analizador y Modificador de Metadatos",
-      "tech": "Python · Ciberseguridad · Scripting · IA",
-      "description": "Herramienta para extraer, analizar y eliminar metadatos de archivos. Correlaciona patrones sospechosos con posibles amenazas y permite a los usuarios preservar su privacidad eliminando información sensible embebida en documentos e imágenes.",
+      "title": "Smart Thermostat Security Audit",
+      "tech": "IoT · Pentesting · Ingeniería Inversa · Firmware",
+      "description": "Evaluación integral de seguridad en hardware, flujos de la app móvil y componentes cloud de un ecosistema IoT real. Descubrimiento de 3+ vulnerabilidades críticas (RCE en backend, credenciales en texto plano y claves API hardcodeadas) y generación de informe priorizado de remediación con PoCs de reproducción.",
+      "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
+    },
+    {
+      "title": "GeoAlarm - iOS Location Alarm App",
+      "tech": "Swift · Privacy-by-Design · iOS · App Store",
+      "description": "App nativa de iOS publicada en la App Store con computación 100% en dispositivo y cero dependencias en la nube (privacidad por diseño, sin SDKs de rastreo). Reducción del consumo de batería en un ~80% mediante geofencing con CoreLocation e implementación de override de AVAudioSession para garantizar el aviso sonoro.",
+      "link": "https://apps.apple.com/app/id6768651486",
+      "images": [
+        "/projects/GeoAlarm/Frame 1-1.png",
+        "/projects/GeoAlarm/Frame 2-1.png",
+        "/projects/GeoAlarm/Frame 3-1.png",
+        "/projects/GeoAlarm/Frame 4-1.png",
+        "/projects/GeoAlarm/Frame 5-1.png",
+        "/projects/GeoAlarm/Frame 6-1.png"
+      ]
+    },
+    {
+      "title": "Metadata Analyzer & Threat Correlator",
+      "tech": "Python · Automatización de Seguridad · IA",
+      "description": "Herramienta en Python para extraer, sanitizar y analizar metadatos en más de 5 formatos, reduciendo el tiempo de revisión manual en un ~70%. Diseñada con lógica de correlación automatizada para detectar y alertar ante patrones anómalos vinculados a manipulación documental, fugas o procedencia de riesgo.",
       "link": "https://github.com/Diego740/Analizador-Metadatos.git"
     },
     {
-      "title": "Análisis de Termostato Inteligente",
-      "tech": "Audit · IoT · Pentesting · Reverse engineering",
-      "description": "Evaluación exhaustiva de seguridad mediante el mapeo de la superficie de ataque en hardware, aplicaciones móviles e infraestructura en la nube. Se identificaron diversas vulnerabilidades y malas prácticas, tales como una vulnerabilidad crítica de Ejecución Remota de Código (RCE) en el backend, exposición de credenciales en texto plano en la interfaz local y claves de API 'harcodeadas' en el código de la aplicación móvil.",
-      "link": "https://drive.google.com/file/d/16mxXQpSL3WSaXcJAnss93JoElSvgP0E-/view?usp=sharing"
+      "title": "University Wargame Environment",
+      "tech": "Red & Blue Team · Active Directory · Wazuh SIEM · DMZ",
+      "description": "Operaciones ofensivas y defensivas en máquinas reales sobre segmentos de red aislados con arquitectura DMZ, atacando y bastionado hosts Windows y Linux. Ejecución de cadenas de ataque en Active Directory (enumeración, movimiento lateral y escalada de privilegios) y despliegue/operación de Wazuh SIEM para correlación de logs y detección de amenazas.",
+      "link": null
     },
     {
       "title": "CTF Writeups",
@@ -64,27 +84,6 @@
         "Permitir mantener la privacidad de los diferentes usuarios."
       ],
       "repository": "https://github.com/Diego740/Analizador-Metadatos.git"
-    },
-    {
-      "title": "GeoAlarm",
-      "status": "Desarrollo de apps",
-      "startDate": "Abril 2026",
-      "scope": "Aplicación móvil · iOS · Swift · SwiftUI",
-      "repository": "https://apps.apple.com/app/id6768651486",
-      "privacyUrl": "/geoalarm-privacy.html",
-      "objectives": [
-        "App de alarma basada en ubicación GPS.",
-        "Crea una app que activa una alarma cuando el usuario se acerca a una ubicación específica.",
-        "Optimiza la app para que funcione en segundo plano y con bajo consumo de batería."
-      ],
-      "images": [
-        "/projects/GeoAlarm/Frame 1-1.png",
-        "/projects/GeoAlarm/Frame 2-1.png",
-        "/projects/GeoAlarm/Frame 3-1.png",
-        "/projects/GeoAlarm/Frame 4-1.png",
-        "/projects/GeoAlarm/Frame 5-1.png",
-        "/projects/GeoAlarm/Frame 6-1.png"
-      ]
     }
   ],
   "completedProjects": [
@@ -97,7 +96,7 @@
     {
       "title": "Herramienta de Volcado de Procesos",
       "tech": "WinAPI · C · Sockets",
-      "description": "Herramienta para volcar procesos mediante WinAPI, incluidos procesos protegidos",
+      "description": "Herramienta para volcar procesos mediante WinAPI, incluidos procesos protegidos.",
       "link": "https://github.com/Diego740/MemoryDumpTool-WinApi"
     },
     {

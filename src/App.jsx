@@ -117,6 +117,8 @@ function App() {
                 <Route path="/cybersecurity/:id" element={<AnimatedPage><WriteupViewer /></AnimatedPage>} />
                 <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
                 <Route path="/education" element={<AnimatedPage><Education /></AnimatedPage>} />
+                <Route path="/trayectoria" element={<AnimatedPage><Education /></AnimatedPage>} />
+                <Route path="/trajectory" element={<AnimatedPage><Education /></AnimatedPage>} />
                 <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
               </Routes>
             )}

@@ -1,34 +1,84 @@
 {
-  "title": "Formación Académica",
-  "items": [
+  "pageTitle": "Trayectoria",
+  "pageEyebrow": "// EXPERIENCIA & FORMACIÓN",
+  "title": "Trayectoria",
+  "experienceTitle": "Experiencia Profesional",
+  "experience": [
     {
-      "title": "Grado en Ingeniería del Software",
+      "title": "Security Architecture Analyst",
+      "company": "Deloitte",
+      "period": "Sept 2026 – Actualidad",
+      "location": "Madrid, España",
+      "badge": "Puesto actual",
       "details": [
-        "Centro: U-TAD (Centro Universitario de Tecnología y Arte Digital)",
-        "Periodo: 2022 – Actualidad",
-        "Curso: 4º y último año",
-        "Mención: Ciberseguridad"
+        "Empresa: Deloitte",
+        "Periodo: Septiembre 2026 – Actualidad",
+        "Ubicación: Madrid, España"
       ],
-      "description": "Actualmente cursando el último año de Ingeniería del Software, con especialización en Ciberseguridad. Formación centrada en desarrollo seguro, análisis forense, redes y arquitecturas distribuidas."
+      "description": "Análisis y diseño de arquitectura de seguridad para infraestructuras corporativas, enfocado en evaluación de riesgos, bastionado de sistemas, seguridad en la nube y alineación estratégica con marcos de referencia de la industria."
     },
     {
-      "title": "Prácticas Profesionales en Capgemini",
+      "title": "Software Engineering Intern",
+      "company": "Capgemini",
+      "period": "Oct 2025 – Abr 2026",
+      "location": "Madrid, España",
       "details": [
-        "Puesto: Consultor Junior - BPM (Business Process Management)",
-        "Inicio: Octubre 2025"
+        "Empresa: Capgemini",
+        "Periodo: Octubre 2025 – Abril 2026",
+        "Ubicación: Madrid, España"
       ],
-      "description": "Desempeño mis prácticas en Capgemini, colaborando en la digitalización de procesos empresariales mediante soluciones BPM. Experiencia en entornos ágiles, automatización y análisis de sistemas."
+      "description": "Desarrollo de software y consultoría técnica en sistemas empresariales de producción bajo metodologías ágiles (Agile).",
+      "highlights": [
+        "Lideré de principio a fin la refactorización de un sistema empresarial en producción, desplegando nuevas funcionalidades de forma iterativa.",
+        "Aceleré las entregas mediante la integración de herramientas de IA en el flujo de diseño, testing y documentación técnica.",
+        "Obtuve la certificación Appian Certified Associate Developer en 3 meses, demostrando una rápida adaptación a una plataforma tecnológica nueva."
+      ]
     }
   ],
   "certificationsTitle": "Certificaciones",
   "certifications": [
     {
+      "title": "OSCP - Offensive Security Certified Professional",
+      "issuer": "OffSec (Offensive Security)",
+      "issueDate": "Septiembre 2026",
+      "badge": "OffSec",
+      "details": [
+        "Emisor: OffSec (Offensive Security)",
+        "Fecha de expedición: Septiembre 2026"
+      ],
+      "description": "Certificación de referencia en seguridad ofensiva y pruebas de penetración (pentesting). Acredita destreza práctica en auditorías avanzadas, reconocimiento, explotación de aplicaciones web, elevación de privilegios en Linux y Windows, evasión de defensas y ejecución de cadenas de ataque en entornos complejos de Active Directory."
+    },
+    {
       "title": "Appian Certified Associate Developer",
+      "issuer": "Appian",
+      "issueDate": "Marzo 2026",
+      "badge": "Appian",
       "details": [
         "Emisor: Appian",
-        "Fecha de expedición: Marzo2026"
+        "Fecha de expedición: Marzo 2026"
       ],
-      "description": "Certificación obtenida durante mis prácticas en Capgemini. Acredita conocimientos en desarrollo de aplicaciones de bajo código (low-code), automatización de procesos y gestión de proyectos con la plataforma Appian, así como buenas prácticas en el desarrollo de software, metodologías ágiles y arquitectura de software."
+      "description": "Certificación oficial que acredita competencias en desarrollo de aplicaciones empresariales, automatización de procesos de negocio, modelado de arquitecturas y buenas prácticas de ingeniería de software en entornos ágiles."
+    }
+  ],
+  "educationTitle": "Formación Académica",
+  "education": [
+    {
+      "title": "Grado en Ingeniería del Software (Mención Ciberseguridad)",
+      "institution": "U-TAD (Centro Universitario de Tecnología y Arte Digital)",
+      "period": "Septiembre 2022 – Junio 2026",
+      "location": "Madrid, España",
+      "badge": "Graduado · GPA: 8.3/10",
+      "details": [
+        "Centro: U-TAD (Centro Universitario de Tecnología y Arte Digital)",
+        "Periodo: Septiembre 2022 – Junio 2026",
+        "Calificación Media: 8.3 / 10",
+        "Especialización: Ciberseguridad"
+      ],
+      "description": "Graduado con especialización en Ciberseguridad. Formación técnica rigurosa en desarrollo seguro, arquitecturas distribuidas, análisis forense digital, redes de computadores y sistemas operativos.",
+      "highlights": [
+        "Redes de Computadores: 9.7 (Matrícula de Honor)",
+        "Algoritmos: 9.6"
+      ]
     }
   ]
 }

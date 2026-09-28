@@ -1,7 +1,7 @@
 # 🌐 Portafolio | Diego Aranda Gómez
 
-Bienvenido a mi portafolio personal, un espacio donde comparto mis proyectos y aprendizajes en **desarrollo web**, **ciberseguridad** e **inteligencia artificial**.  
-El sitio refleja mi manera de trabajar: limpio, funcional y con atención al detalle.
+Bienvenido a mi portafolio personal. Soy **Ingeniero de Software especializado en Ciberseguridad (OSCP)** y **Analista de Arquitectura de Seguridad en Deloitte**.  
+Aquí comparto mis proyectos técnicos, certificaciones y experiencia en **seguridad ofensiva y defensiva**, **arquitectura e infraestructura**, y **desarrollo de software**.
 
 🔗 **Visítalo aquí:** [https://diego740.github.io](https://diego740.github.io)
 
@@ -10,11 +10,10 @@ El sitio refleja mi manera de trabajar: limpio, funcional y con atención al det
 ## 🚀 Tecnologías principales
 
 - ⚛️ **React + Vite** – base del frontend  
-- 🧭 **React Router DOM** – navegación fluida  
-- 🎞️ **Framer Motion** – animaciones suaves y naturales  
+- 🧭 **React Router DOM v7** – navegación fluida  
+- 🎞️ **Framer Motion** – animaciones suaves y fluidas  
 - 🎨 **CSS Modules** – estilos mantenibles y escalables  
-- 🌍 **i18next** – soporte multilenguaje  
-- 📧 **EmailJS** – contacto directo sin backend  
+- 🌍 **i18next** – soporte multilenguaje (ES / EN)  
 
 ---
 
@@ -23,25 +22,23 @@ El sitio refleja mi manera de trabajar: limpio, funcional y con atención al det
 - 🏠 **Inicio**  
 - 👨‍💻 **Sobre mí**  
 - 🚧 **Proyectos**  
-- ⭐ **Formación**  
-- 🔒 **Ciberseguridad**  
+- ⭐ **Trayectoria** (Experiencia, Certificaciones y Formación)  
+- 🔒 **Ciberseguridad** (OSCP & Writeups)  
 - 📬 **Contacto**
 
 ---
 
-## 💡 Objetivo
+## 💡 Perfil
 
-Este portafolio está diseñado para mostrar mis trabajos y evolución profesional, combinando un diseño moderno con un enfoque técnico y práctico.  
-Busco seguir aprendiendo y participando en proyectos que unan **creatividad** y **tecnología**.
+Ingeniero de software enfocado en seguridad con experiencia práctica en operaciones ofensivas y defensivas, bastionado de infraestructuras y automatización de la seguridad. Certificado OSCP, opero en entornos Linux, Windows, Active Directory y Cloud.
 
 ---
 
 ## 📫 Contacto
 
-Si desea ponerse en contacto conmigo o colaborar en un proyecto:
-
-**Correo:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
-**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gomez)
+- **Correo:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
+- **LinkedIn:** [Diego Aranda Gómez](https://linkedin.com/in/diego-aranda-gomez)  
+- **GitHub:** [Diego740](https://github.com/Diego740)
 
 ---
 
@@ -49,8 +46,8 @@ Si desea ponerse en contacto conmigo o colaborar en un proyecto:
 
 # 🌐 Portfolio | Diego Aranda Gómez
 
-Welcome to my personal portfolio, a space where I share my projects and learning experiences in **web development**, **cybersecurity**, and **artificial intelligence**.  
-The site reflects my way of working: clean, functional, and detail-oriented.
+Welcome to my personal portfolio. I am a **Security-focused Software Engineer (OSCP certified)** and **Security Architecture Analyst at Deloitte**.  
+Here I share my technical projects, certifications, and hands-on experience across **offensive and defensive security**, **infrastructure architecture**, and **software engineering**.
 
 🔗 **Visit it here:** [https://diego740.github.io](https://diego740.github.io)
 
@@ -59,11 +56,10 @@ The site reflects my way of working: clean, functional, and detail-oriented.
 ## 🚀 Main Technologies
 
 - ⚛️ **React + Vite** – frontend foundation  
-- 🧭 **React Router DOM** – smooth navigation  
-- 🎞️ **Framer Motion** – elegant and natural animations  
+- 🧭 **React Router DOM v7** – smooth routing  
+- 🎞️ **Framer Motion** – natural animations  
 - 🎨 **CSS Modules** – maintainable and scalable styles  
-- 🌍 **i18next** – multilingual support  
-- 📧 **EmailJS** – direct contact without backend  
+- 🌍 **i18next** – multilingual support (ES / EN)  
 
 ---
 
@@ -72,23 +68,20 @@ The site reflects my way of working: clean, functional, and detail-oriented.
 - 🏠 **Home**  
 - 👨‍💻 **About Me**  
 - 🚧 **Projects**  
-- ⭐ **Education**  
-- 🔒 **Cibersecurity**  
+- ⭐ **Trajectory** (Experience, Certifications & Education)  
+- 🔒 **Cybersecurity** (OSCP & Writeups)  
 - 📬 **Contact**
 
 ---
 
-## 💡 Purpose
+## 💡 Profile
 
-This portfolio was created to showcase my work and professional growth, combining modern design with a practical and technical approach.  
-I aim to keep learning and contributing to projects that connect **creativity** and **technology**.
+Security-focused software engineer with hands-on experience in offensive and defensive operations, infrastructure hardening, and security automation. OSCP certified, operates across Linux, Windows, Active Directory, and Cloud environments.
 
 ---
 
 ## 📫 Contact
 
-If you’d like to get in touch or collaborate on a project:
-
-**Email:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
-**LinkedIn:** [Diego Aranda Gómez](www.linkedin.com/in/diego-aranda-gomez)
-
+- **Email:** [diegoaranda.dev@gmail.com](mailto:diegoaranda.dev@gmail.com)  
+- **LinkedIn:** [Diego Aranda Gómez](https://linkedin.com/in/diego-aranda-gomez)  
+- **GitHub:** [Diego740](https://github.com/Diego740)
