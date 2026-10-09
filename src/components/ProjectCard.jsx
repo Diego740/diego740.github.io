@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { MdPhotoLibrary } from 'react-icons/md';
+import { MdPhotoLibrary, MdPrivacyTip } from 'react-icons/md';
 import ImageGalleryModal from './ImageGalleryModal';
 import styles from './ProjectCard.module.css';
 
@@ -10,7 +10,7 @@ const entryVariants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
-function ProjectCard({ title, tech, description, link, images, index = 0 }) {
+function ProjectCard({ title, tech, description, link, images, privacyUrl, index = 0 }) {
   const { t } = useTranslation('projects');
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const displayIndex = String(index + 1).padStart(2, '0');
@@ -50,6 +50,16 @@ function ProjectCard({ title, tech, description, link, images, index = 0 }) {
               <MdPhotoLibrary size={16} />
               {t('completed.viewGallery')} →
             </button>
+          )}
+          {privacyUrl && (
+            <a
+              href={privacyUrl}
+              className={styles.link}
+              style={{ opacity: 0.85, display: 'inline-flex', alignItems: 'center', gap: '0.3em' }}
+            >
+              <MdPrivacyTip size={15} />
+              {t('inProgress.viewPrivacy', 'Privacidad & Términos')} →
+            </a>
           )}
         </div>
       </div>

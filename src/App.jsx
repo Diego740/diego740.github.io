@@ -32,6 +32,13 @@ function AnimatedPage({ children }) {
   );
 }
 
+function ExternalRedirect({ to }) {
+  useEffect(() => {
+    window.location.replace(to + window.location.hash);
+  }, [to]);
+  return null;
+}
+
 function getInitialTheme() {
   if (typeof window !== 'undefined') {
     const storedTheme = window.localStorage.getItem('theme');
@@ -119,6 +126,11 @@ function App() {
                 <Route path="/education" element={<AnimatedPage><Education /></AnimatedPage>} />
                 <Route path="/trayectoria" element={<AnimatedPage><Education /></AnimatedPage>} />
                 <Route path="/trajectory" element={<AnimatedPage><Education /></AnimatedPage>} />
+                <Route path="/mybudget-privacy" element={<ExternalRedirect to="/mybudget-privacy.html" />} />
+                <Route path="/mybudget-privacy.html" element={<ExternalRedirect to="/mybudget-privacy.html" />} />
+                <Route path="/mybudget" element={<ExternalRedirect to="/mybudget-privacy.html" />} />
+                <Route path="/geoalarm-privacy" element={<ExternalRedirect to="/geoalarm-privacy.html" />} />
+                <Route path="/geoalarm-privacy.html" element={<ExternalRedirect to="/geoalarm-privacy.html" />} />
                 <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
               </Routes>
             )}

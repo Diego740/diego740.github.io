@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MyBudget — Política de Privacidad, Condiciones de Uso y Soporte Técnico · Diego Aranda Gómez" />
+  <title>MyBudget — Textos legales y soporte</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css" />
+
+  <script>
+    (function () {
+      var t = window.localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    })();
+  </script>
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --bg-color: #0a0a0a;
+      --card-bg: #121212;
+      --text-color: #ffffff;
+      --secondary-text: #cfcfcf;
+      --accent-color: #8a2be2;
+      --accent-contrast-text: #ffffff;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.4);
+      --accent-surface: rgba(138, 43, 226, 0.12);
+      --glass-bg-strong: rgba(10, 10, 10, 0.92);
+      --glass-bg-soft: rgba(10, 10, 10, 0.78);
+      --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    [data-theme='light'] {
+      --bg-color: #fafafa;
+      --card-bg: #ffffff;
+      --text-color: #0a0a0a;
+      --secondary-text: #444444;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.3);
+      --accent-surface: rgba(138, 43, 226, 0.08);
+      --glass-bg-strong: rgba(255, 255, 255, 0.92);
+      --glass-bg-soft: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    html, body {
+      width: 100%; min-height: 100%;
+      background-color: var(--bg-color);
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: var(--font-mono); }
+
+    a { color: var(--accent-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, var(--glass-bg-strong) 0%, var(--glass-bg-soft) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0;
+    }
+
+    .logo {
+      font-size: 1.35rem; font-weight: 600; letter-spacing: 0.02em;
+      color: var(--text-color); display: flex; align-items: center; gap: 0;
+      text-decoration: none; transition: color 0.3s ease;
+      font-family: var(--font-mono);
+    }
+    .logo:hover { color: var(--accent-color); text-decoration: none; }
+    .logo-accent { color: var(--accent-color); font-weight: 700; }
+
+    .header-controls { display: flex; align-items: center; gap: 0.75rem; }
+
+    /* ── Theme pill — píldora fija igual que en el portfolio ── */
+    .theme-pill {
+      position: fixed;
+      right: 2.5rem; bottom: 3rem;
+      width: 5rem; height: 2.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border-color);
+      background: var(--glass-bg-strong);
+      color: var(--text-color);
+      display: flex; align-items: center;
+      padding: 0.35rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+      z-index: 9;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .theme-pill-icon {
+      width: 1.8rem; height: 1.8rem;
+      border-radius: 50%;
+      background: var(--accent-color);
+      color: var(--accent-contrast-text);
+      display: grid; place-items: center;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      flex-shrink: 0;
+    }
+
+    [data-theme='light'] .theme-pill-icon {
+      transform: translateX(2.4rem);
+    }
+
+    .theme-pill svg { display: block; }
+
+    @media (max-width: 768px) {
+      .theme-pill { right: 1.5rem; bottom: 2rem; }
+    }
+
+    .lang-toggle { display: inline-flex; gap: 0.5rem; align-items: center; }
+    .lang-toggle button {
+      background: transparent; color: var(--text-color);
+      border: 1px solid var(--accent-color); border-radius: 10px;
+      padding: 0.3rem 0.55rem; font-size: 1rem; cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .lang-toggle button:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--accent-color) 10%, transparent); }
+    .lang-toggle button.active { background: var(--accent-color); color: var(--accent-contrast-text); border-color: var(--accent-color); }
+
+    /* ── Main ── */
+    main {
+      width: min(780px, 92vw);
+      margin: 0 auto;
+      padding: 3.5rem 0 6rem;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.45em;
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em;
+      color: var(--secondary-text); text-transform: uppercase;
+      margin-bottom: 3rem; text-decoration: none;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .back-link:hover { color: var(--accent-color); text-decoration: none; gap: 0.6em; }
+    .back-arrow { display: inline-block; transition: transform 0.2s ease; }
+    .back-link:hover .back-arrow { transform: translateX(-3px); }
+
+    /* ── Page hero ── */
+    .page-hero {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 0.75rem;
+    }
+
+    .page-hero-sub {
+      font-size: 0.92rem; color: var(--secondary-text);
+      font-family: var(--font-mono); opacity: 0.8;
+    }
+
+    /* ── Doc nav ── */
+    .doc-nav {
+      display: flex; gap: 0.5rem; margin-bottom: 3rem;
+      flex-wrap: wrap; position: sticky; top: 5rem;
+      z-index: 5; background: var(--bg-color);
+      padding: 0.5rem 0; border-radius: 8px;
+    }
+
+    .doc-nav a {
+      font-size: 0.8rem; font-family: var(--font-mono);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--secondary-text);
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--card-bg);
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+    .doc-nav a:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-border-color);
+      background: var(--accent-surface);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    /* ── Document sections ── */
+    .doc-block { margin-bottom: 4rem; scroll-margin-top: 8rem; }
+
+    .doc-label {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-label-text {
+      font-family: var(--font-mono);
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--text-color); letter-spacing: -0.01em;
+    }
+
+    .doc-label-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, var(--accent-border-color), transparent);
+    }
+
+    .doc-meta {
+      font-size: 0.8rem; font-family: var(--font-mono);
+      color: var(--secondary-text); opacity: 0.65;
+      margin-bottom: 2rem;
+    }
+
+    .doc-disclaimer-note {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--secondary-text);
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      padding: 0.75rem 1rem;
+      border-left: 2px solid var(--accent-color);
+      background: var(--accent-surface);
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* ── Sections ── */
+    .doc-section {
+      display: grid;
+      grid-template-columns: 2px 1fr;
+      gap: 0 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-rail {
+      background: var(--accent-border-color);
+      border-radius: 2px;
+      transition: background 0.2s ease;
+    }
+
+    .doc-section:hover .section-rail {
+      background: var(--accent-color);
+    }
+
+    .section-body {}
+
+    .doc-section h2, .doc-section h3 {
+      font-size: 0.76rem; font-weight: 600;
+      color: var(--accent-color);
+      text-transform: uppercase; letter-spacing: 0.09em;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-section p {
+      font-size: 0.95rem; color: var(--secondary-text);
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .doc-section ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .doc-section li {
+      font-size: 0.94rem;
+      color: var(--secondary-text);
+      line-height: 1.7;
+    }
+
+    .contact-link {
+      color: var(--accent-color);
+      font-family: var(--font-mono); font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* ── FAQ items ── */
+    .faq-container {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .faq-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .faq-card:hover {
+      border-color: var(--accent-border-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(138, 43, 226, 0.09);
+    }
+
+    .faq-question {
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 0.55rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .faq-answer {
+      font-size: 0.93rem;
+      color: var(--secondary-text);
+      line-height: 1.75;
+    }
+
+    /* ── Support Info Box ── */
+    .support-intro-card {
+      background: var(--accent-surface);
+      border: 1px solid var(--accent-border-color);
+      border-radius: 12px;
+      padding: 1.35rem 1.6rem;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: var(--secondary-text);
+      line-height: 1.8;
+    }
+
+    /* ── Doc separator ── */
+    .doc-separator {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 3.5rem 0;
+    }
+    .doc-separator-line {
+      flex: 1; height: 1px; background: var(--border-color);
+    }
+    .doc-separator-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-color); opacity: 0.6;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0; text-align: center;
+    }
+    .site-footer p {
+      font-size: 0.82rem; color: var(--secondary-text);
+      opacity: 0.6; font-family: var(--font-mono);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-hero h1 { font-size: 1.55rem; }
+      main { padding: 2.5rem 0 4rem; }
+      .faq-card { padding: 1.1rem 1.2rem; }
+      .faq-answer { padding-left: 0; margin-top: 0.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Volver al portfolio">
+        <span class="logo-accent">&lt;</span>Diego<span class="logo-accent">/&gt;</span>
+      </a>
+      <div class="header-controls">
+        <div class="lang-toggle">
+          <button data-lang="es" class="active" aria-label="Cambiar a español" title="Español">
+            <span class="fi fi-es"></span>
+          </button>
+          <button data-lang="en" aria-label="Switch to English" title="English">
+            <span class="fi fi-gb"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <a href="/" class="back-link">
+      <span class="back-arrow">←</span>
+      <span data-i18n="backToPortfolio">Volver al portfolio</span>
+    </a>
+
+    <!-- Hero -->
+    <div class="page-hero">
+      <h1 data-i18n="page.title">MyBudget — Textos legales y soporte</h1>
+      <p class="page-hero-sub" data-i18n="page.subtitle">Política de Privacidad, Condiciones de Uso y Soporte Técnico</p>
+    </div>
+
+    <!-- Section nav -->
+    <nav class="doc-nav" aria-label="Secciones">
+      <a href="#privacy-policy" data-i18n="nav.privacy">Política de Privacidad</a>
+      <a href="#terms-of-use" data-i18n="nav.terms">Condiciones de Uso</a>
+      <a href="#support" data-i18n="nav.support">Soporte &amp; FAQ</a>
+    </nav>
+
+    <!-- ══════════════════════════════════════════════════════
+         SPANISH CONTENT BLOCK
+    ══════════════════════════════════════════════════════ -->
+    <div class="lang-content-block" data-lang-block="es">
+
+      <!-- Política de Privacidad -->
+      <section id="privacy-policy" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Política de Privacidad</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Última actualización: 6 de octubre de 2026</p>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>1. Responsable</h2>
+            <p>El responsable de la aplicación MyBudget (en adelante, «la Aplicación») es Diego Aranda Gómez (en adelante, «el Responsable»). Puede contactar con él en la dirección de correo electrónico <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>2. Normativa aplicable</h2>
+            <p>Esta política se rige por el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y por la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>3. Principio general: la Aplicación no recoge datos</h2>
+            <p>La Aplicación no recoge, no transmite al Responsable y no almacena en servidores del Responsable ningún dato personal. El Responsable no dispone de servidores y no tiene acceso a la información que usted introduce en la Aplicación.</p>
+            <p>La información financiera que usted registra se guarda exclusivamente en su dispositivo y, si así lo decide, en su cuenta personal de iCloud. Ese tratamiento lo realiza usted en el ámbito de su actividad personal o doméstica, por lo que el Responsable no actúa como responsable del tratamiento de esos datos.</p>
+            <p>No es necesario registrarse ni crear una cuenta para usar la Aplicación.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>4. Información almacenada en su dispositivo</h2>
+            <p>La Aplicación guarda en su dispositivo la información que usted introduce: cuentas, movimientos, categorías, presupuestos, movimientos recurrentes, objetivos de ahorro y preferencias. Estos datos están protegidos por el cifrado del sistema operativo iOS y no son accesibles mientras el dispositivo está bloqueado.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>5. Sincronización mediante iCloud</h2>
+            <p>Si usted tiene iCloud activado, la Aplicación sincroniza su información entre sus dispositivos mediante el servicio iCloud (CloudKit) de Apple Inc. Los datos se almacenan en la base de datos privada de su cuenta de iCloud, a la que el Responsable no tiene acceso.</p>
+            <p>Los campos con contenido personal (nombres, importes, notas, fechas, monedas, tipos de cambio, IBAN, entidad y método de pago) se cifran de extremo a extremo en su dispositivo antes de enviarse, de forma que ni Apple puede leerlos. No se cifran determinados datos técnicos, que Apple puede ver: el número de registros y sus fechas de creación y modificación, las relaciones entre registros y valores sin contenido personal, como el tipo de movimiento (gasto, ingreso o transferencia), la frecuencia de un movimiento recurrente o el icono y el color de una categoría.</p>
+            <p>Si usted pierde el acceso a su llavero de iCloud, los campos cifrados no podrán recuperarse desde iCloud; la copia de su dispositivo no se verá afectada. El uso de iCloud se rige por las condiciones y la política de privacidad de Apple. Si no utiliza iCloud, la Aplicación funciona con normalidad y sus datos solo se guardan en su dispositivo.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>6. Face ID, Touch ID y código del dispositivo</h2>
+            <p>La Aplicación puede solicitar la autenticación del dispositivo al abrirse. La verificación la realiza el sistema operativo iOS: la Aplicación solo recibe el resultado (correcto o incorrecto) y nunca accede a sus datos biométricos.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>7. Widgets, Siri, Atajos y Centro de control</h2>
+            <p>Los widgets muestran cifras de resumen en la pantalla de inicio o de bloqueo. Para ello, la Aplicación guarda una copia de esas cifras en su dispositivo. Cualquier persona que vea su pantalla podrá verlas, salvo que active el modo de privacidad del widget, que oculta los importes.</p>
+            <p>La acción de gasto rápido disponible en Siri, Atajos y el Centro de control únicamente abre la Aplicación. Si utiliza Siri, Apple trata su voz conforme a su propia política de privacidad.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>8. Exportación de datos</h2>
+            <p>La Aplicación permite exportar sus movimientos a un fichero CSV. La exportación solo se realiza a petición suya, y usted decide dónde guardar el fichero o con quién compartirlo.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>9. Lo que la Aplicación no hace</h2>
+            <ul>
+              <li>No utiliza herramientas de analítica, publicidad ni seguimiento.</li>
+              <li>No incorpora librerías ni servicios de terceros.</li>
+              <li>No se conecta a servidores del Responsable ni de terceros, salvo a iCloud de Apple cuando usted lo tiene activado.</li>
+              <li>No elabora perfiles ni toma decisiones automatizadas sobre usted.</li>
+              <li>No vende, cede ni comparte datos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>10. Comunicaciones con el servicio de soporte</h2>
+            <p>Este es el único caso en que el Responsable trata datos personales suyos. Si usted escribe a <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>:</p>
+            <ul>
+              <li><strong>Datos tratados:</strong> su dirección de correo electrónico, su nombre si lo indica y el contenido de su mensaje.</li>
+              <li><strong>Finalidad:</strong> atender su consulta, incidencia o sugerencia.</li>
+              <li><strong>Base jurídica:</strong> su consentimiento, manifestado al enviar el mensaje (art. 6.1.a RGPD).</li>
+              <li><strong>Conservación:</strong> el tiempo necesario para atender su consulta y, como máximo, doce meses desde la última comunicación, salvo obligación legal de conservarlos más tiempo.</li>
+              <li><strong>Destinatarios:</strong> no se ceden a terceros. El correo se gestiona mediante el servicio Gmail de Google, que puede almacenar datos fuera del Espacio Económico Europeo. Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU., reconocido por la Comisión Europea como garantía adecuada.</li>
+            </ul>
+            <p style="margin-top:0.6rem;"><em>Le rogamos que no incluya datos financieros en sus mensajes.</em></p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>11. Sus derechos</h2>
+            <p>Respecto de los datos tratados conforme al apartado 10, usted puede ejercer en cualquier momento sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar su consentimiento, escribiendo a <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. Se le responderá en el plazo máximo de un mes.</p>
+            <p>Si considera que sus derechos no han sido atendidos, puede presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noreferrer">www.aepd.es</a>) o ante la autoridad de control de su país de residencia.</p>
+            <p>Los datos que usted guarda en la Aplicación están bajo su control exclusivo: puede consultarlos, modificarlos o eliminarlos en todo momento desde la propia Aplicación y desde su cuenta de iCloud.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>12. Cómo eliminar sus datos</h2>
+            <ul>
+              <li><strong>En su dispositivo:</strong> al eliminar la Aplicación se eliminan los datos guardados en él.</li>
+              <li><strong>En iCloud:</strong> en Ajustes de iOS, pulse su nombre, después iCloud y la gestión del almacenamiento, seleccione MyBudget y elimine sus datos. Esta acción es irreversible.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>13. Menores de edad</h2>
+            <p>La Aplicación no recoge datos de ningún usuario, tampoco de menores. Si usted es menor de 14 años, no envíe mensajes al servicio de soporte sin el consentimiento de sus padres o tutores legales.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>14. Modificaciones</h2>
+            <p>El Responsable podrá actualizar esta política. Cualquier cambio que afecte al tratamiento de datos se publicará en esta página, con su fecha de actualización, antes de que entre en vigor.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separador -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Condiciones de Uso -->
+      <section id="terms-of-use" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Condiciones de Uso</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Última actualización: 6 de octubre de 2026</p>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>1. Titular y aceptación</h2>
+            <p>La aplicación MyBudget (en adelante, «la Aplicación») es titularidad de Diego Aranda Gómez (en adelante, «el Titular»), con correo de contacto <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. Al descargar o utilizar la Aplicación, usted acepta estas condiciones. Si no está de acuerdo con ellas, no utilice la Aplicación.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>2. Licencia</h2>
+            <p>La Aplicación se distribuye a través del App Store de Apple y su uso se rige por el Contrato de Licencia de Usuario Final de Aplicaciones con Licencia de Apple («EULA estándar de Apple»). Estas condiciones lo complementan. La Aplicación se ofrece de forma gratuita.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>3. Naturaleza de la Aplicación</h2>
+            <p>La Aplicación es una herramienta de registro y organización de finanzas personales. Los saldos, presupuestos, estadísticas, previsiones y conversiones de moneda que muestra se calculan exclusivamente a partir de los datos que usted introduce, incluidos los tipos de cambio.</p>
+            <p>La Aplicación no presta asesoramiento financiero, fiscal, contable, jurídico ni de inversión, y su información no sustituye a la de su entidad bancaria ni a la de un profesional. Las decisiones que usted tome a partir de ella son de su exclusiva responsabilidad.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>4. Obligaciones del usuario</h2>
+            <p>Usted es responsable de:</p>
+            <ul>
+              <li>La exactitud de los datos que introduce y de comprobar las cifras antes de tomar decisiones basadas en ellas.</li>
+              <li>Mantener copias de seguridad de su información. La exportación a CSV solo incluye los movimientos; no incluye cuentas, presupuestos, movimientos recurrentes ni preferencias.</li>
+              <li>La seguridad de su dispositivo, de su código de desbloqueo y de su cuenta de iCloud.</li>
+              <li>Hacer un uso lícito de la Aplicación.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>5. Servicios de terceros</h2>
+            <p>La sincronización de datos depende del servicio iCloud de Apple, y el funcionamiento de la Aplicación, del sistema operativo iOS. El Titular no controla estos servicios y no garantiza su disponibilidad, continuidad ni funcionamiento. La sincronización puede retrasarse o interrumpirse, y la pérdida del acceso al llavero de iCloud impide recuperar desde iCloud los campos cifrados.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>6. Exclusión de garantías</h2>
+            <p>La Aplicación, como cualquier programa informático, es susceptible de contener errores, fallos de funcionamiento o inexactitudes, tanto en sus cálculos como en la sincronización o el almacenamiento de datos, incluidos los que puedan surgir tras actualizaciones de la propia Aplicación o del sistema operativo.</p>
+            <p>La Aplicación se proporciona «tal cual» y «según disponibilidad». En la máxima medida permitida por la ley aplicable, el Titular no garantiza que la Aplicación esté libre de errores, que funcione sin interrupciones ni que sus resultados sean exactos o adecuados para un fin determinado.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>7. Limitación de responsabilidad</h2>
+            <p>En la máxima medida permitida por la ley aplicable, el Titular no será responsable de los daños o perjuicios, directos o indirectos, que se deriven del uso o de la imposibilidad de uso de la Aplicación, incluidos, entre otros:</p>
+            <ul>
+              <li>Errores, omisiones o inexactitudes en los cálculos, saldos, presupuestos, estadísticas o conversiones de moneda.</li>
+              <li>La pérdida, alteración o corrupción de datos, incluida la derivada de fallos de sincronización o de servicios de terceros.</li>
+              <li>Las decisiones económicas, financieras o de cualquier otro tipo adoptadas a partir de la información de la Aplicación.</li>
+              <li>El lucro cesante, la pérdida de oportunidades o los daños indirectos o consecuenciales.</li>
+              <li>El acceso de terceros a su dispositivo o a su cuenta de iCloud.</li>
+            </ul>
+            <p style="margin-top:0.6rem;">Nada de lo dispuesto en estas condiciones excluye ni limita la responsabilidad del Titular en los casos en que la ley no lo permita, en particular por dolo o culpa grave, ni los derechos que le reconoce como consumidor el Real Decreto Legislativo 1/2007, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios, o la normativa imperativa de consumo de su país de residencia.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>8. Propiedad intelectual</h2>
+            <p>La Aplicación, su código, su diseño, sus textos y sus elementos gráficos son propiedad del Titular o de sus licenciantes y están protegidos por la normativa de propiedad intelectual e industrial. Los datos que usted introduce son de su propiedad.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>9. Modificación y discontinuidad</h2>
+            <p>El Titular podrá modificar estas condiciones, actualizar la Aplicación o dejar de ofrecerla. Las modificaciones se publicarán en esta página con su fecha de actualización. Si la Aplicación deja de ofrecerse, sus datos seguirán en su dispositivo y en su cuenta de iCloud.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>10. Ley aplicable y jurisdicción</h2>
+            <p>Estas condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a la ley. Si usted es consumidor, podrá acudir a los tribunales de su domicilio.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>11. Contacto</h2>
+            <p>Para cualquier consulta sobre estas condiciones, escriba a <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separador -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Soporte & FAQ -->
+      <section id="support" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Soporte de MyBudget</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="support-intro-card">
+          <p>Para cualquier incidencia, consulta o sugerencia, escriba a <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. Si se trata de un error, indique qué estaba haciendo, el modelo de su dispositivo y la versión de iOS. Le rogamos que no incluya datos financieros en su mensaje. El tratamiento de su correo se describe en la <a href="#privacy-policy"><strong>Política de privacidad</strong></a>.</p>
+        </div>
+
+        <div class="doc-label" style="margin-top:2.5rem; margin-bottom: 1rem;">
+          <span class="doc-label-text" style="font-size: 1rem;">Preguntas frecuentes</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="faq-container">
+          <article class="faq-card">
+            <h3 class="faq-question">¿Se sincronizan mis datos entre mis dispositivos?</h3>
+            <p class="faq-answer">Sí, siempre que tenga iCloud activado y haya iniciado sesión con la misma cuenta en todos ellos. Si en Ajustes de la Aplicación aparece un aviso sobre iCloud, sus datos solo se están guardando en ese dispositivo.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">¿Puede el desarrollador ver mis datos?</h3>
+            <p class="faq-answer">No. La Aplicación no dispone de servidores: sus datos se guardan en su dispositivo y en su cuenta privada de iCloud, y la información personal se cifra de extremo a extremo.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">He cambiado de iPhone. ¿Cómo recupero mis datos?</h3>
+            <p class="faq-answer">Si utilizaba iCloud, inicie sesión con la misma cuenta, instale la Aplicación y espere a que se complete la sincronización. Si no utilizaba iCloud, sus datos solo estaban guardados en el dispositivo anterior.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">¿Cómo hago una copia de seguridad?</h3>
+            <p class="faq-answer">Puede exportar sus movimientos a un fichero CSV desde la Aplicación. Tenga en cuenta que el CSV solo incluye los movimientos; no incluye cuentas, presupuestos, movimientos recurrentes ni preferencias.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">¿Cómo oculto los importes de los widgets?</h3>
+            <p class="faq-answer">Active el modo de privacidad en la configuración del widget.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">¿Cómo elimino todos mis datos?</h3>
+            <p class="faq-answer">Elimine la Aplicación de su dispositivo y, si utilizaba iCloud, elimine también sus datos en Ajustes de iOS → su nombre → iCloud → gestión del almacenamiento → MyBudget. Esta acción es irreversible.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">La Aplicación no reconoce mi Face ID.</h3>
+            <p class="faq-answer">Puede utilizar el código de su dispositivo. La verificación la realiza iOS; la Aplicación nunca accede a sus datos biométricos.</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         ENGLISH CONTENT BLOCK
+    ══════════════════════════════════════════════════════ -->
+    <div class="lang-content-block" data-lang-block="en" style="display: none;">
+
+      <!-- Privacy Policy -->
+      <section id="privacy-policy-en" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Privacy Policy</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Last updated: October 6, 2026</p>
+        <div class="doc-disclaimer-note">
+          This is a translation of the Spanish original. In the event of any discrepancy, the Spanish version shall prevail.
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>1. Controller</h2>
+            <p>The MyBudget application (the "App") is provided by Diego Aranda Gómez (the "Controller"), who can be contacted at <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>2. Applicable law</h2>
+            <p>This policy is governed by Regulation (EU) 2016/679, the General Data Protection Regulation (GDPR), and by Spanish Organic Law 3/2018 on Personal Data Protection and the Guarantee of Digital Rights (LOPDGDD).</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>3. General principle: the App collects no data</h2>
+            <p>The App does not collect any personal data, does not transmit it to the Controller and does not store it on the Controller's servers. The Controller has no servers and no access to the information you enter in the App.</p>
+            <p>The financial information you record is stored exclusively on your device and, if you so choose, in your personal iCloud account. You carry out that processing in the course of a purely personal or household activity, so the Controller does not act as controller of that data.</p>
+            <p>No registration or account is required to use the App.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>4. Information stored on your device</h2>
+            <p>The App stores on your device the information you enter: accounts, transactions, categories, budgets, recurring transactions, savings goals and preferences. This data is protected by iOS encryption and cannot be accessed while the device is locked.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>5. iCloud sync</h2>
+            <p>If iCloud is enabled, the App syncs your information across your devices through the iCloud (CloudKit) service provided by Apple Inc. The data is stored in the private database of your iCloud account, to which the Controller has no access.</p>
+            <p>Fields with personal content (names, amounts, notes, dates, currencies, exchange rates, IBAN, bank and payment method) are end-to-end encrypted on your device before they are sent, so that not even Apple can read them. Certain technical data is not encrypted and is visible to Apple: the number of records and their creation and modification dates, the relationships between records, and values with no personal content, such as the transaction type (expense, income or transfer), the frequency of a recurring transaction, or a category's icon and color.</p>
+            <p>If you lose access to your iCloud Keychain, the encrypted fields cannot be recovered from iCloud; the copy on your device is not affected. Your use of iCloud is governed by Apple's terms and privacy policy. If you do not use iCloud, the App works normally and your data is stored only on your device.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>6. Face ID, Touch ID and device passcode</h2>
+            <p>The App may request device authentication when it opens. The verification is performed by iOS: the App only receives the result (success or failure) and never accesses your biometric data.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>7. Widgets, Siri, Shortcuts and Control Center</h2>
+            <p>Widgets display summary figures on the Home Screen or Lock Screen. To do so, the App keeps a copy of those figures on your device. Anyone who can see your screen can see them, unless you enable the widget's privacy mode, which hides amounts.</p>
+            <p>The quick expense action available in Siri, Shortcuts and Control Center only opens the App. If you use Siri, Apple processes your voice under its own privacy policy.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>8. Data export</h2>
+            <p>The App lets you export your transactions to a CSV file. The export only takes place at your request, and you decide where to save the file or with whom to share it.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>9. What the App does not do</h2>
+            <ul>
+              <li>It does not use analytics, advertising or tracking tools.</li>
+              <li>It does not include third-party libraries or services.</li>
+              <li>It does not connect to servers of the Controller or of third parties, except Apple's iCloud when you have it enabled.</li>
+              <li>It does not profile you or make automated decisions about you.</li>
+              <li>It does not sell, transfer or share data.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>10. Communications with support</h2>
+            <p>This is the only case in which the Controller processes your personal data. If you write to <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>:</p>
+            <ul>
+              <li><strong>Data processed:</strong> your email address, your name if you provide it, and the content of your message.</li>
+              <li><strong>Purpose:</strong> to handle your query, issue or suggestion.</li>
+              <li><strong>Legal basis:</strong> your consent, given by sending the message (Art. 6(1)(a) GDPR).</li>
+              <li><strong>Retention:</strong> for as long as necessary to handle your query and, at most, twelve months from the last communication, unless a legal obligation requires longer retention.</li>
+              <li><strong>Recipients:</strong> your data is not disclosed to third parties. Email is managed through Google's Gmail service, which may store data outside the European Economic Area. Google LLC participates in the EU-U.S. Data Privacy Framework, recognized by the European Commission as an adequate safeguard.</li>
+            </ul>
+            <p style="margin-top:0.6rem;"><em>Please do not include financial data in your messages.</em></p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>11. Your rights</h2>
+            <p>Regarding the data processed under section 10, you may at any time exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. You will receive a reply within one month at the latest.</p>
+            <p>If you believe your rights have not been respected, you may lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noreferrer">www.aepd.es</a>) or with the supervisory authority of your country of residence.</p>
+            <p>The data you store in the App remains under your exclusive control: you can view, modify or delete it at any time from the App itself and from your iCloud account.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>12. How to delete your data</h2>
+            <ul>
+              <li><strong>On your device:</strong> deleting the App deletes the data stored on it.</li>
+              <li><strong>In iCloud:</strong> in iOS Settings, tap your name, then iCloud and storage management, select MyBudget and delete its data. This action cannot be undone.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>13. Minors</h2>
+            <p>The App does not collect data from any user, including minors. If you are under 14, do not send messages to support without the consent of your parents or legal guardians.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>14. Changes</h2>
+            <p>The Controller may update this policy. Any change affecting data processing will be published on this page, with its update date, before it takes effect.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Terms of Use -->
+      <section id="terms-of-use-en" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Terms of Use</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Last updated: October 6, 2026</p>
+        <div class="doc-disclaimer-note">
+          This is a translation of the Spanish original. In the event of any discrepancy, the Spanish version shall prevail.
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>1. Owner and acceptance</h2>
+            <p>The MyBudget application (the "App") is owned by Diego Aranda Gómez (the "Owner"), contact email <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. By downloading or using the App, you accept these terms. If you do not agree with them, do not use the App.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>2. License</h2>
+            <p>The App is distributed through Apple's App Store, and its use is governed by Apple's Licensed Application End User License Agreement ("Apple's standard EULA"). These terms supplement it. The App is provided free of charge.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>3. Nature of the App</h2>
+            <p>The App is a tool for recording and organizing personal finances. The balances, budgets, statistics, projections and currency conversions it displays are calculated solely from the data you enter, including exchange rates.</p>
+            <p>The App does not provide financial, tax, accounting, legal or investment advice, and its information does not replace that of your bank or of a professional. Any decisions you make based on it are your sole responsibility.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>4. User obligations</h2>
+            <p>You are responsible for:</p>
+            <ul>
+              <li>The accuracy of the data you enter, and for checking the figures before making decisions based on them.</li>
+              <li>Keeping backups of your information. CSV export only includes transactions; it does not include accounts, budgets, recurring transactions or preferences.</li>
+              <li>The security of your device, your passcode and your iCloud account.</li>
+              <li>Using the App lawfully.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>5. Third-party services</h2>
+            <p>Data sync depends on Apple's iCloud service, and the App's operation depends on the iOS operating system. The Owner does not control these services and does not guarantee their availability, continuity or operation. Sync may be delayed or interrupted, and losing access to your iCloud Keychain prevents the encrypted fields from being recovered from iCloud.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>6. Disclaimer of warranties</h2>
+            <p>Like any software, the App may contain errors, malfunctions or inaccuracies, whether in its calculations or in the syncing or storage of data, including any that may arise after updates to the App itself or to the operating system.</p>
+            <p>The App is provided "as is" and "as available". To the maximum extent permitted by applicable law, the Owner does not warrant that the App is free of errors, that it will operate without interruption, or that its results are accurate or fit for a particular purpose.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>7. Limitation of liability</h2>
+            <p>To the maximum extent permitted by applicable law, the Owner shall not be liable for any direct or indirect damage or loss arising from the use of, or inability to use, the App, including but not limited to:</p>
+            <ul>
+              <li>Errors, omissions or inaccuracies in calculations, balances, budgets, statistics or currency conversions.</li>
+              <li>Loss, alteration or corruption of data, including as a result of sync failures or third-party services.</li>
+              <li>Economic, financial or other decisions made based on the information in the App.</li>
+              <li>Loss of profits, loss of opportunity, or indirect or consequential damages.</li>
+              <li>Third-party access to your device or your iCloud account.</li>
+            </ul>
+            <p style="margin-top:0.6rem;">Nothing in these terms excludes or limits the Owner's liability where the law does not allow it, in particular for willful misconduct or gross negligence, nor the rights you have as a consumer under Spanish Royal Legislative Decree 1/2007 (General Law for the Defense of Consumers and Users) or under the mandatory consumer law of your country of residence.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>8. Intellectual property</h2>
+            <p>The App, its code, design, texts and graphic elements are the property of the Owner or its licensors and are protected by intellectual and industrial property law. The data you enter belongs to you.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>9. Changes and discontinuation</h2>
+            <p>The Owner may modify these terms, update the App or stop offering it. Changes will be published on this page with their update date. If the App is discontinued, your data will remain on your device and in your iCloud account.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>10. Governing law and jurisdiction</h2>
+            <p>These terms are governed by Spanish law. Any dispute shall be submitted to the courts and tribunals competent under the law. If you are a consumer, you may bring proceedings before the courts of your place of residence.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>11. Contact</h2>
+            <p>For any question about these terms, write to <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Support & FAQ -->
+      <section id="support-en" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">MyBudget Support</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="support-intro-card">
+          <p>For any issue, question or suggestion, write to <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>. If you are reporting a bug, please describe what you were doing, your device model and your iOS version. Please do not include financial data in your message. How your email is handled is described in the <a href="#privacy-policy"><strong>Privacy Policy</strong></a>.</p>
+        </div>
+
+        <div class="doc-label" style="margin-top:2.5rem; margin-bottom: 1rem;">
+          <span class="doc-label-text" style="font-size: 1rem;">Frequently Asked Questions</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="faq-container">
+          <article class="faq-card">
+            <h3 class="faq-question">Does my data sync across my devices?</h3>
+            <p class="faq-answer">Yes, provided iCloud is enabled and you are signed in with the same account on all of them. If the App's Settings shows an iCloud notice, your data is only being stored on that device.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">Can the developer see my data?</h3>
+            <p class="faq-answer">No. The App has no servers: your data is stored on your device and in your private iCloud account, and personal information is end-to-end encrypted.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">I have a new iPhone. How do I get my data back?</h3>
+            <p class="faq-answer">If you used iCloud, sign in with the same account, install the App and wait for sync to complete. If you did not use iCloud, your data was only stored on the previous device.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">How do I back up my data?</h3>
+            <p class="faq-answer">You can export your transactions to a CSV file from the App. Note that the CSV only includes transactions; it does not include accounts, budgets, recurring transactions or preferences.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">How do I hide amounts in the widgets?</h3>
+            <p class="faq-answer">Enable privacy mode in the widget's settings.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">How do I delete all my data?</h3>
+            <p class="faq-answer">Delete the App from your device and, if you used iCloud, also delete its data in iOS Settings → your name → iCloud → storage management → MyBudget. This action cannot be undone.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3 class="faq-question">The App does not recognize my Face ID.</h3>
+            <p class="faq-answer">You can use your device passcode. The verification is performed by iOS; the App never accesses your biometric data.</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Theme pill (matching portfolio) -->
+  <button class="theme-pill" id="theme-toggle" aria-label="Cambiar tema">
+    <span class="theme-pill-icon" id="theme-pill-icon">
+      <!-- Moon (dark mode) -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>
+      <!-- Sun (light mode, hidden by default) -->
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:none">
+        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707"/>
+      </svg>
+    </span>
+  </button>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.copy">© 2026 Diego Aranda Gómez — MyBudget</p>
+  </footer>
+
+  <script>
+    var uiTranslations = {
+      es: {
+        backToPortfolio: 'Volver al portfolio',
+        'page.title': 'MyBudget — Textos legales y soporte',
+        'page.subtitle': 'Política de Privacidad, Condiciones de Uso y Soporte Técnico',
+        'nav.privacy': 'Política de Privacidad',
+        'nav.terms': 'Condiciones de Uso',
+        'nav.support': 'Soporte & FAQ',
+        'footer.copy': '© 2026 Diego Aranda Gómez — MyBudget'
+      },
+      en: {
+        backToPortfolio: 'Back to portfolio',
+        'page.title': 'MyBudget — Legal & Support',
+        'page.subtitle': 'Privacy Policy, Terms of Use & Technical Support',
+        'nav.privacy': 'Privacy Policy',
+        'nav.terms': 'Terms of Use',
+        'nav.support': 'Support & FAQ',
+        'footer.copy': '© 2026 Diego Aranda Gómez — MyBudget'
+      }
+    };
+
+    var currentLang = localStorage.getItem('lang') || 'es';
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+
+      // Update doc title
+      document.title = (lang === 'es')
+        ? 'MyBudget — Textos legales y soporte'
+        : 'MyBudget — Legal & Support';
+
+      // Update UI translations
+      var t = uiTranslations[lang] || uiTranslations.es;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Update nav link targets according to lang
+      var navPrivacy = document.querySelector('nav.doc-nav a[data-i18n="nav.privacy"]');
+      var navTerms = document.querySelector('nav.doc-nav a[data-i18n="nav.terms"]');
+      var navSupport = document.querySelector('nav.doc-nav a[data-i18n="nav.support"]');
+
+      if (navPrivacy) navPrivacy.setAttribute('href', lang === 'es' ? '#privacy-policy' : '#privacy-policy-en');
+      if (navTerms) navTerms.setAttribute('href', lang === 'es' ? '#terms-of-use' : '#terms-of-use-en');
+      if (navSupport) navSupport.setAttribute('href', lang === 'es' ? '#support' : '#support-en');
+
+      // Toggle language block display
+      document.querySelectorAll('.lang-content-block').forEach(function (block) {
+        block.style.display = (block.getAttribute('data-lang-block') === lang) ? 'block' : 'none';
+      });
+
+      // Toggle active flag button
+      document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // Theme toggle
+    function updateThemeIcon() {
+      var theme = document.documentElement.getAttribute('data-theme');
+      document.getElementById('icon-moon').style.display = theme === 'dark' ? '' : 'none';
+      document.getElementById('icon-sun').style.display  = theme === 'light' ? '' : 'none';
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon();
+    });
+
+    // Handle deep linking hash on page load
+    window.addEventListener('load', function() {
+      if (window.location.hash) {
+        var hash = window.location.hash;
+        if (currentLang === 'en') {
+          if (hash === '#privacy-policy') hash = '#privacy-policy-en';
+          if (hash === '#terms-of-use') hash = '#terms-of-use-en';
+          if (hash === '#support') hash = '#support-en';
+        }
+        var targetEl = document.querySelector(hash);
+        if (targetEl) {
+          setTimeout(function() {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    });
+
+    setLang(currentLang);
+    updateThemeIcon();
+  </script>
+
+</body>
+</html>

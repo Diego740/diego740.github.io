@@ -37,6 +37,7 @@
       "tech": "Swift · Privacy-by-Design · iOS · App Store",
       "description": "Shipped a native iOS app to the App Store with 100% on-device computation and zero cloud dependencies — privacy-by-design, no tracking SDKs. Reduced battery consumption ~80% via CoreLocation geofencing; implemented AVAudioSession override to guarantee delivery regardless of hardware silent switch state.",
       "link": "https://apps.apple.com/app/id6768651486",
+      "privacyUrl": "/geoalarm-privacy.html",
       "images": [
         "/projects/GeoAlarm/Frame 1.png",
         "/projects/GeoAlarm/Frame 2.png",
@@ -73,6 +74,18 @@
     "viewGallery": "View gallery"
   },
   "projectsInProgress": [
+    {
+      "title": "MyBudget - iOS Personal Finance App",
+      "status": "App Development",
+      "startDate": "October 2026",
+      "scope": "Mobile App · iOS · Swift · CloudKit · Privacy",
+      "privacyUrl": "/mybudget-privacy.html",
+      "objectives": [
+        "Complete personal finance management, budgeting, and savings tracking with 100% on-device computation.",
+        "Secure sync via iCloud (CloudKit) with end-to-end encryption on personal content fields.",
+        "Native iOS integration: Widgets with privacy mode, Siri, Shortcuts, Face ID / Touch ID biometric lock, and CSV export."
+      ]
+    },
     {
       "title": "Metadata Analyzer and Editor",
       "status": "Applied development",
