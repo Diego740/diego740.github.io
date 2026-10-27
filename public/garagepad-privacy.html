@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="GaragePad — Política de Privacidad y Términos de Uso · Tus mandos de garaje en un solo widget en iPhone y CarPlay · Diego Aranda Gómez" />
+  <title>GaragePad — Textos legales y soporte</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css" />
+
+  <script>
+    (function () {
+      var t = window.localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    })();
+  </script>
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --bg-color: #0a0a0a;
+      --card-bg: #121212;
+      --text-color: #ffffff;
+      --secondary-text: #cfcfcf;
+      --accent-color: #8a2be2;
+      --accent-contrast-text: #ffffff;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.4);
+      --accent-surface: rgba(138, 43, 226, 0.12);
+      --glass-bg-strong: rgba(10, 10, 10, 0.92);
+      --glass-bg-soft: rgba(10, 10, 10, 0.78);
+      --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    [data-theme='light'] {
+      --bg-color: #fafafa;
+      --card-bg: #ffffff;
+      --text-color: #0a0a0a;
+      --secondary-text: #444444;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --accent-border-color: rgba(138, 43, 226, 0.3);
+      --accent-surface: rgba(138, 43, 226, 0.08);
+      --glass-bg-strong: rgba(255, 255, 255, 0.92);
+      --glass-bg-soft: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ── Reset ── */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg-color);
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-mono);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, var(--glass-bg-strong) 0%, var(--glass-bg-soft) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: var(--font-mono);
+    }
+
+    .logo:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .logo-accent {
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* ── Theme pill ── */
+    .theme-pill {
+      position: fixed;
+      right: 2.5rem;
+      bottom: 3rem;
+      width: 5rem;
+      height: 2.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border-color);
+      background: var(--glass-bg-strong);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      padding: 0.35rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+      z-index: 9;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .theme-pill-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: var(--accent-color);
+      color: var(--accent-contrast-text);
+      display: grid;
+      place-items: center;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      flex-shrink: 0;
+    }
+
+    [data-theme='light'] .theme-pill-icon {
+      transform: translateX(2.4rem);
+    }
+
+    .theme-pill svg {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .theme-pill {
+        right: 1.5rem;
+        bottom: 2rem;
+      }
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .lang-toggle button {
+      background: transparent;
+      color: var(--text-color);
+      border: 1px solid var(--accent-color);
+      border-radius: 10px;
+      padding: 0.3rem 0.55rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .lang-toggle button:hover {
+      transform: translateY(-2px);
+      background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+    }
+
+    .lang-toggle button.active {
+      background: var(--accent-color);
+      color: var(--accent-contrast-text);
+      border-color: var(--accent-color);
+    }
+
+    /* ── Main ── */
+    main {
+      width: min(780px, 92vw);
+      margin: 0 auto;
+      padding: 3.5rem 0 6rem;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--secondary-text);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      text-decoration: none;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+      gap: 0.6em;
+    }
+
+    .back-arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .back-link:hover .back-arrow {
+      transform: translateX(-3px);
+    }
+
+    /* ── Page hero ── */
+    .page-hero {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--accent-surface);
+      border: 1px solid var(--accent-border-color);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.05em;
+      color: var(--accent-color);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+
+    .page-hero-sub {
+      font-size: 1.05rem;
+      color: var(--secondary-text);
+      line-height: 1.5;
+    }
+
+    /* ── App Intro Card ── */
+    .app-intro-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-intro-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-color);
+    }
+
+    .app-intro-card p {
+      font-size: 0.97rem;
+      color: var(--secondary-text);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .app-intro-card p:last-of-type {
+      margin-bottom: 1.25rem;
+    }
+
+    .app-intro-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.88rem;
+      font-family: var(--font-mono);
+    }
+
+    .app-intro-links a {
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+
+    .app-intro-separator {
+      color: var(--secondary-text);
+      opacity: 0.4;
+    }
+
+    /* ── Doc nav ── */
+    .doc-nav {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 5rem;
+      z-index: 5;
+      background: var(--bg-color);
+      padding: 0.6rem 0;
+      border-radius: 8px;
+    }
+
+    .doc-nav a {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--secondary-text);
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--card-bg);
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .doc-nav a:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-border-color);
+      background: var(--accent-surface);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    /* ── Document sections ── */
+    .doc-block {
+      margin-bottom: 4rem;
+      scroll-margin-top: 8.5rem;
+    }
+
+    .doc-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-label-text {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-color);
+      letter-spacing: -0.01em;
+    }
+
+    .doc-label-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--accent-border-color), transparent);
+    }
+
+    .doc-meta {
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      color: var(--secondary-text);
+      opacity: 0.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-highlight-card {
+      font-size: 0.95rem;
+      color: var(--text-color);
+      margin-bottom: 2rem;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--accent-color);
+      background: var(--accent-surface);
+      border-radius: 0 10px 10px 0;
+      line-height: 1.7;
+    }
+
+    .doc-highlight-card strong {
+      color: var(--text-color);
+    }
+
+    /* ── Sections ── */
+    .doc-section {
+      display: grid;
+      grid-template-columns: 2px 1fr;
+      gap: 0 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-rail {
+      background: var(--accent-border-color);
+      border-radius: 2px;
+      transition: background 0.2s ease;
+    }
+
+    .doc-section:hover .section-rail {
+      background: var(--accent-color);
+    }
+
+    .section-body {}
+
+    .doc-section h2,
+    .doc-section h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-section p {
+      font-size: 0.95rem;
+      color: var(--secondary-text);
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .doc-section ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .doc-section li {
+      font-size: 0.94rem;
+      color: var(--secondary-text);
+      line-height: 1.7;
+    }
+
+    .contact-link {
+      color: var(--accent-color);
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      word-break: break-all;
+    }
+
+    /* ── Doc separator ── */
+    .doc-separator {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3.5rem 0;
+    }
+
+    .doc-separator-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    .doc-separator-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      opacity: 0.6;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-size: 0.82rem;
+      color: var(--secondary-text);
+      opacity: 0.6;
+      font-family: var(--font-mono);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-hero h1 {
+        font-size: 1.6rem;
+      }
+
+      main {
+        padding: 2.5rem 0 4rem;
+      }
+
+      .app-intro-card {
+        padding: 1.25rem;
+      }
+
+      .doc-nav {
+        top: 4.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Volver al portfolio">
+        <span class="logo-accent">&lt;</span>Diego<span class="logo-accent">/&gt;</span>
+      </a>
+      <div class="header-controls">
+        <div class="lang-toggle">
+          <button data-lang="es" class="active" aria-label="Cambiar a español" title="Español">
+            <span class="fi fi-es"></span>
+          </button>
+          <button data-lang="en" aria-label="Switch to English" title="English">
+            <span class="fi fi-gb"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <a href="/" class="back-link">
+      <span class="back-arrow">←</span>
+      <span data-i18n="backToPortfolio">Volver al portfolio</span>
+    </a>
+
+    <!-- Hero -->
+    <div class="page-hero">
+      <div class="page-badge">
+        <span>⚡</span>
+        <span data-i18n="page.badge">iOS · CarPlay · Widgets · Bluetooth</span>
+      </div>
+      <h1 data-i18n="page.title">GaragePad</h1>
+      <p class="page-hero-sub" data-i18n="page.subtitle">Tus mandos de garaje, en un solo widget en el iPhone y en CarPlay.</p>
+    </div>
+
+    <!-- Section nav -->
+    <nav class="doc-nav" aria-label="Secciones">
+      <a href="#about" data-i18n="nav.about">Acerca de</a>
+      <a href="#privacy-policy" data-i18n="nav.privacy">Política de Privacidad</a>
+      <a href="#terms-of-use" data-i18n="nav.terms">Términos de Uso</a>
+    </nav>
+
+    <!-- ══════════════════════════════════════════════════════
+         SPANISH CONTENT BLOCK
+    ══════════════════════════════════════════════════════ -->
+    <div class="lang-content-block" data-lang-block="es">
+
+      <!-- About / Resumen -->
+      <section id="about" class="doc-block">
+        <div class="app-intro-card">
+          <p>
+            GaragePad convierte los archivos de radio que ya tienes en tu dispositivo compatible (como Flipper Zero) en un mando sencillo. Agrupas hasta cuatro botones en un mando, añades el widget a la pantalla de inicio o a CarPlay, y abres tu garaje, cancela o portal con un solo toque, sin desbloquear el móvil ni abrir ninguna app. Puedes crear varios mandos, cada uno con su widget, y elegir los archivos directamente desde el almacenamiento de tu dispositivo.
+          </p>
+          <p>
+            GaragePad es un proyecto personal independiente, nacido porque las opciones existentes solo permitían una puerta por widget. Funciona íntegramente en tu iPhone: se comunica con tu dispositivo por Bluetooth, no tiene cuentas, servidores ni rastreo, y no guarda nada fuera de tu teléfono. No está afiliado ni respaldado por los fabricantes de ningún dispositivo compatible, por Apple ni por ningún fabricante de puertas.
+          </p>
+          <div class="app-intro-links">
+            <a href="#privacy-policy">Política de privacidad</a>
+            <span class="app-intro-separator">·</span>
+            <a href="#terms-of-use">Términos de uso</a>
+            <span class="app-intro-separator">·</span>
+            <span>Contacto: <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Política de Privacidad -->
+      <section id="privacy-policy" class="doc-block">
+        <div id="politica-de-privacidad" style="position: relative; top: -7rem;"></div>
+        <div class="doc-label">
+          <span class="doc-label-text">Política de Privacidad</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Fecha de entrada en vigor: 27 de octubre de 2026</p>
+
+        <div class="doc-highlight-card">
+          <strong>GaragePad no recoge, guarda en servidores, vende ni comparte ningún dato personal.</strong> Todo lo que la app necesita se queda en tu iPhone.
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Quiénes somos</h2>
+            <p>GaragePad está desarrollada por <strong>Diego Aranda Gómez</strong>, desarrollador independiente. Contacto: <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Qué guarda la app y dónde</h2>
+            <p>La app solo guarda la configuración que tú creas: nombres de mandos, nombres e iconos de botones, rutas de archivos de tu propio dispositivo y duraciones de emisión. También conserva un breve registro de diagnóstico local del último envío. Todo ello se queda en tu iPhone, en un almacenamiento compartido entre la app y su widget. Nunca se nos envía a nosotros ni a nadie más.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Bluetooth</h2>
+            <p>GaragePad usa el Bluetooth solo para conectarse al dispositivo compatible que emparejes, enviar las órdenes que tú activas y listar sus archivos. La app recuerda el identificador de sistema de ese dispositivo para poder reconectarse. Ningún dato de Bluetooth sale de tu iPhone.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Lo que no hacemos</h2>
+            <ul>
+              <li>Sin cuentas ni inicio de sesión.</li>
+              <li>Sin analítica, publicidad, rastreo ni SDK de terceros.</li>
+              <li>Sin acceso a ubicación, contactos, fotos ni micrófono.</li>
+              <li>Sin cesión de datos a terceros.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Valoraciones y comentarios</h2>
+            <p>La app puede invitarte de vez en cuando a valorarla mediante el aviso estándar de Apple; ese proceso lo gestiona Apple. Si nos envías comentarios por email, usamos tu mensaje y tu dirección solo para responderte, y los borramos cuando ya no hagan falta.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Menores</h2>
+            <p>GaragePad es apta para todas las edades y no recoge datos personales de nadie, tampoco de menores.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Tus derechos</h2>
+            <p>Como no tenemos datos personales tuyos, no hay nada que consultar, corregir ni borrar por nuestra parte. Para eliminar todo lo que la app guardó, borra la app de tu iPhone. Para cualquier duda sobre tus derechos según el RGPD, escribe a <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Cambios</h2>
+            <p>Si esta política cambia, la actualizaremos en esta página y cambiaremos la fecha de entrada en vigor. Los cambios importantes se indicarán en las notas de la versión de la app.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Términos de Uso -->
+      <section id="terms-of-use" class="doc-block">
+        <div id="terminos-de-uso" style="position: relative; top: -7rem;"></div>
+        <div class="doc-label">
+          <span class="doc-label-text">Términos de Uso</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="doc-highlight-card">
+          <strong>Al usar GaragePad aceptas estos términos. La app se ofrece "tal cual", como proyecto personal independiente, y la usas bajo tu propia responsabilidad.</strong>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Qué hace la app</h2>
+            <p>GaragePad es una interfaz de mando a distancia. Envía órdenes por Bluetooth a un dispositivo compatible de tu propiedad, que reproduce archivos de radio que ya tienes guardados en él. GaragePad no graba, genera, descodifica ni modifica señales de radio.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Independencia de terceros</h2>
+            <p>GaragePad no está afiliada, respaldada ni patrocinada por los fabricantes de ningún dispositivo compatible, por Apple ni por ningún fabricante de puertas o portones. Los nombres de productos son marcas de sus respectivos titulares y se usan solo para indicar compatibilidad.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Tus responsabilidades</h2>
+            <ul>
+              <li>Usa la app solo con puertas, portones y dispositivos que sean tuyos o que tengas autorización para accionar.</li>
+              <li>Cumple la normativa de radio y telecomunicaciones de tu país, incluidas las frecuencias permitidas y los límites de emisión.</li>
+              <li>No uses la app para acceder a propiedades, vehículos o sistemas sin permiso.</li>
+              <li>Acciona una puerta solo cuando puedas comprobar que es seguro y que no hay personas, animales ni objetos en su recorrido.</li>
+              <li>No interactúes con la app de forma que te distraiga al volante. Configúralo todo antes de empezar a conducir.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Sin garantías</h2>
+            <p>La app puede contener errores y puede no enviar una orden, enviarla con retraso o indicar que funcionó cuando la puerta no se movió, o al revés. Depende del Bluetooth, del dispositivo compatible, de su firmware, de los archivos de radio que cargues y de la pantalla de tu vehículo. No confíes en GaragePad como única forma de abrir o cerrar una puerta y conserva siempre tu mando o llave original.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Limitación de responsabilidad</h2>
+            <p>En la máxima medida permitida por la ley, <strong>Diego Aranda Gómez</strong> no responde de daños indirectos, incidentales o consecuentes, incluidos daños a bienes, vehículos, puertas o dispositivos, pérdida de acceso o sanciones derivadas del uso de la app. Esto no limita la responsabilidad que la ley no permite excluir, como la derivada de dolo, culpa grave o daños personales, ni tus derechos legales como consumidor.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Cambios y fin del servicio</h2>
+            <p>Podemos actualizar, modificar o retirar la app en cualquier momento. Los términos actualizados se publicarán en esta página con una nueva fecha de entrada en vigor.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Ley aplicable</h2>
+            <p>Estos términos se rigen por la legislación española, sin perjuicio de las protecciones obligatorias para consumidores de tu país de residencia. También se aplica el Acuerdo de licencia de usuario final estándar de Apple para aplicaciones con licencia.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Contacto</h2>
+            <p>
+              <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>
+              ·
+              <a class="contact-link" href="https://diego740.github.io" target="_blank" rel="noopener">https://diego740.github.io</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         ENGLISH CONTENT BLOCK
+    ══════════════════════════════════════════════════════ -->
+    <div class="lang-content-block" data-lang-block="en" style="display: none;">
+
+      <!-- About / Overview -->
+      <section id="about-en" class="doc-block">
+        <div class="app-intro-card">
+          <p>
+            GaragePad turns the radio files you already keep on your compatible device (such as Flipper Zero) into a simple remote control. You group up to four buttons into a remote, add the widget to your Home Screen or to CarPlay, and open your garage, gate or front door with a single tap, without unlocking your phone or opening any app. You can create several remotes, each with its own widget, and choose the files directly from your device's storage.
+          </p>
+          <p>
+            GaragePad is an independent hobby project, built because the existing options only allowed one door per widget. It works entirely on your iPhone: it talks to your device over Bluetooth, has no accounts, no servers and no tracking, and stores nothing outside your phone. It is not affiliated with or endorsed by the makers of any compatible device, by Apple, or by any door manufacturer.
+          </p>
+          <div class="app-intro-links">
+            <a href="#privacy-policy-en">Privacy Policy</a>
+            <span class="app-intro-separator">·</span>
+            <a href="#terms-of-use-en">Terms of Use</a>
+            <span class="app-intro-separator">·</span>
+            <span>Contact: <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy Policy -->
+      <section id="privacy-policy-en" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Privacy Policy</span>
+          <span class="doc-label-line"></span>
+        </div>
+        <p class="doc-meta">Effective date: 27 October 2026</p>
+
+        <div class="doc-highlight-card">
+          <strong>GaragePad does not collect, store on servers, sell or share any personal data.</strong> Everything the app needs stays on your iPhone.
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Who we are</h2>
+            <p>GaragePad is developed by <strong>Diego Aranda Gómez</strong>, an independent developer. Contact: <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>What the app stores, and where</h2>
+            <p>The app saves only the configuration you create: remote names, button names and icons, file paths on your own device, and transmission durations. It also keeps a short local diagnostic log of the last send. All of this stays on your iPhone, in storage shared between the app and its widget. It is never sent to us or to anyone else.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Bluetooth</h2>
+            <p>GaragePad uses Bluetooth only to connect to the compatible device you pair, to send the commands you trigger and to list the files on it. The app remembers that device's system identifier so it can reconnect. No Bluetooth data leaves your iPhone.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>What we do not do</h2>
+            <ul>
+              <li>No accounts or sign-in.</li>
+              <li>No analytics, advertising, tracking or third-party SDKs.</li>
+              <li>No location, contacts, photos or microphone access.</li>
+              <li>No data shared with third parties.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>App Store reviews and feedback</h2>
+            <p>The app may occasionally invite you to rate it using Apple's standard review prompt; Apple handles that process. If you send us feedback by email, we use your message and address only to reply, and delete them when no longer needed.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Children</h2>
+            <p>GaragePad is suitable for all ages and collects no personal data from anyone, including children.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Your rights</h2>
+            <p>Because we hold no personal data, there is nothing for us to access, correct or delete. To erase everything the app stored, delete the app from your iPhone. For any question about your rights under the GDPR, write to <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Changes</h2>
+            <p>If this policy changes, we will update it on this page and change the effective date. Significant changes will be noted in the app's release notes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="doc-separator" aria-hidden="true">
+        <span class="doc-separator-line"></span>
+        <span class="doc-separator-dot"></span>
+        <span class="doc-separator-line"></span>
+      </div>
+
+      <!-- Terms of Use -->
+      <section id="terms-of-use-en" class="doc-block">
+        <div class="doc-label">
+          <span class="doc-label-text">Terms of Use</span>
+          <span class="doc-label-line"></span>
+        </div>
+
+        <div class="doc-highlight-card">
+          <strong>By using GaragePad you accept these terms. The app is provided "as is", as an independent hobby project, and you use it at your own risk.</strong>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>What the app does</h2>
+            <p>GaragePad is a remote-control interface. It sends commands over Bluetooth to a compatible device that you own, which then plays back radio files that you have already stored on it. GaragePad does not record, generate, decode or modify radio signals.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Independence from third parties</h2>
+            <p>GaragePad is not affiliated with, endorsed by or sponsored by the makers of any compatible device, by Apple or by any garage door or gate manufacturer. Product names are trademarks of their respective owners and are used only to describe compatibility.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Your responsibilities</h2>
+            <ul>
+              <li>Use the app only with doors, gates and devices that you own or are authorized to operate.</li>
+              <li>Comply with the radio and telecommunications rules of your country, including permitted frequencies and transmission limits.</li>
+              <li>Do not use the app to access property, vehicles or systems without permission.</li>
+              <li>Only operate a door when you can confirm that it is safe and that no person, animal or object is in its path.</li>
+              <li>Do not interact with the app in a way that distracts you while driving. Configure everything before you start driving.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>No guarantee</h2>
+            <p>The app may contain bugs and may fail to send a command, send it late, or report success when the door did not move, or the reverse. It depends on Bluetooth, on the compatible device, on its firmware, on the radio files you load, and on your vehicle's display. Do not rely on GaragePad as your only way to open or close a door, and always keep your original remote or key.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Limitation of liability</h2>
+            <p>To the maximum extent permitted by law, <strong>Diego Aranda Gómez</strong> is not liable for indirect, incidental or consequential damages, including damage to property, vehicles, doors or devices, loss of access, or fines arising from your use of the app. This does not limit liability that cannot be excluded by law, such as liability for intent, gross negligence or personal injury, or your statutory rights as a consumer.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Changes and termination</h2>
+            <p>We may update, change or discontinue the app at any time. Updated terms will be published on this page with a new effective date.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Governing law</h2>
+            <p>These terms are governed by the laws of Spain, without prejudice to the mandatory consumer protections of your country of residence. Apple's standard Licensed Application End User License Agreement also applies to your use of the app.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <span class="section-rail"></span>
+          <div class="section-body">
+            <h2>Contact</h2>
+            <p>
+              <a class="contact-link" href="mailto:diegoaranda.dev@gmail.com">diegoaranda.dev@gmail.com</a>
+              ·
+              <a class="contact-link" href="https://diego740.github.io" target="_blank" rel="noopener">https://diego740.github.io</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Theme pill -->
+  <button class="theme-pill" id="theme-toggle" aria-label="Cambiar tema">
+    <span class="theme-pill-icon" id="theme-pill-icon">
+      <!-- Moon (dark mode) -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>
+      <!-- Sun (light mode, hidden by default) -->
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:none">
+        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707"/>
+      </svg>
+    </span>
+  </button>
+
+  <footer class="site-footer">
+    <p>© 2026 Diego Aranda Gómez — GaragePad</p>
+  </footer>
+
+  <script>
+    var uiTranslations = {
+      es: {
+        backToPortfolio: 'Volver al portfolio',
+        'page.badge': 'iOS · CarPlay · Widgets · Bluetooth',
+        'page.title': 'GaragePad',
+        'page.subtitle': 'Tus mandos de garaje, en un solo widget en el iPhone y en CarPlay.',
+        'nav.about': 'Acerca de',
+        'nav.privacy': 'Política de Privacidad',
+        'nav.terms': 'Términos de Uso'
+      },
+      en: {
+        backToPortfolio: 'Back to portfolio',
+        'page.badge': 'iOS · CarPlay · Widgets · Bluetooth',
+        'page.title': 'GaragePad',
+        'page.subtitle': 'Your garage remotes, in one widget on your iPhone and in CarPlay.',
+        'nav.about': 'About',
+        'nav.privacy': 'Privacy Policy',
+        'nav.terms': 'Terms of Use'
+      }
+    };
+
+    var currentLang = localStorage.getItem('lang') || 'es';
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+
+      // Update doc title
+      document.title = (lang === 'es')
+        ? 'GaragePad — Textos legales y soporte'
+        : 'GaragePad — Legal & Privacy Policy';
+
+      // Update UI translations
+      var t = uiTranslations[lang] || uiTranslations.es;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Update nav link targets according to lang
+      var navAbout = document.querySelector('nav.doc-nav a[data-i18n="nav.about"]');
+      var navPrivacy = document.querySelector('nav.doc-nav a[data-i18n="nav.privacy"]');
+      var navTerms = document.querySelector('nav.doc-nav a[data-i18n="nav.terms"]');
+
+      if (navAbout) navAbout.setAttribute('href', lang === 'es' ? '#about' : '#about-en');
+      if (navPrivacy) navPrivacy.setAttribute('href', lang === 'es' ? '#privacy-policy' : '#privacy-policy-en');
+      if (navTerms) navTerms.setAttribute('href', lang === 'es' ? '#terms-of-use' : '#terms-of-use-en');
+
+      // Toggle language block display
+      document.querySelectorAll('.lang-content-block').forEach(function (block) {
+        block.style.display = (block.getAttribute('data-lang-block') === lang) ? 'block' : 'none';
+      });
+
+      // Toggle active flag button
+      document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // Theme toggle
+    function updateThemeIcon() {
+      var theme = document.documentElement.getAttribute('data-theme');
+      document.getElementById('icon-moon').style.display = theme === 'dark' ? '' : 'none';
+      document.getElementById('icon-sun').style.display  = theme === 'light' ? '' : 'none';
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon();
+    });
+
+    // Deep linking hash resolution
+    window.addEventListener('load', function() {
+      if (window.location.hash) {
+        var rawHash = decodeURIComponent(window.location.hash);
+        
+        // Auto-select language based on hash if appropriate
+        if (rawHash === '#politica-de-privacidad' || rawHash === '#política-de-privacidad' || rawHash === '#terminos-de-uso' || rawHash === '#términos-de-uso') {
+          setLang('es');
+        } else if (rawHash.endsWith('-en') || rawHash === '#privacy-policy' || rawHash === '#terms-of-use') {
+          // If hash is English and language was already EN or came from external English link
+          if (currentLang === 'en') {
+            if (rawHash === '#privacy-policy') rawHash = '#privacy-policy-en';
+            if (rawHash === '#terms-of-use') rawHash = '#terms-of-use-en';
+            if (rawHash === '#about') rawHash = '#about-en';
+          }
+        }
+
+        var targetEl = document.querySelector(rawHash);
+        if (targetEl) {
+          setTimeout(function() {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }, 120);
+        }
+      }
+    });
+
+    setLang(currentLang);
+    updateThemeIcon();
+  </script>
+
+</body>
+</html>

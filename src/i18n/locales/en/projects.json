@@ -87,6 +87,18 @@
       ]
     },
     {
+      "title": "GaragePad - Garage Remotes for iPhone & CarPlay",
+      "status": "App Development",
+      "startDate": "October 2026",
+      "scope": "Mobile App · iOS · CarPlay · Widgets · Bluetooth · Privacy",
+      "privacyUrl": "/garagepad-privacy.html",
+      "objectives": [
+        "Groups up to four garage remotes or doors into a single widget on iPhone Home Screen and CarPlay.",
+        "Direct Bluetooth transmission to compatible devices (such as Flipper Zero) to trigger radio file playback.",
+        "100% local architecture: no accounts, no servers, no analytics, and zero tracking."
+      ]
+    },
+    {
       "title": "Metadata Analyzer and Editor",
       "status": "Applied development",
       "startDate": "October 2025",

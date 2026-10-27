@@ -87,6 +87,18 @@
       ]
     },
     {
+      "title": "GaragePad - Mandos de Garaje en iPhone y CarPlay",
+      "status": "Desarrollo de apps",
+      "startDate": "Octubre 2026",
+      "scope": "Aplicación móvil · iOS · CarPlay · Widgets · Bluetooth · Privacidad",
+      "privacyUrl": "/garagepad-privacy.html",
+      "objectives": [
+        "Unifica hasta cuatro mandos o puertas en un solo widget para la pantalla de inicio del iPhone y CarPlay.",
+        "Emisión directa por Bluetooth a dispositivos compatibles como Flipper Zero para reproducción de señales de radio.",
+        "Arquitectura 100% local: sin cuentas, sin servidores, sin analíticas y sin rastreo de ningún tipo."
+      ]
+    },
+    {
       "title": "Analizador y Modificador de Metadatos",
       "status": "Desarrollo aplicado",
       "startDate": "Octubre 2025",

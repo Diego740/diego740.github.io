@@ -131,6 +131,10 @@ function App() {
                 <Route path="/mybudget" element={<ExternalRedirect to="/mybudget-privacy.html" />} />
                 <Route path="/geoalarm-privacy" element={<ExternalRedirect to="/geoalarm-privacy.html" />} />
                 <Route path="/geoalarm-privacy.html" element={<ExternalRedirect to="/geoalarm-privacy.html" />} />
+                <Route path="/garagepad" element={<ExternalRedirect to="/garagepad-privacy.html" />} />
+                <Route path="/garagepad.html" element={<ExternalRedirect to="/garagepad-privacy.html" />} />
+                <Route path="/garagepad-privacy" element={<ExternalRedirect to="/garagepad-privacy.html" />} />
+                <Route path="/garagepad-privacy.html" element={<ExternalRedirect to="/garagepad-privacy.html" />} />
                 <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
               </Routes>
             )}
