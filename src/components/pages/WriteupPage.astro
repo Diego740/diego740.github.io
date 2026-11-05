@@ -1,0 +1,31 @@
+---
+import Page from '../../layouts/Page.astro';
+import { ui } from '../../i18n/ui.mjs';
+import { renderWriteup } from '../../lib/writeup.mjs';
+import { writeupLd } from '../../lib/jsonld.mjs';
+const { lang, id, data } = Astro.props;
+const t = ui[lang];
+const { html, tags } = await renderWriteup(data.file);
+const base = lang === 'es' ? '/cybersecurity' : '/en/cybersecurity';
+const alt = { es: `/cybersecurity/${id}`, en: `/en/cybersecurity/${id}` };
+const diff = data.difficulty[0].toUpperCase() + data.difficulty.slice(1);
+---
+<Page title={`${data.title} · ${data.platform} writeup · Diego Aranda Gómez`} description={`Writeup de la máquina ${data.title} (${data.platform}, ${data.os}, ${diff}).`} lang={lang} alternates={alt} ogType="article" jsonld={writeupLd(id, data, tags, lang)}>
+  <p><a class="more" href={`${base}#writeups`} style="margin:0">{t.back}</a></p>
+  <h1>{data.title}</h1>
+  <p class="wmeta"><span>{data.platform}</span><span>{data.os}</span><span class={`pill d-${data.difficulty}`}>{diff}</span><time datetime={data.date}>{data.date}</time>{lang === 'es' && <span>{t.cyber.onlyEnglish}</span>}</p>
+  {tags.length > 0 && <ul class="tags" style="margin-top:14px">{tags.map((x: string) => <li class="tag">#{x}</li>)}</ul>}
+  <article class="prose" set:html={html} />
+  <script>
+    document.querySelectorAll('.prose pre').forEach((pre) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'copy'; b.textContent = document.documentElement.lang === 'es' ? 'Copiar' : 'Copy';
+      b.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(pre.innerText);
+        const o = b.textContent; b.textContent = document.documentElement.lang === 'es' ? 'Copiado' : 'Copied';
+        setTimeout(() => (b.textContent = o), 1800);
+      });
+      pre.append(b);
+    });
+  </script>
+</Page>

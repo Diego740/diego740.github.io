@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import W from '../../components/pages/WriteupPage.astro';
+export async function getStaticPaths() {
+  const all = await getCollection('writeups');
+  return all.filter((w) => w.data.status === 'retired' && w.data.file).map((w) => ({ params: { id: w.id }, props: { data: w.data } }));
+}
+const { id } = Astro.params;
+const { data } = Astro.props;
+---
+<W lang="es" id={id} data={data} />

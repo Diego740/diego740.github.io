@@ -1,0 +1,63 @@
+---
+import Page from '../../layouts/Page.astro';
+import { ui } from '../../i18n/ui.mjs';
+import { svg } from '../../data/home.mjs';
+import { appLd, workLd } from '../../lib/jsonld.mjs';
+const { lang, id, data: p } = Astro.props;
+const t = ui[lang]; const L = t.proj;
+const pre = lang === 'en' ? '/en' : '';
+const alt = { es: `/projects/${id}`, en: `/en/projects/${id}` };
+const ld = p.shelf === 'apps' ? appLd(id, p, lang) : workLd(id, p, lang);
+const hasLinks = p.links.repo || p.links.store || p.links.legal || p.links.writeups;
+---
+<Page title={`${p.heading[lang]} · Diego Aranda Gómez`} description={p.blurb[lang]} lang={lang} alternates={alt} jsonld={ld}>
+  <p><a class="more" href={`${pre}/projects`} style="margin:0">{L.all}</a></p>
+  <header class="phero" data-slug={id}>
+    <div class="phero-text">
+      <p class={`pstatus s-${p.status}`}>{L.status[p.status]}</p>
+      <h1>{p.heading[lang]}</h1>
+      <p class="plead">{p.whatIs[lang]}</p>
+    </div>
+    <Fragment set:html={svg(p.motif, 'phero-motif')} />
+  </header>
+
+  {p.video && (
+    <section class="block" aria-labelledby="h-vid"><h2 id="h-vid">{L.video}</h2>
+      <figure class="pvideo">
+        <video controls muted playsinline preload="metadata" poster={p.video.poster} width="320" height="568"><source src={p.video.src} type="video/mp4" /></video>
+        <figcaption>{p.video.caption[lang]}</figcaption>
+      </figure>
+    </section>
+  )}
+  {p.gallery && (
+    <section class="block" aria-labelledby="h-gal"><h2 id="h-gal">{L.gallery}</h2>
+      <div class="scroller inset" style="--h:380px">
+        <button type="button" class="arrow prev" hidden aria-label={t.shelfNav.prev}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <ul class="gallery" data-scroll tabindex="0" aria-label={L.gallery}>{p.gallery.map((g: any) => <li><button type="button" class="thumb" data-full={g.src[lang]} data-alt={g.alt[lang]} aria-label={`${g.alt[lang]}: ${L.zoom}`}><img src={g.src[lang]} alt="" width={p.gallerySize?.w ?? 900} height={p.gallerySize?.h ?? 1819} loading="lazy" decoding="async" /></button></li>)}</ul>
+        <button type="button" class="arrow next" hidden aria-label={t.shelfNav.next}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <dialog class="lightbox" aria-label={L.gallery}>
+        <button type="button" class="lb-close" aria-label={L.close}>×</button>
+        <img alt="" />
+      </dialog>
+    </section>
+  )}
+  {p.problem && <section class="block" aria-labelledby="h-prob"><h2 id="h-prob">{L.problem}</h2><p class="lead" style="margin-top:0">{p.problem[lang]}</p></section>}
+  {p.how && <section class="block" aria-labelledby="h-how"><h2 id="h-how">{L.how}</h2><ul class="steps plain">{p.how[lang].map((x: string) => <li>{x}</li>)}</ul></section>}
+  {p.techDetails && <section class="block"><details class="fold"><summary>{L.tech}</summary><ul class="steps plain">{p.techDetails[lang].map((x: string) => <li>{x}</li>)}</ul></details></section>}
+  {p.results && <section class="block" aria-labelledby="h-res"><h2 id="h-res">{L.results}</h2><ul class="steps plain">{p.results[lang].map((x: string) => <li>{x}</li>)}</ul></section>}
+  <section class="block" aria-labelledby="h-stack"><h2 id="h-stack">{L.stack}</h2><ul class="tags">{p.stack.map((x: string) => <li class="tag">{x}</li>)}</ul></section>
+  {p.limits && <section class="block" aria-labelledby="h-lim"><h2 id="h-lim">{L.limits}</h2><ul class="steps plain">{p.limits[lang].map((x: string) => <li>{x}</li>)}</ul></section>}
+  {p.notes && <section class="block"><details class="fold"><summary>{L.notes}</summary><ul class="steps plain">{p.notes[lang].map((x: string) => <li>{x}</li>)}</ul></details></section>}
+  {hasLinks && (
+    <section class="block" aria-labelledby="h-links"><h2 id="h-links">{L.links}</h2>
+      <div class="actions-row" style="margin-top:0">
+        {p.links.store && <a class="btn btn-main" href={p.links.store} target="_blank" rel="noopener">{L.store}<span class="sr"> {t.opensNew}</span></a>}
+        {p.links.repo && <a class="btn" href={p.links.repo} target="_blank" rel="noopener">{L.repo}<span class="sr"> {t.opensNew}</span></a>}
+        {p.links.legal && <a class="btn" href={p.links.legal}>{L.legal}</a>}
+        {p.links.writeups && <a class="btn" href={pre + p.links.writeups}>{L.writeupsCta}</a>}
+        {p.links.report && <a class="btn" href={p.links.report} target="_blank" rel="noopener">{L.report}<span class="sr"> {t.opensNew}</span></a>}
+      </div>
+    </section>
+  )}
+</Page>

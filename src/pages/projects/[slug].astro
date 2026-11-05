@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import C from '../../components/pages/ProjectPage.astro';
+export async function getStaticPaths() {
+  return (await getCollection('projects')).filter((p) => p.data.detail).map((p) => ({ params: { slug: p.id }, props: { data: p.data } }));
+}
+const { slug } = Astro.params;
+const { data } = Astro.props;
+---
+<C lang="es" id={slug} data={data} />

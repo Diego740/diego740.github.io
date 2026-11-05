@@ -1,0 +1,24 @@
+---
+import Page from '../../layouts/Page.astro';
+import { ui } from '../../i18n/ui.mjs';
+import { getOrdered } from '../../lib/collections.mjs';
+import { getCollection } from 'astro:content';
+import { personLd } from '../../lib/jsonld.mjs';
+import es from '../../i18n/es.json';
+import en from '../../i18n/en.json';
+const { lang } = Astro.props;
+const t = ui[lang]; const c = (lang === 'es' ? es : en).about;
+const alt = { es: '/about', en: '/en/about' };
+const creds = (await getOrdered('certifications')).filter((x) => x.data.featured).map((x) => ({ name: x.data.name, verifyUrl: x.data.verifyUrl }));
+---
+<Page title={`${c.header.title} · Diego Aranda Gómez`} description={c.header.description.slice(0, 155)} lang={lang} alternates={alt} ogType="profile" jsonld={personLd(lang, creds)}>
+  <h1>{c.header.title}</h1>
+  <p class="lead">{c.header.description}</p>
+  <div class="actions-row"><a class="btn btn-main" href={t.cvFile} download>{c.downloadCv}</a></div>
+  <section class="block" aria-labelledby="h-tech"><h2 id="h-tech">{c.technicalTitle}</h2>
+    <ul class="tags">{c.technicalSkills.map((s: string) => <li class="tag">{s}</li>)}</ul></section>
+  <section class="block" aria-labelledby="h-soft"><h2 id="h-soft">{c.softTitle}</h2>
+    <ul class="tags">{c.softSkills.map((s: string) => <li class="tag">{s}</li>)}</ul></section>
+  <section class="block" aria-labelledby="h-lang"><h2 id="h-lang">{c.langTitle}</h2>
+    <ul class="tags">{c.languages.map((s: string) => <li class="tag">{s}</li>)}</ul></section>
+</Page>

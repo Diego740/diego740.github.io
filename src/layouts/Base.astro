@@ -1,0 +1,44 @@
+---
+interface Props { title: string; description: string; lang?: 'es' | 'en'; canonical?: string; alternates?: { es: string; en: string }; image?: string; ogType?: string; jsonld?: object | object[]; robots?: string; }
+const { title, description, lang = 'es', canonical, alternates, image = '/og/default.png', ogType = 'website', jsonld, robots } = Astro.props;
+import '../styles/global.css';
+const abs = (p: string) => new URL(p, Astro.site).href;
+const url = abs(canonical ?? Astro.url.pathname);
+const ld = jsonld ? JSON.stringify(Array.isArray(jsonld) ? jsonld : [jsonld]) : null;
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {robots && <meta name="robots" content={robots} />}
+  <script is:inline>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t})()</script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="canonical" href={abs(canonical ?? Astro.url.pathname)} />
+  <meta property="og:site_name" content="Diego Aranda Gómez" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url} />
+  <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_GB'} />
+  <meta property="og:locale:alternate" content={lang === 'es' ? 'en_GB' : 'es_ES'} />
+  <meta property="og:image" content={abs(image)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={abs(image)} />
+  {ld && <script type="application/ld+json" set:html={ld} />}
+  {alternates && <link rel="alternate" hreflang="es" href={abs(alternates.es)} />}
+  {alternates && <link rel="alternate" hreflang="en" href={abs(alternates.en)} />}
+  {alternates && <link rel="alternate" hreflang="x-default" href={abs(alternates.es)} />}
+</head>
+<body>
+  <slot />
+  <script src="../scripts/site.js"></script>
+</body>
+</html>

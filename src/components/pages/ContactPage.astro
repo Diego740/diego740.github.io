@@ -1,0 +1,20 @@
+---
+import Page from '../../layouts/Page.astro';
+import { ui, social } from '../../i18n/ui.mjs';
+import es from '../../i18n/es.json';
+import en from '../../i18n/en.json';
+const { lang } = Astro.props;
+const t = ui[lang]; const c = (lang === 'es' ? es : en).contact;
+const alt = { es: '/contact', en: '/en/contact' };
+---
+<Page title={`${c.header.eyebrow} · Diego Aranda Gómez`} description={c.header.description} lang={lang} alternates={alt}>
+  <h1>{c.header.title}</h1>
+  <p class="lead">{c.header.description}</p>
+  <ul class="contact-list" aria-label={c.sidebar.title}>
+    <li><a href={`mailto:${social.email}`}>{social.email}</a></li>
+    <li><a href={social.linkedin} target="_blank" rel="noopener">{c.sidebar.linkedin}<span class="sr"> {t.opensNew}</span></a></li>
+    <li><a href={social.github} target="_blank" rel="noopener">{c.sidebar.github}<span class="sr"> {t.opensNew}</span></a></li>
+    <li><a href={t.cvFile} download>{t.cvDownload}</a></li>
+  </ul>
+  <p class="lead">{c.sidebar.note}</p>
+</Page>

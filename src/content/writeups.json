@@ -1,0 +1,91 @@
+[
+  {
+    "id": "silentium",
+    "title": "Silentium",
+    "os": "Linux",
+    "difficulty": "easy",
+    "status": "active",
+    "date": "2026-04-15",
+    "file": null,
+    "platform": null
+  },
+  {
+    "id": "updown",
+    "title": "Updown",
+    "os": "Linux",
+    "difficulty": "medium",
+    "status": "retired",
+    "date": "2026-05-07",
+    "file": "/writeups/UpDown.md",
+    "platform": "HTB",
+    "heading": {
+      "es": "UpDown: máquina de Hack The Box",
+      "en": "UpDown: Hack The Box machine"
+    },
+    "cover": {
+      "es": "Linux · Medium · LFI y SUID",
+      "en": "Linux · Medium · LFI and SUID"
+    },
+    "blurb": {
+      "es": "LFI, abuso de Git y escalada con SUID.",
+      "en": "LFI, Git abuse and SUID escalation."
+    },
+    "motif": "updown"
+  },
+  {
+    "id": "broker",
+    "title": "Broker",
+    "os": "Linux",
+    "difficulty": "easy",
+    "status": "retired",
+    "date": "2026-05-15",
+    "file": "/writeups/Broker.md",
+    "platform": "HTB",
+    "heading": {
+      "es": "Broker: máquina de Hack The Box",
+      "en": "Broker: Hack The Box machine"
+    },
+    "cover": {
+      "es": "Linux · Easy · ActiveMQ",
+      "en": "Linux · Easy · ActiveMQ"
+    },
+    "blurb": {
+      "es": "ActiveMQ, RCE y escalada de privilegios.",
+      "en": "ActiveMQ, RCE and privilege escalation."
+    },
+    "motif": "broker"
+  },
+  {
+    "id": "builder",
+    "title": "Builder",
+    "os": "Linux",
+    "difficulty": "medium",
+    "status": "retired",
+    "date": "2026-05-15",
+    "file": "/writeups/Builder.md",
+    "platform": "HTB",
+    "heading": {
+      "es": "Builder: máquina de Hack The Box",
+      "en": "Builder: Hack The Box machine"
+    },
+    "cover": {
+      "es": "Linux · Medium · Jenkins",
+      "en": "Linux · Medium · Jenkins"
+    },
+    "blurb": {
+      "es": "Jenkins y CVE-2024-23897.",
+      "en": "Jenkins and CVE-2024-23897."
+    },
+    "motif": "builder"
+  },
+  {
+    "id": "devhub",
+    "title": "DevHub",
+    "os": "Linux",
+    "difficulty": "medium",
+    "status": "active",
+    "date": "2026-06-05",
+    "file": null,
+    "platform": null
+  }
+]

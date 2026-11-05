@@ -1,0 +1,119 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cover from '../Cover.astro';
+import ThemeToggle from '../ThemeToggle.astro';
+import { getOrdered } from '../../lib/collections.mjs';
+import { getCollection } from 'astro:content';
+import { getShelves } from '../../lib/shelves.mjs';
+import { homeText } from '../../data/homeText.mjs';
+import { ui, social } from '../../i18n/ui.mjs';
+import { personLd } from '../../lib/jsonld.mjs';
+const { lang } = Astro.props;
+const h = homeText[lang]; const t = ui[lang];
+const shelves = await getShelves(lang);
+const exp = await getOrdered('experience');
+const certs = await getOrdered('certifications');
+const featured = certs.filter((c) => c.data.featured);
+const appian = certs.find((c) => c.id === 'appian');
+const other = other_(lang);
+function other_(l: string) { return l === 'es' ? '/en/' : '/'; }
+const alt = { es: '/', en: '/en/' };
+const person = personLd(lang, featured.map((c) => ({ name: c.data.name, verifyUrl: c.data.verifyUrl })));
+const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+---
+<Base title={h.title} description={h.description} {lang} alternates={alt} canonical={lang === 'es' ? '/' : '/en/'} jsonld={person}>
+  <header class="top">
+    <div class="who">
+      <h1 class="name">Diego Aranda Gómez</h1>
+      <p class="pos">{h.positioning}</p>
+    </div>
+    <a class="skip" href="#escaparate">{h.skip}</a>
+    <nav class="actions" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
+      <a class="btn btn-main" href={t.cvFile} download>CV</a>
+      <a class="btn" href={lang === 'es' ? '/contact' : '/en/contact'}>{t.nav[4][1]}</a>
+      <details class="menu"><summary>{h.menu}</summary>
+        <ul>{t.nav.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul>
+      </details>
+      <ThemeToggle {lang} />
+      <a class="lang" data-setlang={lang === 'es' ? 'en' : 'es'} href={other} hreflang={lang === 'es' ? 'en' : 'es'} lang={lang === 'es' ? 'en' : 'es'} aria-label={t.langName}>{t.langLabel}</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="escaparate" class="exhibit" aria-label={h.showcase}>
+      <div class="wall">
+        {shelves.map((s) => (
+          <section class={`shelf shelf-${s.id}`} aria-labelledby={`sh-${s.id}`}>
+            <div class="shelf-head"><h2 id={`sh-${s.id}`}>{s.title}</h2></div>
+            <div class="scroller">
+              <button type="button" class="arrow prev" hidden aria-label={`${t.shelfNav.prev}: ${s.title}`}><Fragment set:html={arrow} /></button>
+              <ul class="row" data-scroll tabindex="0" aria-label={`${s.title}: ${s.items.length}`}>
+                {s.items.map((p, i) => <Cover {p} {i} {lang} />)}
+                <Cover p={{ ...s.more, slug: s.id }} i={s.items.length} more {lang} />
+              </ul>
+              <button type="button" class="arrow next" hidden aria-label={`${t.shelfNav.next}: ${s.title}`}><Fragment set:html={arrow} /></button>
+            </div>
+          </section>
+        ))}
+      </div>
+      <nav class="timeline" aria-label={h.timelineLabel}>
+        <ol>
+          {h.timeline.map((x) => <li class={x.star ? 'star' : undefined}><a href={x.href}><span class="when">{x.when}</span><span class="what">{x.label}</span></a></li>)}
+        </ol>
+      </nav>
+    </section>
+
+    <section class="sum sum-about" id="sobre-mi" aria-labelledby="h-about">
+      <h2 id="h-about">{h.about.title}</h2>
+      <p>{h.about.text}</p>
+      <a class="more" href={h.about.cta[1]}>{h.about.cta[0]}</a>
+    </section>
+    <section class="sum sum-exp" id="experiencia" aria-labelledby="h-exp">
+      <h2 id="h-exp">{h.experience.title}</h2>
+      <ul class="exp">
+        {exp.map(({ data: e, id }) => <li><h3>{e.role}</h3><p class="org">{e.org} · {e.period[lang]}</p><p>{h.experience.notes[id]}</p></li>)}
+      </ul>
+      <a class="more" href={h.experience.cta[1]}>{h.experience.cta[0]}</a>
+    </section>
+    <section class="sum sum-certs" id="certificaciones" aria-labelledby="h-ce">
+      <h2 id="h-ce">{h.certs.title}</h2>
+      <div class="gatefold">
+        {featured.map(({ data: c, id }) => (
+          <article class={`panel panel-${id === 'oscp-plus' ? 'oscp-plus' : 'oscp'}`}>
+            <h3>{c.name}</h3>
+            <p>{c.fullName}</p>
+            <a class="verify" href={c.verifyUrl} target="_blank" rel="noopener">{t.verify}<span class="sr"> {c.name} {t.opensNew}</span></a>
+          </article>
+        ))}
+      </div>
+      <p class="other-cert">OffSec, {featured[0].data.date[lang]}. {h.certs.also}: {appian.data.name}, {appian.data.date[lang]}.</p>
+      <a class="more" href={h.certs.cta[1]}>{h.certs.cta[0]}</a>
+    </section>
+    <section class="sum sum-writeups" id="writeups" aria-labelledby="h-wu">
+      <h2 id="h-wu">{h.writeups.title}</h2>
+      <p>{h.writeups.text}</p>
+      <a class="more" href={h.writeups.cta[1]}>{h.writeups.cta[0]}</a>
+    </section>
+    <section class="sum sum-contact" id="contacto" aria-labelledby="h-ct">
+      <h2 id="h-ct">{h.contact.title}</h2>
+      <p>{h.contact.text}</p>
+      <ul class="ct">
+        <li><a href={`mailto:${social.email}`}>{social.email}</a></li>
+        <li><a href={social.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href={social.github} target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href={t.cvFile} download>{h.contact.cv}</a></li>
+      </ul>
+      <a class="more" href={h.contact.cta[1]}>{h.contact.cta[0]}</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© 2026 Diego Aranda Gómez</p>
+    <ul>
+      <li><a href="/geoalarm-privacy.html">{t.privacy[0]}</a></li>
+      <li><a href="/mybudget-privacy.html">{t.privacy[1]}</a></li>
+      <li><a href="/garagepad-privacy.html">{t.privacy[2]}</a></li>
+    </ul>
+  </footer>
+  <script src="../../scripts/home.js"></script>
+</Base>

@@ -1,0 +1,14 @@
+@import url('../vinilos/style.css');
+
+/* Variante "taste-skill": mismas piezas, aplicando estrictamente sus reglas de la casa:
+   sin sombras en reposo, sin desenfoque ni cristal, sin inclinación 3D, sin etiquetas en mayúsculas espaciadas.
+   Profundidad solo con escalones de tono. */
+.cv::before{display:none}
+.sleeve{transform:none}
+.cv:hover .sleeve,.cv:focus-visible .sleeve{transform:translateY(-6px)}
+.shelf::after{height:12px;background:#f6f6f7;box-shadow:none;border-radius:0}
+.row{perspective:none}
+.sticker,.menu ul,.qv-front .sleeve,.qv-back{box-shadow:none}
+.qv-scrim{background:var(--wall);backdrop-filter:none;-webkit-backdrop-filter:none;opacity:.96}
+.shelf-head h2{font-size:1.25rem;text-transform:none;letter-spacing:-.01em;font-stretch:112%}
+.s-hint{display:none}

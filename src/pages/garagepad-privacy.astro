@@ -1,0 +1,7 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import data from '../content/legal/garagepad.json';
+import es from '../content/legal/garagepad.es.html?raw';
+import en from '../content/legal/garagepad.en.html?raw';
+---
+<LegalPage {data} {es} {en} />

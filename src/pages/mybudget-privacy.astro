@@ -1,0 +1,7 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import data from '../content/legal/mybudget.json';
+import es from '../content/legal/mybudget.es.html?raw';
+import en from '../content/legal/mybudget.en.html?raw';
+---
+<LegalPage {data} {es} {en} />

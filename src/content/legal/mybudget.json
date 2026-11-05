@@ -1,0 +1,58 @@
+{
+  "app": "mybudget",
+  "path": "/mybudget-privacy",
+  "meta": {
+    "es": {
+      "title": "MyBudget — Textos legales y soporte",
+      "description": "MyBudget — Política de Privacidad, Condiciones de Uso y Soporte Técnico · Diego Aranda Gómez"
+    },
+    "en": {
+      "title": "MyBudget — Legal & Support",
+      "description": "MyBudget — Política de Privacidad, Condiciones de Uso y Soporte Técnico · Diego Aranda Gómez"
+    }
+  },
+  "ui": {
+    "es": {
+      "back": "Volver al portfolio",
+      "title": "MyBudget — Textos legales y soporte",
+      "subtitle": "Política de Privacidad, Condiciones de Uso y Soporte Técnico",
+      "badge": null,
+      "nav": [
+        {
+          "href": "#privacy-policy",
+          "label": "Política de Privacidad"
+        },
+        {
+          "href": "#terms-of-use",
+          "label": "Condiciones de Uso"
+        },
+        {
+          "href": "#support",
+          "label": "Soporte & FAQ"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — MyBudget"
+    },
+    "en": {
+      "back": "Back to portfolio",
+      "title": "MyBudget — Legal & Support",
+      "subtitle": "Privacy Policy, Terms of Use & Technical Support",
+      "badge": null,
+      "nav": [
+        {
+          "href": "#privacy-policy-en",
+          "label": "Privacy Policy"
+        },
+        {
+          "href": "#terms-of-use-en",
+          "label": "Terms of Use"
+        },
+        {
+          "href": "#support-en",
+          "label": "Support & FAQ"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — MyBudget"
+    }
+  }
+}

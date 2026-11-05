@@ -1,0 +1,56 @@
+[
+  {
+    "id": "oscp-plus",
+    "anchor": "oscp",
+    "name": "OSCP+",
+    "fullName": "OffSec Certified Professional+",
+    "issuer": "OffSec",
+    "date": {
+      "es": "Septiembre 2026",
+      "en": "September 2026"
+    },
+    "verifyUrl": "https://credentials.offsec.com/159672f6-9730-4525-a631-628407d0144f#acc.tqr0eo9A",
+    "featured": true,
+    "description": {
+      "es": "Credencial de OffSec expedida en septiembre de 2026. Verificable en credentials.offsec.com.",
+      "en": "OffSec credential issued in September 2026. Verifiable at credentials.offsec.com."
+    },
+    "order": 1
+  },
+  {
+    "id": "oscp",
+    "anchor": "oscp-clasica",
+    "name": "OSCP",
+    "fullName": "Offensive Security Certified Professional",
+    "issuer": "OffSec",
+    "date": {
+      "es": "Septiembre 2026",
+      "en": "September 2026"
+    },
+    "verifyUrl": "https://credentials.offsec.com/ad48ce5c-4ca2-4f5d-b9eb-41cc5db1cb09#acc.B8LsJ1rl",
+    "featured": true,
+    "description": {
+      "es": "Certificación de referencia en seguridad ofensiva y pruebas de penetración (pentesting). Acredita destreza práctica en auditorías avanzadas, reconocimiento, explotación de aplicaciones web, elevación de privilegios en Linux y Windows, evasión de defensas y ejecución de cadenas de ataque en entornos complejos de Active Directory.",
+      "en": "Gold-standard certification in offensive security and penetration testing. Demonstrates hands-on mastery in advanced reconnaissance, web application exploitation, Linux and Windows privilege escalation, defense evasion, and executing attack chains across complex Active Directory domains."
+    },
+    "order": 2
+  },
+  {
+    "id": "appian",
+    "anchor": "appian",
+    "name": "Appian Certified Associate Developer",
+    "fullName": "Appian Certified Associate Developer",
+    "issuer": "Appian",
+    "date": {
+      "es": "Marzo 2026",
+      "en": "March 2026"
+    },
+    "verifyUrl": null,
+    "featured": false,
+    "description": {
+      "es": "Certificación oficial que acredita competencias en desarrollo de aplicaciones empresariales, automatización de procesos de negocio, modelado de arquitecturas y buenas prácticas de ingeniería de software en entornos ágiles.",
+      "en": "Official certification validating skills in enterprise application development, business process automation, data architecture, and software engineering best practices in agile settings."
+    },
+    "order": 3
+  }
+]

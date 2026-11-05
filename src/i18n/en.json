@@ -1,0 +1,104 @@
+{
+  "about": {
+    "header": {
+      "eyebrow": "About Me",
+      "title": "About Me",
+      "description": "Software Engineering graduate specialized in Cybersecurity (U-TAD, GPA 8.3/10) and OSCP certified (Offensive Security Certified Professional). Currently working as a Security Architecture Analyst at Deloitte. Focused on offensive and defensive operations, infrastructure hardening, and security automation across Windows, Linux, Active Directory, and Cloud. Additionally, I was a high-performance alpine skier—a background that instilled discipline, resilience, and composure under sustained pressure."
+    },
+    "downloadCv": "Download CV",
+    "technicalTitle": "Hard Skills & Tech Stack",
+    "technicalSkills": [
+      "Pentesting",
+      "Red & Blue Team",
+      "Hardening",
+      "Active Directory",
+      "Wazuh SIEM",
+      "Forensic Analysis",
+      "Reverse Engineering",
+      "MITRE ATT&CK",
+      "OWASP",
+      "Linux",
+      "Windows",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Netskope",
+      "Zscaler",
+      "Python",
+      "Bash",
+      "PowerShell",
+      "Swift",
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "MongoDB",
+      "Appian",
+      "WinAPI"
+    ],
+    "langTitle": "Languages",
+    "languages": [
+      "Spanish (native)",
+      "English (professional proficiency)"
+    ],
+    "softTitle": "Core Strengths & Values",
+    "softSkills": [
+      "High-performance alpine skiing (resilience & discipline)",
+      "Ability to thrive under sustained pressure",
+      "Analytical problem-solving",
+      "High autonomy and proactive mindset",
+      "Agile teamwork and cross-collaboration",
+      "Organization and strategic planning"
+    ]
+  },
+  "cybersecurity": {
+    "header": {
+      "eyebrow": "Cybersecurity",
+      "title": "Defensive and offensive strategies",
+      "description": "Security-focused software engineer and OSCP certified (Offensive Security Certified Professional), currently working as a Security Architecture Analyst at Deloitte. Proven experience in Red & Blue Team operations, critical infrastructure hardening, and vulnerability assessments. Specialized in Active Directory attack chains, Linux and Windows environments, security automation, and threat detection with SIEM (Wazuh)."
+    },
+    "certTitle": "Featured Certification",
+    "certSubtitle": "OffSec Certified · Issued September 2026",
+    "certDesc": "Demonstrates advanced hands-on proficiency in reconnaissance, exploitation, Linux/Windows privilege escalation, and lateral movement across enterprise Active Directory domains.",
+    "toolsTitle": "Ecosystem, key tools & capabilities",
+    "writeups": {
+      "title": "Writeups",
+      "readWriteup": "Read writeup",
+      "machineActive": "Active machine",
+      "backButton": "Back",
+      "loadErrorTitle": "Could not load writeup",
+      "loadErrorBody": "The response did not seem to be valid Markdown. Try reloading in a few seconds.",
+      "status": {
+        "active": "Active",
+        "retired": "Retired"
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "eyebrow": "Contact",
+      "title": "Let's build something together",
+      "description": "Do you have a project, an idea or simply want to say hi? Reach out and let's talk."
+    },
+    "sidebar": {
+      "title": "Direct information",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "note": "I try to respond as quickly as possible. Tell me about your idea related to cybersecurity, web development, artificial intelligence, or similar fields, and we can work together."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "education": "Trajectory",
+    "cybersecurity": "Cybersecurity",
+    "ai": "AI",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}

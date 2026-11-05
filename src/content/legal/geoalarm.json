@@ -1,0 +1,50 @@
+{
+  "app": "geoalarm",
+  "path": "/geoalarm-privacy",
+  "meta": {
+    "es": {
+      "title": "Privacy Policy — GeoAlarm",
+      "description": "GeoAlarm Privacy Policy and Terms of Service — Diego Aranda Gómez"
+    },
+    "en": {
+      "title": "Privacy Policy — GeoAlarm",
+      "description": "GeoAlarm Privacy Policy and Terms of Service — Diego Aranda Gómez"
+    }
+  },
+  "ui": {
+    "es": {
+      "back": "Volver al portfolio",
+      "title": "Legal — GeoAlarm",
+      "subtitle": "Política de Privacidad & Términos de Servicio",
+      "badge": null,
+      "nav": [
+        {
+          "href": "#privacy-policy",
+          "label": "Política de Privacidad"
+        },
+        {
+          "href": "#terms-of-service",
+          "label": "Términos de Servicio"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — GeoAlarm"
+    },
+    "en": {
+      "back": "Back to portfolio",
+      "title": "Legal — GeoAlarm",
+      "subtitle": "Privacy Policy & Terms of Service",
+      "badge": null,
+      "nav": [
+        {
+          "href": "#privacy-policy-en",
+          "label": "Privacy Policy"
+        },
+        {
+          "href": "#terms-of-service-en",
+          "label": "Terms of Service"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — GeoAlarm"
+    }
+  }
+}

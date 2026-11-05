@@ -1,0 +1,11 @@
+{
+  "_note": "sha256 de los 6 STUBS de redirección (siguen en public/, byte a byte iguales). Los 3 documentos legales .html ya no se comparan por hash: ver scripts/verify-legal.mjs.",
+  "files": {
+    "public/geoalarm-privacy/index.html": "457c3df3f3457d58a17df59b5d374b0fb50f85b42ee66358898481e27ebb9ec4",
+    "public/mybudget-privacy/index.html": "7317e5fffc4a5d671b09762289b3b011d50aae0e612e2146d71db660ec0912a1",
+    "public/mybudget/index.html": "7317e5fffc4a5d671b09762289b3b011d50aae0e612e2146d71db660ec0912a1",
+    "public/garagepad-privacy/index.html": "e259ccb66b4c6fa9a4091b3b374759f1b9ad3e74bbb6c836a16532a5ffdc33f2",
+    "public/garagepad/index.html": "e259ccb66b4c6fa9a4091b3b374759f1b9ad3e74bbb6c836a16532a5ffdc33f2",
+    "public/garagepad.html": "e259ccb66b4c6fa9a4091b3b374759f1b9ad3e74bbb6c836a16532a5ffdc33f2"
+  }
+}

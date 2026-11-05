@@ -1,0 +1,62 @@
+---
+import Page from '../../layouts/Page.astro';
+import { getOrdered } from '../../lib/collections.mjs';
+import { getCollection } from 'astro:content';
+import { credentialLd } from '../../lib/jsonld.mjs';
+import { ui } from '../../i18n/ui.mjs';
+const { lang, canonical } = Astro.props;
+const t = ui[lang];
+const exp = await getOrdered('experience');
+const certs = await getOrdered('certifications');
+const edu = await getOrdered('education');
+const featured = certs.filter((c) => c.data.featured);
+const other = certs.filter((c) => !c.data.featured);
+const alt = { es: '/education', en: '/en/education' };
+const desc = lang === 'es' ? 'Experiencia profesional, certificaciones (OSCP, OSCP+, Appian) y formación de Diego Aranda Gómez.' : 'Professional experience, certifications (OSCP, OSCP+, Appian) and education of Diego Aranda Gómez.';
+---
+<Page title={`${t.edu.title} · Diego Aranda Gómez`} description={desc} lang={lang} alternates={alt} canonical={canonical} jsonld={featured.map((c: any) => credentialLd({ name: c.data.name, verifyUrl: c.data.verifyUrl }))}>
+  <h1>{t.edu.title}</h1>
+  <section class="block" id="experiencia" aria-labelledby="h-exp"><h2 id="h-exp">{t.edu.exp}</h2>
+    <div class="cards">
+      {exp.map(({ data: e, id }) => (
+        <article class="card" id={e.anchor}>
+          {e.current && <span class="badge">{t.current}</span>}
+          <h3>{e.role} · {e.org}</h3>
+          <p class="meta">{e.period[lang]} · {e.location[lang]}</p>
+          <p>{e.summary[lang]}</p>
+          {e.highlights[lang].length > 0 && <ul class="bullets">{e.highlights[lang].map((h: string) => <li>{h}</li>)}</ul>}
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="block" id="certificaciones" aria-labelledby="h-cert"><h2 id="h-cert">{t.edu.certs}</h2>
+    <div class="pair">
+      {featured.map(({ data: c, id }) => (
+        <article class={`panel panel-${id}`} id={c.anchor}>
+          <h3>{c.name}</h3>
+          <p>{c.fullName} · {c.issuer}, {c.date[lang]}</p>
+          {c.verifyUrl && <a class="verify" href={c.verifyUrl} target="_blank" rel="noopener">{t.verify}<span class="sr"> {c.name} {t.opensNew}</span></a>}
+        </article>
+      ))}
+    </div>
+    <div class="cards" style="margin-top:14px">
+      {featured.map(({ data: c }) => <article class="card"><h3>{c.name}</h3><p>{c.description[lang]}</p></article>)}
+      {other.map(({ data: c }) => (
+        <article class="card" id={c.anchor}><h3>{c.name}</h3><p class="meta">{c.issuer} · {c.date[lang]}</p><p>{c.description[lang]}</p></article>
+      ))}
+    </div>
+  </section>
+  <section class="block" aria-labelledby="h-study"><h2 id="h-study">{t.edu.study}</h2>
+    <div class="cards">
+      {edu.map(({ data: e }) => (
+        <article class="card" id={e.anchor}>
+          <span class="badge">{e.badge[lang]}</span>
+          <h3>{e.degree[lang]}</h3>
+          <p class="meta">{e.institution[lang]} · {e.period[lang]} · {e.location[lang]}</p>
+          <p>{e.description[lang]}</p>
+          <ul class="bullets">{e.highlights[lang].map((h: string) => <li>{h}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+  </section>
+</Page>

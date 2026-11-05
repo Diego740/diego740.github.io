@@ -1,0 +1,2032 @@
+{
+ "url": "prototypes/informe/index.html",
+ "at": "2026-11-04T16:10:35.359Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.38,
+    1,
+    0.81,
+    0.68
+   ],
+   "motion": {
+    "elements": 14,
+    "css": 14,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2958,
+     "screens": 3.3,
+     "words": 313,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 59.2,
+     "vw": 4.1,
+     "font": "Public Sans",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.47,
+     "top": 22,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "lines": 1,
+     "size": 59.2,
+     "font": "Public Sans"
+    },
+    "headings": [
+     {
+      "text": "Diego Aranda Gómez",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 59.2,
+      "vw": 4.1,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 22,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 46.4,
+      "vw": 3.2,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1060,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Experiencia",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 46.4,
+      "vw": 3.2,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1410,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Certificaciones",
+      "words": 1,
+      "chars": 15,
+      "lines": 1,
+      "size": 46.4,
+      "vw": 3.2,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1816,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.33,
+      "top": 1852,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 1852,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Writeups",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 46.4,
+      "vw": 3.2,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 2357,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Contacto",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 46.4,
+      "vw": 3.2,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 2634,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Public Sans",
+       "share": 0.99,
+       "mono": false
+      },
+      {
+       "family": "system-ui",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      46,
+      59,
+      64
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Public Sans",
+      "size": 21,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 76,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Public Sans",
+      "text": "OSCP+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1d3df0",
+     "bodyBgHsl": {
+      "h": 231,
+      "s": 0.88,
+      "l": 0.53
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#eceffb",
+       "top": 972,
+       "hsl": {
+        "h": 228,
+        "s": 0.65,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 1322,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#1d3df0",
+       "top": 2546,
+       "hsl": {
+        "h": 231,
+        "s": 0.88,
+        "l": 0.53
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1020",
+       "share": 0.31
+      },
+      {
+       "color": "#434b66",
+       "share": 0.27
+      },
+      {
+       "color": "#d6dcff",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#1d3df0",
+       "share": 0.11
+      }
+     ],
+     "button": {
+      "bg": "#1d3df0",
+      "hsl": {
+       "h": 231,
+       "s": 0.88,
+       "l": 0.53
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 6,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al escaparate",
+      "Contacto"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 165,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "public sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2958,
+    "margins": {
+     "left": 46,
+     "right": 121
+    },
+    "sections": [
+     {
+      "sel": "header.top",
+      "tag": "header",
+      "top": 0,
+      "height": 165,
+      "words": 32,
+      "media": 0,
+      "middle": 401,
+      "heading": {
+       "text": "Diego Aranda Gómez",
+       "size": 59,
+       "tag": "h1"
+      },
+      "left": 46,
+      "right": 60,
+      "textLeft": 46,
+      "textRight": 60,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#escaparate.exhibit",
+      "tag": "section",
+      "top": 165,
+      "height": 807,
+      "words": 96,
+      "media": 0,
+      "middle": 241,
+      "heading": {
+       "text": "Seguridad",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 207,
+      "textLeft": 46,
+      "textRight": 207,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#sobre-mi.sum.sum-about",
+      "tag": "section",
+      "top": 972,
+      "height": 350,
+      "words": 51,
+      "media": 0,
+      "middle": 269,
+      "heading": {
+       "text": "Sobre mí",
+       "size": 46,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 153,
+      "textLeft": 46,
+      "textRight": 153,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiencia.sum.sum-exp",
+      "tag": "section",
+      "top": 1322,
+      "height": 406,
+      "words": 39,
+      "media": 0,
+      "middle": 208,
+      "heading": {
+       "text": "Experiencia",
+       "size": 46,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 484,
+      "textLeft": 46,
+      "textRight": 484,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#certificaciones.sum.sum-certs",
+      "tag": "section",
+      "top": 1728,
+      "height": 541,
+      "words": 31,
+      "media": 0,
+      "middle": 164,
+      "heading": {
+       "text": "OSCP+",
+       "size": 64,
+       "tag": "h3"
+      },
+      "left": 46,
+      "right": 153,
+      "textLeft": 46,
+      "textRight": 153,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#writeups.sum.sum-writeups",
+      "tag": "section",
+      "top": 2269,
+      "height": 277,
+      "words": 20,
+      "media": 0,
+      "middle": 265,
+      "heading": {
+       "text": "Writeups",
+       "size": 46,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 328,
+      "textLeft": 46,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contacto.sum.sum-contact",
+      "tag": "section",
+      "top": 2546,
+      "height": 315,
+      "words": 19,
+      "media": 0,
+      "middle": 263,
+      "heading": {
+       "text": "Contacto",
+       "size": 46,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 276,
+      "textLeft": 46,
+      "textRight": 276,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Diego Aranda Gómez",
+      "size": 59,
+      "top": 22,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 46,
+      "n": 10
+     },
+     {
+      "x": 503,
+      "n": 3
+     },
+     {
+      "x": 525,
+      "n": 1
+     },
+     {
+      "x": 1068,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.27,
+    "voidBox": {
+     "x": 600,
+     "y": 420,
+     "w": 840,
+     "h": 420
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.66,
+    0.98,
+    0.81,
+    0.76
+   ],
+   "motion": {
+    "elements": 14,
+    "css": 14,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3200,
+     "screens": 3.1,
+     "words": 313,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "geoalarm-1.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 3,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 33.6,
+     "vw": 4.4,
+     "font": "Public Sans",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.89,
+     "top": 22,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "lines": 1,
+     "size": 33.6,
+     "font": "Public Sans"
+    },
+    "headings": [
+     {
+      "text": "Diego Aranda Gómez",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 22,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1355,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Experiencia",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1717,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Certificaciones",
+      "words": 1,
+      "chars": 15,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2104,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 2189,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 2189,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Writeups",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2625,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Contacto",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 4,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2882,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Public Sans",
+       "share": 0.99,
+       "mono": false
+      },
+      {
+       "family": "system-ui",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      30,
+      34,
+      42
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Public Sans",
+      "size": 21,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 68,
+     "max": {
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Public Sans",
+      "text": "OSCP+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1d3df0",
+     "bodyBgHsl": {
+      "h": 231,
+      "s": 0.88,
+      "l": 0.53
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#eceffb",
+       "top": 1301,
+       "hsl": {
+        "h": 228,
+        "s": 0.65,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 1664,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1020",
+       "share": 0.31
+      },
+      {
+       "color": "#434b66",
+       "share": 0.27
+      },
+      {
+       "color": "#d6dcff",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#1d3df0",
+       "share": 0.11
+      }
+     ],
+     "button": {
+      "bg": "#1d3df0",
+      "hsl": {
+       "h": 231,
+       "s": 0.88,
+       "l": 0.53
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 6,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al escaparate",
+      "Contacto"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 197,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "public sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3200,
+    "margins": {
+     "left": 25,
+     "right": 21
+    },
+    "sections": [
+     {
+      "sel": "header.top",
+      "tag": "header",
+      "top": 0,
+      "height": 197,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Diego Aranda Gómez",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 25,
+      "right": 84,
+      "textLeft": 25,
+      "textRight": 84,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#escaparate.exhibit",
+      "tag": "section",
+      "top": 197,
+      "height": 1104,
+      "words": 87,
+      "media": 1,
+      "middle": 201,
+      "heading": {
+       "text": "Seguridad",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 25,
+      "right": 0,
+      "textLeft": 25,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#sobre-mi.sum.sum-about",
+      "tag": "section",
+      "top": 1301,
+      "height": 362,
+      "words": 51,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Sobre mí",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 25,
+      "right": 38,
+      "textLeft": 25,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiencia.sum.sum-exp",
+      "tag": "section",
+      "top": 1664,
+      "height": 386,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Experiencia",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 25,
+      "right": 290,
+      "textLeft": 25,
+      "textRight": 290,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#certificaciones.sum.sum-certs",
+      "tag": "section",
+      "top": 2050,
+      "height": 521,
+      "words": 31,
+      "media": 0,
+      "middle": 61,
+      "heading": {
+       "text": "OSCP+",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 25,
+      "right": 62,
+      "textLeft": 25,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#writeups.sum.sum-writeups",
+      "tag": "section",
+      "top": 2571,
+      "height": 258,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Writeups",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 25,
+      "right": 134,
+      "textLeft": 25,
+      "textRight": 134,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contacto.sum.sum-contact",
+      "tag": "section",
+      "top": 2829,
+      "height": 274,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Contacto",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 25,
+      "right": 82,
+      "textLeft": 25,
+      "textRight": 82,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Diego Aranda Gómez",
+      "size": 34,
+      "top": 22,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 25,
+      "n": 13
+     },
+     {
+      "x": 47,
+      "n": 1
+     },
+     {
+      "x": 486,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.68,
+    0.9,
+    1,
+    0.87,
+    0.74
+   ],
+   "motion": {
+    "elements": 14,
+    "css": 14,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3752,
+     "screens": 4.4,
+     "words": 313,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 3,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 33.6,
+     "vw": 8.6,
+     "font": "Public Sans",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 22,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Diego Aranda Gómez",
+     "words": 3,
+     "lines": 1,
+     "size": 33.6,
+     "font": "Public Sans"
+    },
+    "headings": [
+     {
+      "text": "Diego Aranda Gómez",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 22,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1315,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Experiencia",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1792,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Certificaciones",
+      "words": 1,
+      "chars": 15,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2219,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 2304,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "OSCP",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 2614,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Writeups",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3065,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Contacto",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Public Sans",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3311,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Public Sans",
+       "share": 0.99,
+       "mono": false
+      },
+      {
+       "family": "system-ui",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      30,
+      34,
+      42
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Public Sans",
+      "size": 21,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 33,
+     "max": {
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Public Sans",
+      "text": "OSCP+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1d3df0",
+     "bodyBgHsl": {
+      "h": 231,
+      "s": 0.88,
+      "l": 0.53
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#eceffb",
+       "top": 1267,
+       "hsl": {
+        "h": 228,
+        "s": 0.65,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 1744,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2268,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#1d3df0",
+       "top": 3263,
+       "hsl": {
+        "h": 231,
+        "s": 0.88,
+        "l": 0.53
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1020",
+       "share": 0.31
+      },
+      {
+       "color": "#434b66",
+       "share": 0.27
+      },
+      {
+       "color": "#d6dcff",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#1d3df0",
+       "share": 0.11
+      }
+     ],
+     "button": {
+      "bg": "#1d3df0",
+      "hsl": {
+       "h": 231,
+       "s": 0.88,
+       "l": 0.53
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 6,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al escaparate",
+      "Contacto"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 253,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "public sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3752,
+    "margins": {
+     "left": 20,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "header.top",
+      "tag": "header",
+      "top": 0,
+      "height": 253,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Diego Aranda Gómez",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 27,
+      "textLeft": 20,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#escaparate.exhibit",
+      "tag": "section",
+      "top": 253,
+      "height": 1014,
+      "words": 72,
+      "media": 0,
+      "middle": 337,
+      "heading": {
+       "text": "Seguridad",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#sobre-mi.sum.sum-about",
+      "tag": "section",
+      "top": 1267,
+      "height": 477,
+      "words": 51,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Sobre mí",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiencia.sum.sum-exp",
+      "tag": "section",
+      "top": 1744,
+      "height": 427,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Experiencia",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 36,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#certificaciones.sum.sum-certs",
+      "tag": "section",
+      "top": 2171,
+      "height": 846,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "OSCP+",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 68,
+      "textLeft": 20,
+      "textRight": 68,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#writeups.sum.sum-writeups",
+      "tag": "section",
+      "top": 3017,
+      "height": 246,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Writeups",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 25,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contacto.sum.sum-contact",
+      "tag": "section",
+      "top": 3263,
+      "height": 317,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Contacto",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 3581,
+      "height": 172,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 71,
+      "textLeft": 20,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Diego Aranda Gómez",
+      "size": 34,
+      "top": 22,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 13
+     },
+     {
+      "x": 42,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (13, 14, 15, 16, 17, 18, 20, 21, 46, 59, 64).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 59.2px (4.1vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 46px from the left edge but only to 121px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 768,
+   "message": "3 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/desktop-fold.jpg",
+   "pages": [
+    "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/tablet-fold.jpg",
+   "pages": [
+    "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/mobile-fold.jpg",
+   "pages": [
+    "/Users/diegoaranda/Documents/Proyectos/diego740.github.io/prototypes/_captures/informe/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

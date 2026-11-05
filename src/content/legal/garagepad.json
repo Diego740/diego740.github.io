@@ -1,0 +1,58 @@
+{
+  "app": "garagepad",
+  "path": "/garagepad-privacy",
+  "meta": {
+    "es": {
+      "title": "GaragePad — Textos legales y soporte",
+      "description": "GaragePad — Política de Privacidad y Términos de Uso · Tus mandos de garaje en un solo widget en iPhone y CarPlay · Diego Aranda Gómez"
+    },
+    "en": {
+      "title": "GaragePad — Legal & Privacy Policy",
+      "description": "GaragePad — Política de Privacidad y Términos de Uso · Tus mandos de garaje en un solo widget en iPhone y CarPlay · Diego Aranda Gómez"
+    }
+  },
+  "ui": {
+    "es": {
+      "back": "Volver al portfolio",
+      "title": "GaragePad",
+      "subtitle": "Tus mandos de garaje, en un solo widget en el iPhone y en CarPlay.",
+      "badge": "iOS · CarPlay · Widgets · Bluetooth",
+      "nav": [
+        {
+          "href": "#about",
+          "label": "Acerca de"
+        },
+        {
+          "href": "#privacy-policy",
+          "label": "Política de Privacidad"
+        },
+        {
+          "href": "#terms-of-use",
+          "label": "Términos de Uso"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — GaragePad"
+    },
+    "en": {
+      "back": "Back to portfolio",
+      "title": "GaragePad",
+      "subtitle": "Your garage remotes, in one widget on your iPhone and in CarPlay.",
+      "badge": "iOS · CarPlay · Widgets · Bluetooth",
+      "nav": [
+        {
+          "href": "#about-en",
+          "label": "About"
+        },
+        {
+          "href": "#privacy-policy-en",
+          "label": "Privacy Policy"
+        },
+        {
+          "href": "#terms-of-use-en",
+          "label": "Terms of Use"
+        }
+      ],
+      "footer": "© 2026 Diego Aranda Gómez — GaragePad"
+    }
+  }
+}

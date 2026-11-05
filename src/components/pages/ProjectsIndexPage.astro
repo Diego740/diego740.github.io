@@ -1,0 +1,25 @@
+---
+import Page from '../../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import { ui } from '../../i18n/ui.mjs';
+import Cover from '../Cover.astro';
+import { toItem } from '../../lib/shelves.mjs';
+const { lang } = Astro.props;
+const t = ui[lang]; const L = t.proj;
+const pre = lang === 'en' ? '/en' : '';
+const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const groups = ['seguridad', 'apps', 'otros'].map((id) => ({ id, items: all.filter((p) => p.data.shelf === id) }));
+const alt = { es: '/projects', en: '/en/projects' };
+---
+<Page title={`${L.title} · Diego Aranda Gómez`} description={L.lead} lang={lang} alternates={alt}>
+  <h1>{L.title}</h1>
+  <p class="lead">{L.lead}</p>
+  {groups.map((g) => (
+    <section class="block" id={g.id} aria-labelledby={`h-${g.id}`}>
+      <h2 id={`h-${g.id}`}>{L.shelves[g.id]}</h2>
+      <ul class="grid-covers">{g.items.map((it, i) => <Cover p={toItem(lang)(it)} lang={lang} {i} quick={false} />)}</ul>
+    </section>
+  ))}
+  <p class="lead">{L.writeupsLink} <a class="more" href={`${pre}/cybersecurity#writeups`} style="margin:0">{L.writeupsCta}</a></p>
+</Page>
+<script src="../../scripts/home.js"></script>

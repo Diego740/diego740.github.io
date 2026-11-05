@@ -1,0 +1,8 @@
+---
+const { lang = 'es' } = Astro.props;
+const l = lang === 'es' ? { dark: 'Activar modo oscuro', light: 'Activar modo claro' } : { dark: 'Switch to dark mode', light: 'Switch to light mode' };
+---
+<button type="button" class="theme-toggle" aria-label={l.dark} aria-pressed="false" data-to-dark={l.dark} data-to-light={l.light}>
+  <svg class="i-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></svg>
+</button>

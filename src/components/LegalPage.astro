@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { ui as siteUi } from '../i18n/ui.mjs';
+// Página legal de una app. El texto vive en src/content/legal/<app>.{json,es.html,en.html};
+// ES se muestra por defecto (sin JavaScript) y EN está en el HTML con `hidden`.
+const { data, es, en } = Astro.props;
+const html = { es, en };
+const langs = ['es', 'en'] as const;
+const canonical = `${data.path}.html`;
+---
+<Base title={data.meta.es.title} description={data.meta.es.description} lang="es" canonical={canonical} robots="index, follow" ogType="article">
+  {langs.map((l) => <a class="skip" href="#main" data-lang={l} hidden={l !== 'es'}>{siteUi[l].skip}</a>)}
+  <header class="subtop">
+    <a class="brand" href="/">Diego Aranda Gómez</a>
+    <nav class="subnav" aria-label="Principal">
+      {langs.map((l) => (
+        <ul data-lang={l} hidden={l !== 'es'}>{siteUi[l].nav.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul>
+      ))}
+      <ThemeToggle lang="es" />
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        {langs.map((l) => <button type="button" class="lang" data-lang-btn={l} aria-pressed={l === 'es' ? 'true' : 'false'}>{l.toUpperCase()}</button>)}
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page legal" data-legal-app={data.app}>
+    {langs.map((l) => (
+      <a class="back-link" href="/" data-lang={l} hidden={l !== 'es'} data-legal="back"><span class="back-arrow" aria-hidden="true">←</span><span>{data.ui[l].back}</span></a>
+    ))}
+    <div class="page-hero">
+      {data.ui.es.badge && langs.map((l) => <p class="page-badge" data-lang={l} hidden={l !== 'es'} data-legal="badge">{data.ui[l].badge}</p>)}
+      {langs.map((l) => <h1 data-lang={l} hidden={l !== 'es'} data-legal="title">{data.ui[l].title}</h1>)}
+      {langs.map((l) => <p class="page-hero-sub" data-lang={l} hidden={l !== 'es'} data-legal="subtitle">{data.ui[l].subtitle}</p>)}
+    </div>
+    {langs.map((l) => (
+      <nav class="doc-nav" aria-label={l === 'es' ? 'Secciones' : 'Sections'} data-lang={l} hidden={l !== 'es'} data-legal="nav">
+        {data.ui[l].nav.map((n: { href: string; label: string }) => <a href={n.href}>{n.label}</a>)}
+      </nav>
+    ))}
+    {langs.map((l) => (
+      <div class="lang-content-block" data-lang-block={l} data-lang={l} hidden={l !== 'es'} data-legal="content" lang={l} set:html={html[l]} />
+    ))}
+  </main>
+
+  <footer class="foot">
+    {langs.map((l) => <p data-lang={l} hidden={l !== 'es'} data-legal="footer">{data.ui[l].footer}</p>)}
+    <ul>
+      <li><a href="/geoalarm-privacy.html">GeoAlarm</a></li>
+      <li><a href="/mybudget-privacy.html">MyBudget</a></li>
+      <li><a href="/garagepad-privacy.html">GaragePad</a></li>
+    </ul>
+  </footer>
+  <script type="application/json" id="legal-titles" set:html={JSON.stringify({ es: data.meta.es.title, en: data.meta.en.title })} />
+  <script src="../scripts/legal.js"></script>
+</Base>

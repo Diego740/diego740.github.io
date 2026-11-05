@@ -1,0 +1,41 @@
+---
+import { svg } from '../data/home.mjs';
+import { ui } from '../i18n/ui.mjs';
+// Portada de vinilo. Con `quick` (o sin página de detalle) incluye la plantilla de la vista rápida.
+const { p, lang = 'es', i = 0, quick = true, more = false } = Astro.props;
+const L = ui[lang].proj;
+const hasTpl = quick || !p.href;
+---
+<li class={`cover${more ? ' more-tile' : ''}`} style={`--i:${i}`} data-slug={p.slug} data-status={p.status}>
+  {more ? <a href={p.href}><span>{p.label}</span></a> : (
+    <>
+      <a class="cv" href={p.href ?? '#h-otros'} data-title={p.heading} role={p.href ? undefined : 'button'}>
+        <span class="sleeve">
+          <span class="s-title">{p.heading}</span>
+          <Fragment set:html={svg(p.motif)} />
+          <span class="s-fact">{p.cover}</span>
+          {hasTpl && <span class="s-hint" aria-hidden="true">{L.quickHint}</span>}
+        </span>
+        {p.status === 'en-curso' && <span class="sticker" aria-hidden="true">{L.sticker}</span>}
+        {p.status === 'en-curso' && <span class="sr"> ({L.status['en-curso']})</span>}
+        {p.status === 'publicada' && <span class="sr"> ({L.status.publicada})</span>}
+      </a>
+      {hasTpl && (
+        <template>
+          <h3>{p.heading}</h3>
+          <p class={`qv-status s-${p.status}`}>{L.status[p.status]}</p>
+          <p class="qv-blurb">{p.blurb}</p>
+          {p.cover && <p class="qv-fact">{p.cover}</p>}
+          <ul class="qv-tags">{p.tags.map((t: string) => <li>{t}</li>)}</ul>
+          <div class="qv-actions">
+            {p.href && <a class="qv-main" href={p.href}>{L.details}</a>}
+            {p.store && <a class="qv-sec" href={p.store} target="_blank" rel="noopener">App Store<span class="sr"> {ui[lang].opensNew}</span></a>}
+            {p.repo && <a class="qv-sec" href={p.repo} target="_blank" rel="noopener">{L.repo}<span class="sr"> {ui[lang].opensNew}</span></a>}
+            {p.legal && <a class="qv-sec" href={p.legal}>{L.legal}</a>}
+            <button type="button" class="qv-close" data-close>{L.close}</button>
+          </div>
+        </template>
+      )}
+    </>
+  )}
+</li>

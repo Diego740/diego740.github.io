@@ -1,0 +1,41 @@
+[
+  {
+    "id": "utad",
+    "anchor": "utad",
+    "institution": {
+      "es": "U-TAD (Centro Universitario de Tecnología y Arte Digital)",
+      "en": "U-TAD (University Center for Technology and Digital Art)"
+    },
+    "degree": {
+      "es": "Grado en Ingeniería del Software (Mención Ciberseguridad)",
+      "en": "B.Sc. Software Engineering (Cybersecurity Specialization)"
+    },
+    "period": {
+      "es": "Septiembre 2022 – Junio 2026",
+      "en": "September 2022 – June 2026"
+    },
+    "location": {
+      "es": "Madrid, España",
+      "en": "Madrid, Spain"
+    },
+    "badge": {
+      "es": "Graduado · GPA: 8.3/10",
+      "en": "Graduated · GPA: 8.3/10"
+    },
+    "description": {
+      "es": "Graduado con especialización en Ciberseguridad. Formación técnica rigurosa en desarrollo seguro, arquitecturas distribuidas, análisis forense digital, redes de computadores y sistemas operativos.",
+      "en": "Graduated with honors in technical subjects. Comprehensive curriculum in secure software engineering, distributed systems, digital forensics, computer networks, and operating systems."
+    },
+    "highlights": {
+      "es": [
+        "Redes de Computadores: 9.7 (Matrícula de Honor)",
+        "Algoritmos: 9.6"
+      ],
+      "en": [
+        "Computer Networks: 9.7 (Honours)",
+        "Algorithms: 9.6"
+      ]
+    },
+    "order": 1
+  }
+]

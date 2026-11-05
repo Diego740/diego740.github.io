@@ -1,0 +1,7 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import data from '../content/legal/geoalarm.json';
+import es from '../content/legal/geoalarm.es.html?raw';
+import en from '../content/legal/geoalarm.en.html?raw';
+---
+<LegalPage {data} {es} {en} />

@@ -1,0 +1,124 @@
+@import url('../_shared/base.css');
+
+/* Dirección C · INFORME — carátulas de informe de auditoría. Cobalto, papel, sellos. Sobria y profesional. */
+@font-face{font-family:'Public Sans';font-weight:100 900;font-display:swap;src:url('../_shared/fonts/public-sans-latin-wght-normal.woff2') format('woff2')}
+
+:root{
+  --cobalt:#1d3df0; --cobalt-d:#1129b8; --paper:#fbfbfd; --paper-2:#eceffb; --ink:#0b1020; --ink-2:#434b66; --on-cobalt-2:#d6dcff; --stamp:#d4141c;
+  --gut:clamp(20px,3.2vw,48px);
+  --top-h:112px;
+  --h:clamp(150px,19svh,270px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+html{background:var(--cobalt)}
+body{background:var(--cobalt);color:#fff;font:400 1.0625rem/1.55 'Public Sans',system-ui,sans-serif}
+::selection{background:#fff;color:var(--cobalt)}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* Cabecera */
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:22px var(--gut) 18px;min-height:var(--top-h)}
+.name{font:800 clamp(2.1rem,4.2vw,3.7rem)/1 'Public Sans',sans-serif;letter-spacing:-.03em}
+.pos{margin-top:10px;max-width:62ch;color:var(--on-cobalt-2);font-size:1.125rem}
+.actions{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.btn,.menu summary,.lang{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:6px;background:var(--cobalt-d);color:#fff;font:600 .9375rem/1 'Public Sans',sans-serif;transition:transform .18s var(--ease),background-color .18s}
+.btn-main{background:#fff;color:var(--cobalt)}
+.btn:hover,.menu summary:hover,.lang:hover{transform:translateY(-2px)}
+.lang{padding:0 14px}
+.menu ul{background:var(--paper);color:var(--ink);border-radius:8px}
+.menu li a{border-radius:5px;font-weight:600}
+.menu li a:hover{background:var(--paper-2)}
+
+/* Escaparate */
+.exhibit{min-height:calc(100svh - var(--top-h))}
+.shelves{flex:1;padding:4px var(--gut) 28px}
+.shelf{margin-top:12px}
+.shelf-head{display:flex;align-items:center;gap:16px;padding-bottom:8px}
+.shelf-head h2{font:800 1.25rem/1 'Public Sans',sans-serif;letter-spacing:-.01em}
+.shelf-note{color:var(--on-cobalt-2);font-size:.9375rem}
+.more-tile a{display:grid;place-items:center;width:calc(var(--h)*.76);height:var(--h);padding:12px;background:var(--cobalt-d);color:#fff;font:700 1.0625rem/1.2 'Public Sans',sans-serif;text-align:center;border-radius:3px;transition:background-color .2s,transform .22s var(--ease)}
+.more-tile a:hover{background:#0d1f94;transform:translateY(-6px)}
+.more-tile span::after{content:" →"}
+.row{gap:16px;padding:14px 4px 0;margin:0 -4px;border-bottom:12px solid var(--cobalt-d)}
+.row:focus-visible{outline-offset:-3px}
+
+/* Carátula */
+.shelf-apps .sheet{border-left-color:var(--cobalt-d)}
+.shelf-writeups .sheet{border-left-color:#7d8bd6}
+.sheet{position:relative;display:flex;flex-direction:column;width:calc(var(--h)*.76);height:var(--h);padding:10px 10px 9px 18px;background:var(--paper);color:var(--ink);border-radius:2px 4px 4px 2px;border-left:8px solid var(--ink);transition:transform .22s var(--ease)}
+.cover a:hover .sheet{transform:translateY(-6px)}
+.s-cat{display:block;color:var(--cobalt);font:700 .8125rem/1.2 'Public Sans',sans-serif}
+.s-art{flex:1;display:grid;place-items:center;min-height:0;color:var(--cobalt)}
+.s-art{position:relative;margin-top:6px;overflow:hidden}
+.s-art .motif{width:56%;stroke-width:4}
+.s-art .motif-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 82%}
+.s-title{font:800 1.0625rem/1.1 'Public Sans',sans-serif;letter-spacing:-.02em}
+.s-fact{margin-top:4px;font-size:.8125rem;line-height:1.25;color:var(--ink-2);font-weight:500}
+.sticker{position:absolute;right:-12px;top:-17px;z-index:2;padding:3px 8px 2px;border:3px solid var(--stamp);border-radius:3px;background:var(--paper);color:var(--stamp);font:800 .875rem/1.1 'Public Sans',sans-serif;letter-spacing:.04em;transform:rotate(-8deg);transition:transform .25s var(--ease)}
+.cover a:hover .sticker{transform:rotate(-3deg) scale(1.06)}
+
+/* Línea temporal: índice del informe */
+.timeline{background:var(--cobalt-d)}
+.timeline ol{padding:0 var(--gut);overflow-x:auto;gap:2px}
+.timeline li{min-width:128px}
+.timeline a{display:flex;flex-direction:column;justify-content:center;gap:1px;height:100%;min-height:64px;padding:9px 14px;transition:background-color .18s}
+.timeline a:hover{background:rgba(255,255,255,.14)}
+.timeline .what{font:700 1rem/1.15 'Public Sans',sans-serif;order:1}
+.timeline .when{font-size:.8125rem;font-weight:500;color:var(--on-cobalt-2);order:2}
+.timeline .star{flex:1.6 1 0;min-width:200px;background:#fff}
+.timeline .star a:hover{background:var(--paper-2)}
+.timeline .star .what{font-size:1.3rem;font-weight:800;color:var(--cobalt);letter-spacing:-.02em}
+.timeline .star .when{color:var(--ink-2)}
+
+/* Resúmenes: hojas de informe sobre fondo papel */
+.sum{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:clamp(48px,7vw,88px) var(--gut);align-items:start;background:var(--paper);color:var(--ink)}
+.sum:nth-of-type(even){background:var(--paper-2)}
+.sum>h2{grid-column:1/5;font:800 clamp(1.9rem,3.4vw,2.9rem)/1.02 'Public Sans',sans-serif;letter-spacing:-.03em}
+.sum>*:not(h2){grid-column:5/-1}
+.sum p{max-width:62ch;color:var(--ink-2)}
+.sum-about p{font-size:1.3125rem;line-height:1.5;color:var(--ink)}
+.more{margin-top:22px;display:inline-block;font-weight:700;color:var(--cobalt)}
+.more::after{content:" →"}
+.more:hover{text-decoration:underline;text-underline-offset:4px}
+.exp{display:grid;gap:26px}
+.exp h3{font:700 1.3rem/1.2 'Public Sans',sans-serif}
+.exp .org{color:var(--cobalt);font-weight:600}
+.sum-certs>.pair,.sum-certs .other-cert,.sum-certs .more{grid-column:5/-1}
+.pair{display:grid;grid-template-columns:3fr 2fr;gap:20px;align-items:end}
+.cert-1{min-height:230px;border-top-color:var(--ink)}
+.cert-1 h3{font-size:clamp(2rem,3.6vw,3rem)}
+.cert{position:relative;padding:22px 22px 24px;background:#fff;border-top:14px solid var(--cobalt);display:flex;flex-direction:column;gap:6px;min-height:290px}
+.cert h3{font:800 clamp(2.6rem,5vw,4rem)/.95 'Public Sans',sans-serif;letter-spacing:-.04em}
+.cert .date{margin-top:auto;font-weight:600;color:var(--ink)}
+.verify{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:6px;background:var(--cobalt);color:#fff;font-weight:600;transition:transform .18s var(--ease)}
+.verify:hover{transform:translateY(-2px)}
+.wu{display:grid;gap:8px;margin-top:20px}
+.wu a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border-radius:5px;background:#fff;font:700 1.25rem/1 'Public Sans',sans-serif;transition:transform .18s var(--ease)}
+.wu a:hover{transform:translateX(4px)}
+.wu-diff{padding:5px 10px;border-radius:4px;font:700 .875rem/1 'Public Sans',sans-serif;color:#fff}
+.d-easy{background:#14703a}.d-medium{background:var(--cobalt)}.d-hard{background:var(--stamp)}
+.sum-contact{background:var(--cobalt)!important;color:#fff}
+.sum-contact p{color:var(--on-cobalt-2)}
+.sum-contact .ct{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:18px;font:700 1.3rem/1.2 'Public Sans',sans-serif}
+.sum-contact .ct a:hover{text-decoration:underline;text-underline-offset:4px}
+.sum-contact .more{color:#fff}
+.foot{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding:26px var(--gut) 40px;background:var(--cobalt-d);color:var(--on-cobalt-2);font-size:.9375rem}
+.foot ul{display:flex;flex-wrap:wrap;gap:8px 24px}
+.foot a{display:inline-block;padding:4px 0}
+.foot a:hover{color:#fff;text-decoration:underline}
+
+@media (max-width:900px){
+  :root{--top-h:auto;--h:clamp(196px,46vw,270px)}
+  .top{flex-direction:column;gap:14px}
+  .actions{width:100%;flex-wrap:wrap}
+  .sum{display:block}
+  .sum>h2{margin-bottom:18px}
+  .shelf-note{display:none}
+  .timeline li{min-width:118px}
+}
+
+/* Colocación de las portadas en el estante: una vez, transform+opacity */
+@keyframes place{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cover{animation:place .45s var(--ease) both;animation-delay:calc(var(--i,0)*45ms + 80ms)}
+@media (prefers-reduced-motion:reduce){.cover{animation:none}}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+@media (max-width:640px){.sum-contact .ct{font-size:1.125rem}}

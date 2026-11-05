@@ -1,0 +1,42 @@
+---
+import Page from '../../layouts/Page.astro';
+import { getOrdered } from '../../lib/collections.mjs';
+import { getCollection } from 'astro:content';
+import { credentialLd } from '../../lib/jsonld.mjs';
+import { ui, CYBER_TOOLS } from '../../i18n/ui.mjs';
+import es from '../../i18n/es.json';
+import en from '../../i18n/en.json';
+const { lang } = Astro.props;
+const t = ui[lang]; const c = (lang === 'es' ? es : en).cybersecurity;
+const certs = (await getOrdered('certifications')).filter((x) => x.data.featured);
+const writeups = (await getCollection('writeups')).sort((a, b) => a.data.date.localeCompare(b.data.date));
+const base = lang === 'es' ? '/cybersecurity' : '/en/cybersecurity';
+const alt = { es: '/cybersecurity', en: '/en/cybersecurity' };
+---
+<Page title={`${c.header.title} · Diego Aranda Gómez`} description={c.header.description.slice(0, 155)} lang={lang} alternates={alt} jsonld={certs.filter((c: any) => c.data.featured).map((c: any) => credentialLd({ name: c.data.name, verifyUrl: c.data.verifyUrl }))}>
+  <h1>{c.header.title}</h1>
+  <p class="lead">{c.header.description}</p>
+  <section class="block" id="oscp" aria-labelledby="h-oscp"><h2 id="h-oscp">{t.cyber.oscpTitle}</h2>
+    <div class="pair">
+      {certs.map(({ data: x, id }) => (
+        <article class={`panel panel-${id}`}>
+          <h3>{x.name}</h3>
+          <p>{x.fullName} · {x.issuer}, {x.date[lang]}</p>
+          {x.verifyUrl && <a class="verify" href={x.verifyUrl} target="_blank" rel="noopener">{t.verify}<span class="sr"> {x.name} {t.opensNew}</span></a>}
+        </article>
+      ))}
+    </div>
+    <p class="lead">{c.certDesc}</p>
+  </section>
+  <section class="block" aria-labelledby="h-tools"><h2 id="h-tools">{t.cyber.tools}</h2>
+    <ul class="tools">{CYBER_TOOLS.map((x) => <li>{x}</li>)}</ul></section>
+  <section class="block" id="writeups" aria-labelledby="h-wu"><h2 id="h-wu">{t.cyber.writeups}</h2>
+    <ul class="wlist">
+      {writeups.map(({ data: w, id }) => w.status === 'retired' ? (
+        <li><a href={`${base}/${id}`}><span>{w.title}</span><span class="info"><span>{w.platform} · {w.os}</span><span class={`pill d-${w.difficulty}`}>{w.difficulty[0].toUpperCase() + w.difficulty.slice(1)}</span></span></a></li>
+      ) : (
+        <li><div class="locked"><span>{w.title}</span><span class="info"><span>{t.cyber.active}</span><span class={`pill d-${w.difficulty}`}>{w.difficulty[0].toUpperCase() + w.difficulty.slice(1)}</span></span></div></li>
+      ))}
+    </ul>
+  </section>
+</Page>

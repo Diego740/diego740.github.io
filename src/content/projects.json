@@ -1,0 +1,818 @@
+[
+  {
+    "id": "termostato",
+    "shelf": "seguridad",
+    "order": 1,
+    "status": "terminado",
+    "motif": "dial",
+    "title": "Smart Thermostat Security Audit",
+    "heading": {
+      "es": "Auditoría termostato IoT",
+      "en": "IoT thermostat security audit"
+    },
+    "cover": {
+      "es": "3+ vulnerabilidades críticas",
+      "en": "3+ critical vulnerabilities"
+    },
+    "blurb": {
+      "es": "Auditoría de hardware, app móvil y cloud de un ecosistema IoT real.",
+      "en": "Hardware, mobile app and cloud audit of a real IoT ecosystem."
+    },
+    "tags": [
+      "IoT",
+      "Pentesting",
+      "Ingeniería inversa",
+      "Firmware"
+    ],
+    "whatIs": {
+      "es": "Auditoría de seguridad de un termostato IoT comercial y de toda la infraestructura que lo rodea: el propio dispositivo, la aplicación móvil y los servidores con los que se comunica. Trabajo de una asignatura universitaria que se alargó varios meses (2025-2026).",
+      "en": "Security audit of a commercial IoT thermostat and all the infrastructure around it: the device itself, the mobile app and the servers it talks to. Work for a university course that ran for several months (2025-2026)."
+    },
+    "results": {
+      "es": [
+        "Descubrimiento de 3+ vulnerabilidades críticas: RCE en backend, credenciales en texto plano y claves API hardcodeadas.",
+        "Informe priorizado de remediación con PoCs de reproducción."
+      ],
+      "en": [
+        "Uncovered 3+ critical vulnerabilities: backend RCE, plaintext credential storage and hardcoded API keys.",
+        "Remediation-prioritized report with PoC reproduction steps."
+      ]
+    },
+    "stack": [
+      "IoT",
+      "Pentesting",
+      "Ingeniería inversa",
+      "Firmware"
+    ],
+    "links": {},
+    "featured": true,
+    "detail": true,
+    "how": {
+      "es": [
+        "Auditoría del termostato y de su ecosistema completo: configuración, funcionamiento, conexión a internet y al móvil, e intentos de interceptar los mensajes que intercambian.",
+        "Ingeniería inversa de la aplicación móvil para entender cómo se comunica con el dispositivo y con la nube.",
+        "Siguiendo ese rastro paso a paso, localicé servidores que parecían ser propiedad del fabricante y que tenían vulnerabilidades críticas, entre ellas ejecución remota de código (RCE)."
+      ],
+      "en": [
+        "Audit of the thermostat and its whole ecosystem: configuration, behaviour, internet and phone connectivity, and attempts to intercept the messages they exchange.",
+        "Reverse engineering of the mobile app to understand how it talks to the device and to the cloud.",
+        "Following that trail step by step, I found servers that appeared to belong to the manufacturer and had critical vulnerabilities, including remote code execution (RCE)."
+      ]
+    }
+  },
+  {
+    "id": "wargame",
+    "shelf": "seguridad",
+    "order": 2,
+    "status": "terminado",
+    "motif": "network",
+    "title": "University Wargame Environment",
+    "heading": {
+      "es": "Wargame: ataque y defensa con DMZ",
+      "en": "Wargame: attack and defense with a DMZ"
+    },
+    "cover": {
+      "es": "Active Directory y Wazuh SIEM",
+      "en": "Active Directory and Wazuh SIEM"
+    },
+    "blurb": {
+      "es": "Ataque y bastionado de hosts Windows y Linux en una red con DMZ.",
+      "en": "Attack and hardening of Windows and Linux hosts on a DMZ network."
+    },
+    "tags": [
+      "Red & Blue Team",
+      "Active Directory",
+      "Wazuh SIEM",
+      "DMZ"
+    ],
+    "whatIs": {
+      "es": "Wargames de ataque y defensa de una asignatura de proyectos de ciberseguridad (2026). Cada equipo configuraba y bastionaba sus propias máquinas, y en clase las atacábamos entre equipos; pasado un tiempo también podíamos defender la nuestra en tiempo real mientras atacábamos al resto.",
+      "en": "Attack-and-defense wargames for a cybersecurity projects course (2026). Each team set up and hardened its own machines, and in class we attacked each other; after a while we could also defend our own in real time while attacking the rest."
+    },
+    "how": {
+      "es": [
+        "Varias jornadas de wargame repartidas a lo largo de meses, con tres escenarios: una máquina Linux, una máquina Windows y un entorno de Active Directory con una DMZ (Windows o Linux).",
+        "Equipos de cuatro personas en los que todos participamos en todas las áreas. Yo me especialicé en la configuración de la máquina, el diseño de los vectores de ataque y el ataque a las máquinas de otros equipos.",
+        "Ejecución de cadenas de ataque en Active Directory: enumeración, movimiento lateral y escalada de privilegios.",
+        "Despliegue y operación de Wazuh SIEM para correlación de logs y detección de amenazas."
+      ],
+      "en": [
+        "Several wargame sessions spread over months, with three scenarios: a Linux machine, a Windows machine and an Active Directory environment with a DMZ (Windows or Linux).",
+        "Teams of four in which we all worked across every area. I specialised in machine configuration, designing the attack vectors and attacking other teams’ machines.",
+        "Executed Active Directory attack chains: enumeration, lateral movement and privilege escalation.",
+        "Deployed and operated Wazuh SIEM for log correlation and threat detection."
+      ]
+    },
+    "stack": [
+      "Active Directory",
+      "Wazuh SIEM",
+      "Windows",
+      "Linux",
+      "DMZ"
+    ],
+    "links": {},
+    "featured": true,
+    "detail": true,
+    "results": {
+      "es": [
+        "Alrededor del 75 % de las máquinas rivales comprometidas (cifra aproximada; el tiempo disponible limitaba cuántas se llegaban a atacar).",
+        "Trazabilidad del 100 % de lo que otros equipos hicieron contra nuestras máquinas, gracias a la monitorización y los registros con Wazuh SIEM."
+      ],
+      "en": [
+        "Around 75 % of the rival machines compromised (approximate figure; the available time limited how many we could attack).",
+        "100 % traceability of what other teams did against our machines, thanks to monitoring and logging with Wazuh SIEM."
+      ]
+    }
+  },
+  {
+    "id": "metadata-analyzer",
+    "shelf": "seguridad",
+    "order": 3,
+    "status": "en-curso",
+    "motif": "document",
+    "title": "Metadata Analyzer & Threat Correlator",
+    "heading": {
+      "es": "Analizador de metadatos",
+      "en": "Metadata analyzer"
+    },
+    "cover": {
+      "es": "PDF · DOCX · imágenes",
+      "en": "PDF · DOCX · images"
+    },
+    "blurb": {
+      "es": "Analiza, limpia y modifica metadatos de PDF, Word e imágenes, y señala anomalías con IA.",
+      "en": "Analyzes, wipes and edits metadata in PDF, Word and image files, and flags anomalies with AI."
+    },
+    "tags": [
+      "Python",
+      "Seguridad",
+      "IA"
+    ],
+    "whatIs": {
+      "es": "Herramienta en Python, con modo consola e interfaz gráfica, para analizar, extraer, limpiar y modificar los metadatos de PDF, documentos Word (.docx) e imágenes (JPG, PNG, HEIC y otros formatos de Pillow). Incorpora un modelo de detección de anomalías para señalar archivos con patrones sospechosos. Nació como mi Trabajo de Fin de Grado.",
+      "en": "Python tool, with a console mode and a graphical interface, to analyze, extract, wipe and edit metadata in PDF, Word (.docx) and image files (JPG, PNG, HEIC and other Pillow formats). It includes an anomaly-detection model to flag files with suspicious patterns. It started as my Bachelor’s thesis."
+    },
+    "how": {
+      "es": [
+        "Análisis de metadatos y verificación de que la extensión del archivo coincide con su tipo real (MIME), sugiriendo la correcta si no es así.",
+        "Limpieza de metadatos para proteger la privacidad, aplicación de una plantilla por defecto y campos personalizados (clave=valor). Siempre genera un archivo nuevo y conserva el original.",
+        "Detección de anomalías con un Isolation Forest, para correlacionar patrones sospechosos con posibles amenazas."
+      ],
+      "en": [
+        "Metadata analysis and a check that the file extension matches its real (MIME) type, suggesting the right one if not.",
+        "Metadata wiping for privacy, a default template and custom key=value fields. It always writes a new file and keeps the original.",
+        "Anomaly detection with an Isolation Forest, to correlate suspicious patterns with potential threats."
+      ]
+    },
+    "results": {
+      "es": [
+        "Estimación propia, no medida de forma objetiva: ~70 % menos de tiempo de revisión manual."
+      ],
+      "en": [
+        "My own estimate, not objectively measured: ~70 % less manual review time."
+      ]
+    },
+    "stack": [
+      "Python",
+      "Isolation Forest",
+      "Pillow",
+      "PyPDF2",
+      "python-docx"
+    ],
+    "links": {
+      "repo": "https://github.com/Diego740/AnalizadorMetadatos"
+    },
+    "featured": true,
+    "detail": true,
+    "notes": {
+      "es": [
+        "Sigue en desarrollo: lo siguiente es el procesado de archivos en bloque (bulk) y ampliar los formatos soportados."
+      ],
+      "en": [
+        "Still in development: next up are bulk processing and support for more formats."
+      ]
+    }
+  },
+  {
+    "id": "volcado-procesos",
+    "shelf": "seguridad",
+    "order": 4,
+    "status": "terminado",
+    "motif": "memory",
+    "title": "Herramienta de Volcado de Procesos",
+    "heading": {
+      "es": "Volcado de procesos con WinAPI",
+      "en": "Process dump tool with WinAPI"
+    },
+    "cover": {
+      "es": "Por PID, por nombre o por red",
+      "en": "By PID, by name or over the network"
+    },
+    "blurb": {
+      "es": "Volcado de memoria de procesos en Windows con WinAPI, también por red.",
+      "en": "Process memory dumping on Windows with WinAPI, also over the network."
+    },
+    "tags": [
+      "WinAPI",
+      "C",
+      "Sockets"
+    ],
+    "whatIs": {
+      "es": "Herramienta de línea de comandos para Windows, escrita en C con WinAPI, que realiza volcados de memoria de procesos. Se puede elegir el proceso por PID o por nombre, usar una instantánea del proceso o enviar el volcado por red.",
+      "en": "Windows command-line tool, written in C with the WinAPI, that dumps process memory. You can pick the process by PID or by name, use a process snapshot, or send the dump over the network."
+    },
+    "stack": [
+      "C",
+      "WinAPI",
+      "MiniDumpWriteDump",
+      "Sockets (Winsock)"
+    ],
+    "links": {
+      "repo": "https://github.com/Diego740/MemoryDumpTool-WinApi"
+    },
+    "featured": true,
+    "detail": true,
+    "how": {
+      "es": [
+        "Cuatro modos: volcado por PID, por nombre, desde una instantánea (PssCaptureSnapshot) y por red.",
+        "Habilita el privilegio SeDebugPrivilege (hay que ejecutarla como administrador) para poder acceder a procesos del sistema.",
+        "En el modo de red, el volcado se envía por un socket a otra máquina sin escribirlo en disco."
+      ],
+      "en": [
+        "Four modes: dump by PID, by name, from a snapshot (PssCaptureSnapshot) and over the network.",
+        "Enables the SeDebugPrivilege privilege (it must run as administrator) to reach system processes.",
+        "In network mode the dump is sent over a socket to another machine without being written to disk."
+      ]
+    },
+    "limits": {
+      "es": [
+        "Úsala solo en sistemas propios o con autorización expresa."
+      ],
+      "en": [
+        "Use it only on systems you own or have explicit permission to test."
+      ]
+    },
+    "notes": {
+      "es": [
+        "Licencia MIT."
+      ],
+      "en": [
+        "MIT license."
+      ]
+    }
+  },
+  {
+    "id": "ctfs",
+    "shelf": "seguridad",
+    "order": 5,
+    "status": "terminado",
+    "motif": "flag",
+    "title": "CTFs de Ciberseguridad",
+    "heading": {
+      "es": "CTFs: forense y pentesting web",
+      "en": "CTFs: forensics and web pentesting"
+    },
+    "cover": {
+      "es": "HTB · Proving Grounds · writeups",
+      "en": "HTB · Proving Grounds · writeups"
+    },
+    "blurb": {
+      "es": "Retos de CTF en Hack The Box, Proving Grounds y más, con writeups ocasionales.",
+      "en": "CTF challenges on Hack The Box, Proving Grounds and more, with the occasional writeup."
+    },
+    "tags": [
+      "Burp Suite",
+      "Wireshark",
+      "Nmap"
+    ],
+    "whatIs": {
+      "es": "Participo y practico en CTFs y plataformas como Hack The Box y Proving Grounds, con foco en análisis forense, pentesting web y retos ofensivos y defensivos. Ocasionalmente publico writeups.",
+      "en": "I take part in CTFs and practise on platforms such as Hack The Box and Proving Grounds, focused on forensics, web pentesting and offensive/defensive challenges. I occasionally publish writeups."
+    },
+    "stack": [
+      "Burp Suite",
+      "Wireshark",
+      "Nmap"
+    ],
+    "links": {
+      "writeups": "/cybersecurity#writeups"
+    },
+    "featured": true,
+    "detail": true
+  },
+  {
+    "id": "geoalarm",
+    "shelf": "apps",
+    "order": 1,
+    "status": "publicada",
+    "motif": "geofence",
+    "title": "GeoAlarm",
+    "heading": {
+      "es": "GeoAlarm: aviso al llegar a tu destino",
+      "en": "GeoAlarm: alert when you arrive"
+    },
+    "cover": {
+      "es": "Alarma GPS",
+      "en": "GPS alarm"
+    },
+    "blurb": {
+      "es": "Te avisa con una alarma al llegar a tu destino.",
+      "en": "Sounds an alarm when you reach your destination."
+    },
+    "tags": [
+      "Swift",
+      "iOS",
+      "App Store",
+      "CoreLocation"
+    ],
+    "whatIs": {
+      "es": "App de iOS, publicada en la App Store, que te avisa con una alarma cuando llegas a tu destino. Todo ocurre en el dispositivo, sin SDKs de rastreo.",
+      "en": "iOS app on the App Store that sounds an alarm when you reach your destination. Everything runs on the device, with no tracking SDKs."
+    },
+    "how": {
+      "es": [
+        "Se elige el destino, se fija el radio al que se desea recibir el aviso y se inicia el viaje: la alarma suena al llegar.",
+        "Geofencing con CoreLocation.",
+        "Override de AVAudioSession para garantizar el aviso sonoro."
+      ],
+      "en": [
+        "You choose the destination, set the radius at which you want to be alerted and start the trip: the alarm rings on arrival.",
+        "CoreLocation geofencing.",
+        "AVAudioSession override to guarantee the audible alert."
+      ]
+    },
+    "results": {
+      "es": [
+        "~80 % menos de consumo de batería frente al seguimiento GPS continuo (estimación a partir de mis pruebas)."
+      ],
+      "en": [
+        "~80 % lower battery use compared with continuous GPS tracking (an estimate based on my own tests)."
+      ]
+    },
+    "stack": [
+      "Swift",
+      "CoreLocation",
+      "AVAudioSession",
+      "iOS"
+    ],
+    "links": {
+      "store": "https://apps.apple.com/app/id6768651486",
+      "legal": "/geoalarm-privacy.html"
+    },
+    "gallery": [
+      {
+        "src": {
+          "es": "/media/geoalarm/es-1.webp",
+          "en": "/media/geoalarm/en-1.webp"
+        },
+        "alt": {
+          "es": "Alarma de llegada: «¡Has llegado!» con el botón para apagarla",
+          "en": "Arrival alarm: “You’ve arrived!” with a button to stop it"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/geoalarm/es-2.webp",
+          "en": "/media/geoalarm/en-2.webp"
+        },
+        "alt": {
+          "es": "Selección del destino en el mapa con el radio de alerta",
+          "en": "Choosing the destination on the map with the alert radius"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/geoalarm/es-3.webp",
+          "en": "/media/geoalarm/en-3.webp"
+        },
+        "alt": {
+          "es": "Ajuste del radio de alerta, de 100 m a 100 km",
+          "en": "Setting the alert radius, from 100 m to 100 km"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/geoalarm/es-4.webp",
+          "en": "/media/geoalarm/en-4.webp"
+        },
+        "alt": {
+          "es": "Distancia restante hasta el destino durante el viaje",
+          "en": "Remaining distance to the destination during the trip"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/geoalarm/es-5.webp",
+          "en": "/media/geoalarm/en-5.webp"
+        },
+        "alt": {
+          "es": "Distancia restante en la pantalla de bloqueo y en la Dynamic Island",
+          "en": "Remaining distance on the lock screen and in the Dynamic Island"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/geoalarm/es-6.webp",
+          "en": "/media/geoalarm/en-6.webp"
+        },
+        "alt": {
+          "es": "Historial de viajes con destinos recientes y favoritos",
+          "en": "Trip history with recent destinations and favorites"
+        }
+      }
+    ],
+    "featured": true,
+    "detail": true,
+    "notes": {
+      "es": [
+        "Gratis y disponible en español e inglés."
+      ],
+      "en": [
+        "Free, and available in Spanish and English."
+      ]
+    },
+    "gallerySize": {
+      "w": 900,
+      "h": 1946
+    }
+  },
+  {
+    "id": "rootjar",
+    "shelf": "apps",
+    "order": 2,
+    "status": "en-curso",
+    "motif": "jar",
+    "title": "RootJar",
+    "heading": {
+      "es": "RootJar: finanzas personales para iOS",
+      "en": "RootJar: personal finance for iOS"
+    },
+    "cover": {
+      "es": "Privada y automática",
+      "en": "Private and automatic"
+    },
+    "blurb": {
+      "es": "El tarro del presupuesto de toda la vida: automático con Apple Pay y sin darle tus datos bancarios a nadie.",
+      "en": "The classic budget jar: automatic with Apple Pay, without handing your bank data to anyone."
+    },
+    "tags": [
+      "Swift",
+      "iOS",
+      "CloudKit",
+      "Privacidad"
+    ],
+    "whatIs": {
+      "es": "RootJar es el tarro del presupuesto de toda la vida, automático con Apple Pay y sin entregar tus datos bancarios a nadie. Una app de iOS y iPadOS para controlar gastos, presupuestos y huchas de ahorro.",
+      "en": "RootJar is the classic budget jar, automatic with Apple Pay and without handing your bank data to anyone. An iOS and iPadOS app to track spending, budgets and savings jars."
+    },
+    "how": {
+      "es": [
+        "Privada por diseño: sin servidores propios ni cuentas que crear, y sin acceso al banco. Los datos viven en tu dispositivo y en tu iCloud privado (CloudKit), con los campos sensibles cifrados. Sin publicidad ni rastreo: no podemos ver tu dinero.",
+        "Automática sin tocar el banco: cuando pagas con Apple Pay, una automatización de Atajos registra el pago en la app. Si un pago está incompleto o no está claro, queda pendiente y no cuenta hasta que lo apruebas.",
+        "Un presupuesto que se entiende de un vistazo: el tarro del mes se vacía según gastas. Las huchas son tarros más pequeños para ahorrar con un objetivo, pueden contar o no en el presupuesto, y se ven el patrimonio total y el dinero aún sin asignar.",
+        "Hecha como una app de Apple: componentes nativos, iPhone y iPad, widgets con modo de privacidad, Siri, Atajos, bloqueo con Face ID / Touch ID, modo oscuro y exportación a CSV."
+      ],
+      "en": [
+        "Private by design: no servers of our own, no accounts to create and no bank access. Data lives on your device and in your private iCloud (CloudKit), with sensitive fields encrypted. No ads and no tracking: we can’t see your money.",
+        "Automatic without touching your bank: when you pay with Apple Pay, a Shortcuts automation logs the payment in the app. If a payment is incomplete or unclear, it stays pending and doesn’t count until you approve it.",
+        "A budget you understand at a glance: the month’s jar empties as you spend. Savings jars are smaller jars for a goal, can count towards the budget or not, and you see your total net worth and the money not yet assigned.",
+        "Built like an Apple app: native components, iPhone and iPad, widgets with privacy mode, Siri, Shortcuts, Face ID / Touch ID lock, dark mode and CSV export."
+      ]
+    },
+    "stack": [
+      "Swift",
+      "CloudKit",
+      "Widgets",
+      "Siri y Atajos",
+      "Apple Pay (Atajos)",
+      "Face ID / Touch ID"
+    ],
+    "links": {
+      "legal": "/mybudget-privacy.html"
+    },
+    "featured": true,
+    "detail": true,
+    "problem": {
+      "es": "Casi todas las apps de finanzas te obligan a elegir entre comodidad y privacidad. Las automáticas se conectan a tu banco, normalmente a través de un intermediario que guarda tus credenciales o tus movimientos en sus servidores, y muchas viven de analizar esos datos. Las privadas te obligan a apuntarlo todo a mano, y la mayoría de los usuarios lo abandona a las pocas semanas. RootJar busca las dos cosas a la vez.",
+      "en": "Almost every finance app makes you choose between convenience and privacy. The automatic ones connect to your bank, usually through an intermediary that keeps your credentials or transactions on its servers, and many make money from analysing that data. The private ones make you log everything by hand, and most users give up within a few weeks. RootJar aims for both at once."
+    },
+    "notes": {
+      "es": [
+        "El nombre junta dos ideas: «jar» (tarro) viene del método de toda la vida de repartir el dinero en tarros o sobres; «root» (raíz) es la base de unas finanzas sanas: hábitos estables y un ahorro que crece despacio pero firme.",
+        "Gratuita y sin anuncios. Disponible pronto en la App Store."
+      ],
+      "en": [
+        "The name joins two ideas: “jar” comes from the age-old method of splitting money into jars or envelopes; “root” is the foundation of healthy finances: steady habits and savings that grow slowly but firmly.",
+        "Free and ad-free. Coming soon to the App Store."
+      ]
+    }
+  },
+  {
+    "id": "garagepad",
+    "shelf": "apps",
+    "order": 3,
+    "status": "en-curso",
+    "motif": "pad",
+    "title": "GaragePad",
+    "heading": {
+      "es": "GaragePad: mandos de garaje en CarPlay",
+      "en": "GaragePad: garage remotes on CarPlay"
+    },
+    "cover": {
+      "es": "Mandos del Flipper desde el coche",
+      "en": "Flipper remotes from your car"
+    },
+    "blurb": {
+      "es": "Abre tus garajes desde la pantalla del coche con los mandos de tu Flipper Zero.",
+      "en": "Open your garage doors from the car’s screen with your Flipper Zero remotes."
+    },
+    "tags": [
+      "Swift",
+      "iOS",
+      "CarPlay",
+      "Widgets",
+      "Bluetooth LE",
+      "Flipper Zero"
+    ],
+    "whatIs": {
+      "es": "GaragePad es una pequeña app en Swift que reúne hasta cuatro de tus archivos .sub en un único widget, cada uno con su nombre y su icono. Basta un toque en la pantalla del coche o en la de inicio para que el Flipper transmita, sin desbloquear el iPhone.",
+      "en": "GaragePad is a small Swift app that groups up to four of your saved .sub files into a single widget, each with its own name and icon. One tap on the car’s screen or the Home Screen and the Flipper transmits, with no need to unlock the phone."
+    },
+    "problem": {
+      "es": "Guardé en mi Flipper Zero los mandos de mis propios garajes y quería abrirlos desde la pantalla del coche, con el Flipper en el bolsillo o en la guantera. El inconveniente es que el widget de la app oficial solo admite un botón, de modo que, con varias puertas, hay que ir cambiando de widget mientras se conduce.",
+      "en": "I saved the remotes for my own garage doors on my Flipper Zero and wanted to open them from my car’s screen, with the Flipper in my pocket or the glovebox. The catch: the official app’s widget only fits one button, so with several doors you end up swiping between widgets while driving."
+    },
+    "how": {
+      "es": [
+        "Los botones del widget lanzan un App Intent en segundo plano que habla con el Flipper por BLE, con el mismo servicio serie y el mismo RPC protobuf que la app oficial.",
+        "Lo más complicado fue que, si se arranca la app pasándole la ruta del archivo, el Flipper abre su pantalla manual, que ignora las pulsaciones remotas. Fue necesario encontrar otra forma de iniciar el envío.",
+        "CarPlay (desde iOS 26) muestra widgets pequeños con botones interactivos, y el diseño se adapta a 1, 2, 3 o 4 botones."
+      ],
+      "en": [
+        "The widget buttons run an App Intent in the background that talks to the Flipper over BLE, using the same serial service and protobuf RPC as the official app.",
+        "The hardest part: starting the app with the file path opens the Flipper’s manual screen, which ignores remote button presses. I had to find another way to start the send.",
+        "CarPlay (since iOS 26) shows small widgets with interactive buttons, and the layout adapts to 1, 2, 3 or 4 buttons."
+      ]
+    },
+    "limits": {
+      "es": [
+        "Solo reproduce archivos que ya tienes en el Flipper: no graba, no decodifica ni genera señales. Debe usarse solo con puertas propias y respetando la normativa de radio de cada país."
+      ],
+      "en": [
+        "It only plays files already on your Flipper; it doesn’t record, decode or generate signals. Use it with doors you own and follow your local radio rules."
+      ]
+    },
+    "notes": {
+      "es": [
+        "Gratis, sin anuncios, sin cuentas y nada sale del teléfono.",
+        "Conviene cerrar antes la app oficial: el Flipper solo admite una conexión Bluetooth a la vez.",
+        "Los envíos por RPC no suman XP al delfín: el firmware solo los da en los envíos manuales."
+      ],
+      "en": [
+        "Free, no ads, no accounts, nothing leaves your phone.",
+        "Close the official app first: the Flipper only accepts one Bluetooth connection.",
+        "Sends made over RPC don’t give the dolphin XP; the firmware only awards it on manual sends."
+      ]
+    },
+    "stack": [
+      "Swift",
+      "App Intents",
+      "Widgets",
+      "Bluetooth LE",
+      "Protobuf RPC",
+      "CarPlay (iOS 26)",
+      "Flipper Zero (Sub-GHz)"
+    ],
+    "links": {
+      "legal": "/garagepad-privacy.html"
+    },
+    "video": {
+      "src": "/media/garagepad/demo-carplay.mp4",
+      "poster": "/media/garagepad/demo-carplay-poster.webp",
+      "caption": {
+        "es": "GaragePad en CarPlay: cuatro botones (Garaje 1 a 4) en la pantalla del coche.",
+        "en": "GaragePad on CarPlay: four buttons (Garage 1 to 4) on the car’s screen."
+      }
+    },
+    "featured": true,
+    "detail": true,
+    "techDetails": {
+      "es": [
+        "Secuencia de envío: arranca Sub-GHz en modo RPC, carga el archivo .sub, envía una pulsación, la mantiene un tiempo configurable (1,5 s por defecto) y la suelta.",
+        "Los archivos se eligen navegando por el almacenamiento del Flipper mediante RPC, sin escribir rutas."
+      ],
+      "en": [
+        "Send sequence: it starts Sub-GHz in RPC mode, loads the .sub file, sends a button press, holds it for a configurable time (1.5 s by default) and releases it.",
+        "Files are picked by browsing the Flipper’s storage over RPC, no paths to type."
+      ]
+    },
+    "gallery": [
+      {
+        "src": {
+          "es": "/media/garagepad/es-1.webp",
+          "en": "/media/garagepad/en-1.webp"
+        },
+        "alt": {
+          "es": "Widget de GaragePad con cuatro botones: Garaje, Parking, Casa y Comunidad",
+          "en": "GaragePad widget with four buttons: Garage, Parking, Home and Building"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/garagepad/es-2.webp",
+          "en": "/media/garagepad/en-2.webp"
+        },
+        "alt": {
+          "es": "Dos widgets de GaragePad en la pantalla de inicio del iPhone",
+          "en": "Two GaragePad widgets on the iPhone Home Screen"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/garagepad/es-3.webp",
+          "en": "/media/garagepad/en-3.webp"
+        },
+        "alt": {
+          "es": "GaragePad en la pantalla de CarPlay, con un widget de cuatro botones y otro de uno",
+          "en": "GaragePad on the CarPlay screen, with a four-button widget and a one-button widget"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/garagepad/es-4.webp",
+          "en": "/media/garagepad/en-4.webp"
+        },
+        "alt": {
+          "es": "Pantallas para crear un mando: nombre, icono, archivo .sub y duración de la pulsación",
+          "en": "Screens to build a remote: name, icon, .sub file and press duration"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/garagepad/es-5.webp",
+          "en": "/media/garagepad/en-5.webp"
+        },
+        "alt": {
+          "es": "El widget en versiones de 1, 2, 3 y 4 botones",
+          "en": "The widget in 1, 2, 3 and 4-button versions"
+        }
+      },
+      {
+        "src": {
+          "es": "/media/garagepad/es-6.webp",
+          "en": "/media/garagepad/en-6.webp"
+        },
+        "alt": {
+          "es": "Privada por diseño: sin cuentas, sin rastreo, sin servidores y con conexión Bluetooth local",
+          "en": "Private by design: no accounts, no tracking, no servers and a local Bluetooth connection"
+        }
+      }
+    ],
+    "gallerySize": {
+      "w": 900,
+      "h": 1957
+    }
+  },
+  {
+    "id": "gestor-espacios",
+    "shelf": "otros",
+    "order": 1,
+    "status": "terminado",
+    "featured": false,
+    "detail": false,
+    "motif": "desk",
+    "title": "Gestor de Espacios y Proyectos Colaborativos",
+    "heading": {
+      "es": "Gestor de Espacios y Proyectos Colaborativos",
+      "en": "Collaborative Space and Project Manager"
+    },
+    "cover": {
+      "es": "React · Node.js · MongoDB",
+      "en": "React · Node.js · MongoDB"
+    },
+    "blurb": {
+      "es": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo.",
+      "en": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment."
+    },
+    "tags": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "whatIs": {
+      "es": "Aplicación web para organizar la reserva de mesas y la gestión de proyectos en un espacio de trabajo universitario. Desarrollada con un cliente real, aplicando metodologías ágiles y despliegue continuo.",
+      "en": "Web application for managing desk bookings and project tracking in a university coworking space. Developed with a real client using agile methodologies and continuous deployment."
+    },
+    "stack": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "links": {}
+  },
+  {
+    "id": "web-peliculas",
+    "shelf": "otros",
+    "order": 2,
+    "status": "terminado",
+    "featured": false,
+    "detail": false,
+    "motif": "film",
+    "title": "Web de Películas (API)",
+    "heading": {
+      "es": "Web de Películas (API)",
+      "en": "Movie Web (API)"
+    },
+    "cover": {
+      "es": "React · API externa",
+      "en": "React · API externa"
+    },
+    "blurb": {
+      "es": "Plataforma interactiva para explorar películas y obtener detalles dinámicos mediante el consumo de APIs públicas.",
+      "en": "Interactive platform to explore movies and fetch dynamic details by consuming public APIs."
+    },
+    "tags": [
+      "React",
+      "API externa"
+    ],
+    "whatIs": {
+      "es": "Plataforma interactiva para explorar películas y obtener detalles dinámicos mediante el consumo de APIs públicas.",
+      "en": "Interactive platform to explore movies and fetch dynamic details by consuming public APIs."
+    },
+    "stack": [
+      "React",
+      "API externa"
+    ],
+    "links": {}
+  },
+  {
+    "id": "simulador-cache",
+    "shelf": "otros",
+    "order": 3,
+    "status": "terminado",
+    "featured": false,
+    "detail": false,
+    "motif": "layers",
+    "title": "Simulador de Memoria Caché",
+    "heading": {
+      "es": "Simulador de Memoria Caché",
+      "en": "Cache Memory Simulator"
+    },
+    "cover": {
+      "es": "C",
+      "en": "C"
+    },
+    "blurb": {
+      "es": "Proyecto académico que reproduce la gestión de memoria caché utilizando estructuras dinámicas para visualizar asignaciones y liberaciones.",
+      "en": "Academic project that recreates cache memory management using dynamic structures to visualize allocations and releases."
+    },
+    "tags": [
+      "C"
+    ],
+    "whatIs": {
+      "es": "Proyecto académico que reproduce la gestión de memoria caché utilizando estructuras dinámicas para visualizar asignaciones y liberaciones.",
+      "en": "Academic project that recreates cache memory management using dynamic structures to visualize allocations and releases."
+    },
+    "stack": [
+      "C"
+    ],
+    "links": {}
+  },
+  {
+    "id": "modelos-ia",
+    "shelf": "otros",
+    "order": 4,
+    "status": "terminado",
+    "featured": false,
+    "detail": false,
+    "motif": "neural",
+    "title": "Modelos de Inteligencia Artificial",
+    "heading": {
+      "es": "Modelos de Inteligencia Artificial",
+      "en": "Artificial Intelligence Models"
+    },
+    "cover": {
+      "es": "Python · LLMs · CNNs",
+      "en": "Python · LLMs · CNNs"
+    },
+    "blurb": {
+      "es": "Generador de texto: modelo entrenado para crear texto coherente a partir de datasets lingüísticos. Clasificador de imágenes pulmonares: CNN que diferencia pulmones sanos de enfermos para apoyar diagnósticos tempranos.",
+      "en": "Text generator: model trained to create coherent text from linguistic datasets. Lung image classifier: CNN distinguishing healthy and diseased lungs to support early diagnoses."
+    },
+    "tags": [
+      "Python",
+      "LLMs",
+      "CNNs"
+    ],
+    "whatIs": {
+      "es": "Generador de texto: modelo entrenado para crear texto coherente a partir de datasets lingüísticos. Clasificador de imágenes pulmonares: CNN que diferencia pulmones sanos de enfermos para apoyar diagnósticos tempranos.",
+      "en": "Text generator: model trained to create coherent text from linguistic datasets. Lung image classifier: CNN distinguishing healthy and diseased lungs to support early diagnoses."
+    },
+    "stack": [
+      "Python",
+      "LLMs",
+      "CNNs"
+    ],
+    "links": {}
+  }
+]

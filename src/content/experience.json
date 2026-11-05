@@ -1,0 +1,62 @@
+[
+  {
+    "id": "deloitte",
+    "anchor": "deloitte",
+    "org": "Deloitte",
+    "role": "Security Architecture Analyst",
+    "from": "2026-09",
+    "to": null,
+    "current": true,
+    "location": {
+      "es": "Madrid, España",
+      "en": "Madrid, Spain"
+    },
+    "period": {
+      "es": "Sept 2026 – Actualidad",
+      "en": "Sept 2026 – Present"
+    },
+    "summary": {
+      "es": "Análisis y diseño de arquitectura de seguridad para infraestructuras corporativas, enfocado en evaluación de riesgos, bastionado de sistemas, seguridad en la nube y alineación estratégica con marcos de referencia de la industria.",
+      "en": "Security architecture analysis and design for enterprise infrastructures, focusing on risk assessments, systems hardening, cloud security, and alignment with industry standards."
+    },
+    "highlights": {
+      "es": [],
+      "en": []
+    },
+    "order": 1
+  },
+  {
+    "id": "capgemini",
+    "anchor": "capgemini",
+    "org": "Capgemini",
+    "role": "Software Engineering Intern",
+    "from": "2025-10",
+    "to": "2026-04",
+    "current": false,
+    "location": {
+      "es": "Madrid, España",
+      "en": "Madrid, Spain"
+    },
+    "period": {
+      "es": "Oct 2025 – Abr 2026",
+      "en": "Oct 2025 – Apr 2026"
+    },
+    "summary": {
+      "es": "Desarrollo de software y consultoría técnica en sistemas empresariales de producción bajo metodologías ágiles (Agile).",
+      "en": "Software engineering and technical consulting on production enterprise systems in an Agile environment."
+    },
+    "highlights": {
+      "es": [
+        "Lideré de principio a fin la refactorización de un sistema empresarial en producción, desplegando nuevas funcionalidades de forma iterativa.",
+        "Aceleré las entregas mediante la integración de herramientas de IA en el flujo de diseño, testing y documentación técnica.",
+        "Obtuve la certificación Appian Certified Associate Developer en 3 meses, demostrando una rápida adaptación a una plataforma tecnológica nueva."
+      ],
+      "en": [
+        "Owned end-to-end refactoring of a production enterprise system, shipping new features iteratively in an Agile environment.",
+        "Accelerated delivery by integrating AI tools into the development workflow for design, testing, and documentation.",
+        "Earned Appian Certified Associate Developer within 3 months — rapid ramp-up in an unfamiliar proprietary platform."
+      ]
+    },
+    "order": 2
+  }
+]

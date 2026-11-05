@@ -1,0 +1,17 @@
+# Todo el sitio es público y puede ser rastreado, incluidos los bots de IA.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://diego740.github.io/sitemap.xml

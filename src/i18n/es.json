@@ -1,0 +1,104 @@
+{
+  "about": {
+    "header": {
+      "eyebrow": "Sobre mí",
+      "title": "Sobre mí",
+      "description": "Graduado en Ingeniería del Software con especialización en Ciberseguridad (U-TAD, GPA 8.3/10) y certificado OSCP (Offensive Security Certified Professional). Actualmente Analista de Arquitectura de Seguridad en Deloitte. Me enfoco en operaciones ofensivas y defensivas, bastionado de sistemas y automatización de la seguridad en entornos Windows, Linux, Active Directory y Cloud. Además, fui deportista de esquí alpino de alta competición, una disciplina que me aportó constancia, resiliencia y templanza bajo presión."
+    },
+    "downloadCv": "Descargar CV",
+    "technicalTitle": "Hard skills & Tecnologías",
+    "technicalSkills": [
+      "Pentesting",
+      "Red & Blue Team",
+      "Bastionado / Hardening",
+      "Active Directory",
+      "Wazuh SIEM",
+      "Análisis Forense",
+      "Ingeniería Inversa",
+      "MITRE ATT&CK",
+      "OWASP",
+      "Linux",
+      "Windows",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Netskope",
+      "Zscaler",
+      "Python",
+      "Bash",
+      "PowerShell",
+      "Swift",
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "MongoDB",
+      "Appian",
+      "WinAPI"
+    ],
+    "langTitle": "Idiomas",
+    "languages": [
+      "Castellano (nativo)",
+      "Inglés (nivel profesional)"
+    ],
+    "softTitle": "Competencias & Valores",
+    "softSkills": [
+      "Esquí alpino de alta competición (resiliencia y disciplina)",
+      "Capacidad para trabajar bajo presión",
+      "Resolución analítica de problemas",
+      "Gran autonomía e iniciativa",
+      "Trabajo en equipo y colaboración ágil",
+      "Organización y planificación estratégica"
+    ]
+  },
+  "cybersecurity": {
+    "header": {
+      "eyebrow": "Ciberseguridad",
+      "title": "Estrategias defensivas y ofensivas",
+      "description": "Ingeniero de software enfocado en seguridad y certificado OSCP (Offensive Security Certified Professional), actualmente Analista de Arquitectura de Seguridad en Deloitte. Experiencia contrastada en operaciones Red & Blue Team, bastionado de sistemas e infraestructuras críticas, y análisis de vulnerabilidades. Especializado en cadenas de ataque en Active Directory, entornos Linux y Windows, automatización de la seguridad y detección de amenazas con SIEM (Wazuh)."
+    },
+    "certTitle": "Certificación Destacada",
+    "certSubtitle": "OffSec Certified · Expedida en Septiembre 2026",
+    "certDesc": "Acredita capacidades avanzadas en reconocimiento, explotación de aplicaciones y servicios, escalada de privilegios en Linux/Windows y cadenas de ataque en dominios Active Directory.",
+    "toolsTitle": "Ecosistema, herramientas y capacidades clave",
+    "writeups": {
+      "title": "Writeups",
+      "readWriteup": "Leer writeup",
+      "machineActive": "Máquina activa",
+      "backButton": "Volver",
+      "loadErrorTitle": "No se pudo cargar el writeup",
+      "loadErrorBody": "La respuesta recibida no parece ser un Markdown válido. Prueba a recargar la página en unos segundos.",
+      "status": {
+        "active": "Activa",
+        "retired": "Retirada"
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "eyebrow": "Contacto",
+      "title": "Construyamos algo juntos",
+      "description": "¿Tienes un proyecto, una idea o simplemente quieres saludar? Escríbeme y hablemos."
+    },
+    "sidebar": {
+      "title": "Información directa",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "note": "Trato de responder con la mayor brevedad posible. Cuéntame tu idea de ciberseguridad, desarrollo web, inteligencia artificial o similares y podemos trabajar juntos."
+    }
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "education": "Trayectoria",
+    "cybersecurity": "Ciberseguridad",
+    "ai": "IA",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  }
+}
